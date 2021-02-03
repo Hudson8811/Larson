@@ -1,0 +1,15 @@
+mixin logo(isHome, cl)
+	- let href = isDark ? URLS.home.defaultDark : URLS.home.default;
+	if (isHome)
+		a(class= cl + " logo")
+			span.logo__image
+				+icon('logo')(width="52", height="52", aria-label="logo")
+			span.logo__text Liarch architecture studio
+	else
+		a(class= cl + " logo animsition-link", href= href)
+			span.logo__image
+				+icon('logo')(width="52", height="52", aria-label="logo")
+			span.logo__text Liarch architecture studio
+
+
+

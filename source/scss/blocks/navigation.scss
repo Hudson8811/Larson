@@ -1,0 +1,276 @@
+.navigation {
+	$self: &;
+
+	&--column {
+		display: block;
+		width: 100%;
+		padding: 6px 0;
+		overflow: auto;
+
+		#{$self}__list {
+			display: block;
+			//max-height: 250px;
+			padding-right: 10px;
+		}
+
+		#{$self}__dropdown {
+			display: none;
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		#{$self}__item {
+			margin-right: 0 !important;
+			margin-bottom: 12px;
+
+			@include media-custom-height(900px) {
+				margin-bottom: 22px;
+			}
+
+			&::after {
+				display: none;
+			}
+		}
+
+		#{$self}__link {
+			@include text(18px, 1.2, $color-default-black);
+			text-transform: none;
+
+			&:hover,
+			&:focus {
+				&::after {
+					display: none;
+				}
+
+				& + #{$self}__dropdown {
+					display: none;
+					opacity: 1;
+					pointer-events: auto;
+				}
+			}
+		}
+
+		#{$self}__dropdown {
+			position: static;
+			transform: translateY(0);
+			width: 100%;
+			min-width: 0;
+			padding: 0 0 0 16px;
+			border: none;
+			background-color: transparent;
+
+			&-wrapper {
+				display: block;
+			}
+
+			&-column {
+				width: 100%;
+
+				&-title {
+					display: none;
+				}
+
+				& + * {
+					width: 100% !important;
+					padding-left: 0 !important;
+				}
+			}
+
+			&-item {
+				a {
+					font-size: 14px;
+					line-height: 1;
+				}
+			}
+		}
+	}
+
+	&__dropdown {
+		position: absolute;
+		z-index: 1;
+		//display: none;
+		//width: 670px;
+		min-width: 400px;
+		background-color: $color-default-white;
+		//border: solid 1px $color-grey4;
+		opacity: 0;
+		pointer-events: none;
+
+		@include transition(opacity);
+
+		&--columns {
+			width: 670px;
+			min-width: 0;
+
+			@include media(lg) {
+				width: 480px;
+			}
+
+			@include media(xl) {
+				width: 670px;
+			}
+		}
+
+		&:hover {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		@include media(lg) {
+			left: -50px;
+			bottom: -55px;
+			transform: translateY(100%);
+			//width: 480px;
+			padding: 42px 50px;
+		}
+
+		@include media(xl) {
+			left: -100px;
+			//width: 670px;
+			padding: 76px 100px 70px;
+		}
+
+		&-wrapper {
+			@include media(lg) {
+				display: flex;
+			}
+		}
+
+		&-column {
+			@include media(lg) {
+				flex-grow: 1;
+
+				& + & {
+					width: 50%;
+					padding-left: 32px;
+				}
+			}
+
+			&-title {
+				margin-bottom: 20px;
+
+				@include text(12px, 1, $color-grey);
+				text-transform: uppercase;
+				letter-spacing: 0.01em;
+			}
+		}
+
+		&-list {
+			@include list-reset;
+		}
+
+		&-item {
+			&--current {
+				a {
+					//color: $color-orange !important;
+					font-weight: 600;
+				}
+			}
+			a {
+				@include text(16px, 1.875);
+				letter-spacing: 0.015em;
+
+				@include transition(color);
+
+				&:hover,
+				&:focus {
+					outline: none;
+					//color: $color-orange;
+				}
+			}
+		}
+	}
+
+	&__list {
+		@include list-reset;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		position: relative;
+		margin-right: 20px;
+
+		@include media(lg) {
+			margin-right: 40px;
+		}
+
+		@include media(xl) {
+			margin-right: 60px; //3.28vw;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 55%;
+			right: -8px;
+			transform: translateY(-50%) translateX(100%);
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			//background-color: $color-grey3;
+
+			@include media(lg) {
+				right: -17px;
+				width: 6px;
+				height: 6px;
+			}
+
+			@include media(xl) {
+				right: -27px; //calc(-1.64vw + 3px);
+			}
+		}
+
+		&:last-child {
+			margin-right: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		&--current {
+			#{$self}__link {
+				//color: $color-orange;
+				font-weight: 600;
+			}
+		}
+	}
+
+	&__link {
+		@include text(12px, 1);
+		text-transform: uppercase;
+
+		@include transition(color);
+
+		@include media(lg) {
+			font-size: 14px;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			//color: $color-orange;
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				transform: translateY(100%);
+				width: 100%;
+				height: 70px;
+			}
+
+			& + #{$self}__dropdown {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+
+		&:active {
+			opacity: 0.7;
+		}
+	}
+}

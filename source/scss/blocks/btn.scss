@@ -1,0 +1,50 @@
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	padding: 16px 20px;
+
+	@include text(16px, 1, $color-default-white);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	text-align: center;
+
+	border-radius: 5px;
+	//border: solid 1px $color-orange;
+	//background-color: $color-orange;
+
+	cursor: pointer;
+
+	@include transition(background-color);
+
+	@include media(xl) {
+		padding: 20px 32px;
+	}
+
+	&:hover,
+	&:focus {
+		outline: none;
+		//background-color: $color-orange-hover;
+		color: $color-default-white;
+		box-shadow: none;
+	}
+
+	&:active {
+		opacity: 0.7;
+		box-shadow: none;
+	}
+
+	&--outline {
+		background-color: transparent;
+		//color: $color-orange;
+		//border-color: $color-orange;
+		transition: background-color $default-transition-settings,
+			color $default-transition-settings;
+
+		&:hover,
+		&:focus {
+			outline: none;
+			//background-color: $color-orange;
+			color: $color-default-white;
+		}
+	}
+}
