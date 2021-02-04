@@ -82,13 +82,17 @@ AOS.init({
 /* 3. Mobile menu */
 (function() {
 	var menuOpenBtn = $('.menu-toggle');
-	var menuCloseBtn = $('.menu__close');
-	var menu = $('.menu');
+	var menu = $('.__js_mobile-canvas');
+	var menuCloseBtn = menu.find('.mobile-canvas__close');
+	var headerInner = $('.header__inner');
+	var animsition = $('.animsition');
+	var isHandled = false;
 
-	var dropdownLinks = menu.find('.__js_menu-dropdown-link');
+	//var dropdownLinks = menu.find('.__js_menu-dropdown-link');
+	var mobileDropdownLinks = $('.navigation__link');
 
 	var ModifierClass = {
-		MENU: 'menu--opened',
+		MENU: 'mobile-canvas--opened',
 		TOGGLE: 'menu-toggle--opened'
 	};
 
@@ -106,11 +110,64 @@ AOS.init({
 		}, DURATION + 50);
 	});
 
-	dropdownLinks.on('click', function(evt) {
-		evt.preventDefault();
-		$(this).next().find('a').on('click', closeMenu);
-		$(this).next().slideToggle(DURATION);
-	});
+	if ($(window).width() >= mobileBreakpoint) {
+		headerInner.append(menu);
+		menu.addClass('header__mobile');
+	}
+
+	if ($(window).width() < mobileBreakpoint) {
+		mobileDropdownLinks.each(function() {
+			if($(this).next().length !== 0) {
+				$(this).removeClass('animsition-link');
+			}
+		});
+	}
+
+	if ($(window).width() < mobileBreakpoint && !isHandled) {
+		mobileDropdownLinks.on('click', openMobileDropdown);
+		isHandled = true;
+	}
+
+	$(window).on('resize', function() {
+		if ($(window).width() >= mobileBreakpoint) {
+			headerInner.append(menu);
+			menu.addClass('header__mobile');
+		} else {
+			animsition.prepend(menu);
+			menu.removeClass('header__mobile');
+		}
+
+		if ($(window).width() < mobileBreakpoint && !isHandled) {
+			mobileDropdownLinks.on('click', openMobileDropdown);
+			isHandled = true;
+		} else {
+			mobileDropdownLinks.off('click', openMobileDropdown);
+			isHandled = false;
+		}
+
+
+		if ($(window).width() < mobileBreakpoint) {
+			mobileDropdownLinks.each(function() {
+				if($(this).next().length !== 0) {
+					$(this).removeClass('animsition-link');
+				}
+			});
+		} else {
+			mobileDropdownLinks.addClass('animsition-link');
+		}
+	})
+
+
+
+
+
+	function openMobileDropdown(evt) {
+		if ($(this).next().length !== 0) {
+			evt.preventDefault();
+			$(this).next().find('a[href]').on('click', closeMenu);
+			$(this).next().slideToggle(DURATION);
+		}
+	}
 
 	function closeMenu() {
 		menuCloseBtn.off('click', closeMenu);

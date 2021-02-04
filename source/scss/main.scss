@@ -66,13 +66,14 @@
 @import "blocks/webpage";
 
 /* 1.24 Language switcher */
-//@import "blocks/lang-switcher";
+@import "blocks/lang-switcher";
 
 /*-------------------------------------------------------------------------------
   2. Header
 -------------------------------------------------------------------------------*/
 
 /* 2.1 Header type 1 */
+@import "blocks/mobile-canvas";
 @import "blocks/header";
 
 /*-------------------------------------------------------------------------------
