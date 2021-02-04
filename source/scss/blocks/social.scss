@@ -5,49 +5,18 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	&--black {
-		#{$self}__link {
-			width: 20px;
-			height: 20px;
-			border: none;
-
-			svg {
-				fill: $color-default-black;
-			}
-
-			&:hover,
-			&:focus {
-				background-color: transparent;
-
-				svg {
-					fill: $color-yellow;
-				}
-			}
-		}
-	}
-
 	&__item + &__item {
-		margin-left: 16px;
-
-		@include media(sm) {
-			margin-left: 24px;
-		}
+		margin-left: 23px;
 	}
 
 	&__link {
 		display: flex;
-		width: 40px;
-		height: 40px;
+		width: 20px;
+		height: 20px;
 		justify-content: center;
-		//border: solid 1px $color-grey3;
-		border-radius: 50%;
-
-		transition: border-color $default-transition-settings,
-			background-color $default-transition-settings;
 
 		svg {
 			display: block;
-			fill: $color-grey;
 			align-self: center;
 
 			@include transition(fill);
@@ -56,11 +25,9 @@
 		&:hover,
 		&:focus {
 			outline: none;
-			background-color: $color-yellow;
-			border-color: $color-yellow;
 
 			svg {
-				fill: $color-default-white;
+				fill: $color-yellow;
 			}
 		}
 
@@ -69,7 +36,7 @@
 		}
 	}
 
-	.fb {
+	/*.fb {
 		background-color: #3b5999;
 		border-color: #3b5999;
 		@include transition(all);
@@ -127,5 +94,5 @@
 				fill: #fb7000;
 			}
 		}
-	}
+	}*/
 }

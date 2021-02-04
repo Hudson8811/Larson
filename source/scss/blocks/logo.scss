@@ -33,6 +33,15 @@
 		@include transition(transform);
 	}
 
+	&--borderless {
+		padding: 0;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+
 	&__large {
 		display: block;
 

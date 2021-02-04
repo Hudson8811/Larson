@@ -9,12 +9,6 @@
 		}
 	}
 
-	&--upper {
-		#{$self}__link {
-			text-transform: uppercase;
-		}
-	}
-
 	&--menu {
 		display: flex;
 		flex-wrap: wrap;
@@ -22,6 +16,27 @@
 		#{$self}__item {
 			margin-right: 24px;
 			margin-bottom: 0;
+		}
+	}
+
+	&--footer {
+		display: flex;
+		flex-wrap: wrap;
+
+		@include media(lg) {
+			display: block;
+		}
+
+		#{$self}__item {
+			display: block;
+			line-height: 1;
+			margin-right: 24px;
+			margin-bottom: 0;
+
+			@include media(lg) {
+				margin-right: 0;
+				margin-bottom: 6px;
+			}
 		}
 	}
 
