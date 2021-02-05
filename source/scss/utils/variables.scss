@@ -13,6 +13,8 @@ $color-smoky: #f1f1f1;
 $color-yellow: #fbc710;
 $color-yellow2: #fcce2e;
 
+$color-yellow-hover: darken(#fbc710, 5%);
+
 $color-grey: #787878;
 $color-grey2: #a1a1a1;
 $color-grey3: #a6a6a6;
@@ -26,6 +28,7 @@ $color-base: $color-grey; // основной цвет текста, испол�
 
 //
 $fonts: "Gilroy" "gilroy-bold" 700 normal, "Gilroy" "gilroy-regular" 400 normal,
+	"Gilroy" "gilroy-regularitalic" 400 italic,
 	"Gilroy" "gilroy-semibold" 600 normal, "Work Sans" "worksans" 400 normal,
 	"Work Sans" "worksansmedium" 500 normal,
 	"Work Sans" "worksanssemibold" 600 normal,

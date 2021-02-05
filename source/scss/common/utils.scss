@@ -9,6 +9,10 @@
 	border: 0;
 }
 
+.relative {
+	position: relative;
+}
+
 .d-none {
 	display: none !important;
 }
@@ -60,4 +64,8 @@
 	@include media(xl) {
 		margin: 0 -25px;
 	}
+}
+
+.color-yellow {
+	color: $color-yellow;
 }

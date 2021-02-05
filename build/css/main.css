@@ -347,6 +347,14 @@ textarea.custom-input {
 
 @font-face {
   font-family: "Gilroy";
+  src: url("../fonts/gilroy-regularitalic.woff2") format("woff2"), url("../fonts/gilroy-regularitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
   src: url("../fonts/gilroy-semibold.woff2") format("woff2"), url("../fonts/gilroy-semibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
@@ -395,6 +403,10 @@ textarea.custom-input {
   margin: -1px;
   padding: 0;
   border: 0;
+}
+
+.relative {
+  position: relative;
 }
 
 .d-none {
@@ -453,31 +465,37 @@ textarea.custom-input {
   }
 }
 
+.color-yellow {
+  color: #fbc710;
+}
+
 /* 1.4 Buttons */
 .btn {
   display: inline-block;
   vertical-align: top;
-  padding: 16px 20px;
+  padding: 17px 20px;
   font-size: 16px;
   line-height: 1;
-  color: #ffffff;
-  letter-spacing: 0.05em;
+  color: #000000;
   text-transform: uppercase;
   text-align: center;
-  border-radius: 5px;
+  font-weight: 500;
+  border: solid 1px #fbc710;
+  background-color: #fbc710;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .btn {
-    padding: 20px 32px;
+    padding: 17px 44px;
   }
 }
 
 .btn:hover, .btn:focus {
   outline: none;
-  color: #ffffff;
+  background-color: #eeba04;
+  color: #000000;
   box-shadow: none;
 }
 
@@ -488,11 +506,14 @@ textarea.custom-input {
 
 .btn--outline {
   background-color: transparent;
+  color: #fbc710;
+  border-color: #fbc710;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn--outline:hover, .btn--outline:focus {
   outline: none;
+  background-color: #fbc710;
   color: #ffffff;
 }
 
@@ -658,36 +679,26 @@ textarea.custom-input {
 /* 1.7 Heading */
 .heading {
   margin: 0;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 32px;
-  line-height: 1.18;
-  color: #787878;
-  font-weight: 300;
-  letter-spacing: -0.025em;
-}
-
-.heading--h1 {
-  font-size: 36px;
+  line-height: 1.25;
+  color: #000000;
+  font-weight: 700;
 }
 
 .heading--upper {
   text-transform: uppercase;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .heading {
-    font-size: 42px;
-  }
-  .heading--h1 {
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 
 @media (min-width: 1200px) {
   .heading {
-    font-size: 54px;
-  }
-  .heading--h1 {
-    font-size: 64px;
+    font-size: 48px;
   }
 }
 
@@ -1982,3 +1993,160 @@ textarea.custom-input {
 }
 
 /* 4.58 Launch page */
+/* About us block */
+.about-section__content {
+  margin-bottom: 56px;
+}
+
+@media (min-width: 768px) {
+  .about-section__content {
+    margin-bottom: 0;
+    padding-right: 30px;
+  }
+}
+
+.about-section__heading {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fbc710;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+  .about-section__heading {
+    margin-bottom: 20px;
+  }
+}
+
+.about-section__pseudoheading {
+  max-width: 290px;
+  margin-bottom: 42px;
+}
+
+@media (min-width: 992px) {
+  .about-section__pseudoheading {
+    margin-bottom: 52px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-section__pseudoheading {
+    max-width: 440px;
+    margin-bottom: 65px;
+  }
+}
+
+.about-section__text {
+  max-width: 490px;
+  margin-bottom: 36px;
+}
+
+@media (min-width: 992px) {
+  .about-section__text {
+    margin-bottom: 62px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-section__text {
+    margin-bottom: 72px;
+  }
+}
+
+.about-section__image {
+  margin-bottom: 30px;
+}
+
+.about-section__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-section__cite-wrapper {
+  position: relative;
+}
+
+.about-section__blockquote {
+  position: relative;
+  max-width: 330px;
+  margin: 0;
+  padding: 0 0 0 100px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #000000;
+}
+
+@media (min-width: 992px) {
+  .about-section__blockquote {
+    max-width: 360px;
+    margin-left: auto;
+    padding-left: 130px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-section__blockquote {
+    margin-left: 44px;
+  }
+}
+
+.about-section__blockquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -17px;
+  width: 83px;
+  height: 62px;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 83 62' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.6.2c6.267 0 11 2.267 14.2 6.8 3.333 4.4 5 9.667 5 15.8 0 8.267-2.467 15.933-7.4 23-4.8 7.067-10.867 12.333-18.2 15.8L.4 52.2c5.333-2.133 10-5.067 14-8.8 4-3.867 6.733-7.867 8.2-12l-1-.6c-.667.533-1.467.933-2.4 1.2-.933.267-2.267.4-4 .4-3.067 0-6.2-1.2-9.4-3.6-3.067-2.533-4.6-6.333-4.6-11.4 0-5.333 1.733-9.533 5.2-12.6S13.933.2 18.6.2zm44.8 0c6.267 0 11 2.267 14.2 6.8 3.333 4.4 5 9.667 5 15.8 0 8.267-2.467 15.933-7.4 23-4.8 7.067-10.867 12.333-18.2 15.8l-11.8-9.4c5.333-2.133 10-5.067 14-8.8 4-3.867 6.733-7.867 8.2-12l-1-.6c-.667.533-1.467.933-2.4 1.2-.933.267-2.267.4-4 .4-3.067 0-6.2-1.2-9.4-3.6-3.067-2.533-4.6-6.333-4.6-11.4 0-5.333 1.733-9.533 5.2-12.6S58.733.2 63.4.2z' fill='%23FBC710'/%3e%3c/svg%3e ");
+}
+
+.about-section__cite {
+  position: absolute;
+  top: -212px;
+  left: -10px;
+  padding: 79px 46px;
+  font-size: 25px;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .about-section__cite {
+    left: -20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-section__cite {
+    left: -37px;
+    padding: 79px 76px;
+  }
+}
+
+.about-section__cite::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 100%;
+  border: solid 4px #fbc710;
+  border-right: none;
+}
+
+@media (min-width: 992px) {
+  .about-section__cite::before {
+    width: 140px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-section__cite::before {
+    width: 162px;
+  }
+}
