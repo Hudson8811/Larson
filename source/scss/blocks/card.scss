@@ -6,6 +6,29 @@
 	box-sizing: border-box;
 	//max-width: 290px;
 
+	&--masonry {
+		#{$self}__heading {
+			visibility: hidden;
+
+			br {
+				display: none;
+			}
+		}
+
+		&:hover,
+		&:focus {
+			#{$self}__heading {
+				visibility: visible;
+			}
+		}
+	}
+
+	&--small {
+		#{$self}__heading {
+			font-size: 25px;
+		}
+	}
+
 	&:hover,
 	&:focus {
 		outline: none;

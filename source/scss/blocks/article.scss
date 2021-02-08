@@ -1,0 +1,30 @@
+.article {
+	padding: 40px 0 60px;
+
+	@include media(md) {
+		padding: 60px 0 80px;
+	}
+
+	@include media(lg) {
+		padding: 100px 0 120px;
+	}
+
+	@include media(xl) {
+		padding: 150px 0 200px;
+	}
+
+	&__header {
+		margin-bottom: 50px;
+	}
+
+	&__heading {
+		margin: 0 0 24px;
+
+		@include media(xl) {
+			margin-bottom: 96px;
+		}
+	}
+
+	&__filter {
+	}
+}
