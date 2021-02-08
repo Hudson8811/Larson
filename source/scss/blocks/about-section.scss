@@ -11,11 +11,6 @@
 	&__heading {
 		margin: 0 0 12px;
 
-		@include text(14px, 1.5, $color-yellow);
-		font-weight: 500;
-		letter-spacing: 0.2em;
-		text-transform: uppercase;
-
 		@include media(lg) {
 			margin-bottom: 20px;
 		}
@@ -23,7 +18,11 @@
 
 	&__pseudoheading {
 		max-width: 290px;
-		margin-bottom: 42px;
+		margin-bottom: 24px;
+
+		@include media(md) {
+			margin-bottom: 42px;
+		}
 
 		@include media(lg) {
 			margin-bottom: 52px;

@@ -1,8 +1,5 @@
 'use strict';
 
-
-//const { default: Swiper } = require("swiper");
-
 /*------------------------------------------------
 
 	1. Global
@@ -444,17 +441,21 @@ AOS.init({
 		},
 	});
 
-	var modernCarousel = new Swiper('.__js_slider-carousel-double', {
+	var latestProjectsInHomeCarousel = new Swiper('.__js_latest-projects-carousel', {
 		slidesPerView: 1,
 		loop: false,
 		breakpoints: {
 			768: {
 				slidesPerView: 2,
-				spaceBetween: 30,
+				spaceBetween: 15
 			},
 			992: {
-				slidesPerView: 2,
-				spaceBetween: 70,
+				slidesPerView: 3,
+				spaceBetween: 24
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 30
 			},
 		},
 
@@ -464,28 +465,32 @@ AOS.init({
 		},
 	});
 
-	var thCarouselPrev = document.querySelector('.__js_th-latest-projects__btn--prev');
-	var thCarouselNext = document.querySelector('.__js_th-latest-projects__btn--next');
+})();
 
-	var thСarousel = new Swiper('.__js_th-latest-projects-carousel', {
+(function() {
+	var reviewCarousel = new Swiper('.__js_review-carousel', {
 		slidesPerView: 1,
 		loop: false,
-		spaceBetween: -4,
+		spaceBetween: 15,
 		breakpoints: {
 			768: {
-				slidesPerView: 2
-			}
+				slidesPerView: 2,
+				spaceBetween: 15
+			},
+			992: {
+				slidesPerView: 2,
+				spaceBetween: 30
+			},
+			1200: {
+				slidesPerView: 2,
+				spaceBetween: 60
+			},
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
 		},
 	});
-
-	if (thCarouselPrev && thCarouselNext) {
-		thCarouselPrev.addEventListener('click', function() {
-			thСarousel.slidePrev(DURATION);
-		});
-		thCarouselNext.addEventListener('click', function() {
-			thСarousel.slideNext(DURATION);
-		});
-	}
 })();
 
 /* 9. Hero slider */

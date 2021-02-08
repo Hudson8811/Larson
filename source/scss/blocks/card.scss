@@ -1,0 +1,106 @@
+.card {
+	$self: &;
+
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	//max-width: 290px;
+
+	&:hover,
+	&:focus {
+		outline: none;
+
+		#{$self}__content {
+			background-color: rgba($color-yellow, 0.95);
+		}
+
+		#{$self}__heading {
+			position: static;
+			color: $color-default-black;
+			transform: translateY(0);
+			transition: transform 0.5s ease;
+		}
+
+		#{$self}__text {
+			max-width: 340px;
+			opacity: 1;
+			transform: translateY(0);
+
+			transition: all 0.4s 0.2s ease;
+		}
+
+		#{$self}__link {
+			opacity: 1;
+		}
+	}
+
+	&__image {
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		padding: 30px;
+
+		transition: background-color 0.5s ease;
+
+		@include media(xl) {
+			padding: 44px 30px;
+		}
+	}
+
+	&__heading {
+		position: absolute;
+		left: 32px;
+		bottom: 12px;
+		margin: 0;
+		transform: translateY(-20px);
+
+		@include text(28px, 1.4, $color-default-white);
+		font-family: $font-family--secondary;
+
+		@include media(xl) {
+			left: 40px;
+			bottom: 24px;
+			font-size: 32px;
+		}
+	}
+
+	&__text {
+		margin-top: 24px;
+		margin-bottom: auto;
+		opacity: 0;
+		transform: translateY(-20px);
+
+		@include text(16px, 1.3125, $color-default-black);
+	}
+
+	&__bottom {
+		margin-top: 12px;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		opacity: 0;
+
+		//transition: opacity 0.5s ease;
+
+		@include text(20px, 1.15, $color-default-black);
+		font-weight: 700;
+
+		svg {
+			margin-left: 8px;
+		}
+	}
+}

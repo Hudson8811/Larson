@@ -37,6 +37,7 @@
 
 /* 1.7 Heading */
 @import "blocks/heading";
+@import "blocks/heading-small";
 
 /* 1.8 Menu toggle button */
 @import "blocks/menu-toggle";
@@ -52,6 +53,7 @@
 
 /* 1.14 More */
 @import "blocks/more";
+@import "blocks/play-btn";
 
 /* 1.17 Filter */
 @import "blocks/filter";
@@ -99,5 +101,32 @@
 /* 4.58 Launch page */
 //@import "blocks/launch-page";
 
+/* Statistics block */
+@import "blocks/card";
+
+/* Review card */
+@import "blocks/review-card";
+
+/* News preview card */
+@import "blocks/news-preview";
+
 /* About us block */
 @import "blocks/about-section";
+
+/* Services block */
+@import "blocks/services-section";
+
+/* Statistics block */
+@import "blocks/statistics";
+
+/* Latest projects carousel block */
+@import "blocks/latest-projects";
+
+/* Partners block */
+@import "blocks/partners";
+
+/* Partners block */
+@import "blocks/reviews-carousel";
+
+/* Latest news block */
+@import "blocks/latest-news";
