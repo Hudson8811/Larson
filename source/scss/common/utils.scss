@@ -94,6 +94,16 @@
 	}
 }
 
+.swiper-container-horizontal > .swiper-scrollbar {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 0;
+	height: 4px;
+	width: 100%;
+	background-color: transparent;
+}
+
 .swiper-pagination-bullets {
 	display: flex;
 	justify-content: center;

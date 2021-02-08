@@ -348,52 +348,6 @@ AOS.init({
 		}
 	});
 
-	var thHeroSliderThumbs = new Swiper('.__js_th-hero-slider-thumbs', {
-		slidesPerView: 'auto',
-		loop: false,
-		freeMode: true,
-		loopedSlides: 3, //looped slides should be the same
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-	});
-
-	var thHeroSliderCurrent = document.querySelector('.__js_th-hero-slider-current');
-	var thHeroSliderTotal = document.querySelector('.__js_th-hero-slider-total');
-	var thHeroSliderSlidesCount = document.querySelectorAll('.__js_th-hero-slider .th-hero-slider__slide').length;
-
-	var thHeroSlider = new Swiper('.__js_th-hero-slider', {
-		slidesPerView: 1,
-		spaceBetween: 0,
-		loop: false,
-		speed: 800,
-		effect: 'fade',
-		fadeEffect: {
-			crossFade: true
-		},
-		thumbs: {
-			swiper: thHeroSliderThumbs
-		},
-		navigation: {
-			nextEl: '.th-hero-slider__nav-btn--next',
-			prevEl: '.th-hero-slider__nav-btn--prev',
-		},
-		on: {
-			init: function () {
-				if (thHeroSliderCurrent && thHeroSliderTotal) {
-					thHeroSliderCurrent.textContent = this.realIndex + 1;
-					thHeroSliderTotal.textContent = thHeroSliderSlidesCount;
-				}
-				console.log(this.slides);
-			},
-			slideChange: function () {
-				if (thHeroSliderCurrent) {
-					thHeroSliderCurrent.textContent = this.realIndex + 1;
-				}
-			}
-
-		},
-	});
-
 })();
 
 /* 7. Testimonials slider */
@@ -431,10 +385,15 @@ AOS.init({
 
 /* 8. Project carousel */
 (function(){
-	var mySwiper = new Swiper('.__js_slider-carousel', {
+	var mySwiper = new Swiper('.__js_projects-carousel', {
 		slidesPerView: 'auto',
-		spaceBetween: 30,
+		spaceBetween: 32,
 		loop: false,
+
+		navigation: {
+			nextEl: '.projects-carousel__next',
+			prevEl: '.projects-carousel__prev',
+		},
 
 		scrollbar: {
 			el: '.swiper-scrollbar',
@@ -734,13 +693,12 @@ AOS.init({
 /* 18. Packery init */
 (function() {
 	$(window).on('load', function(){
-		var select = $('.__js_filter-select');
 		var filterItem = $('.filter__item');
 		var filterItemAll = $('.filter__item[data-filter="*"]');
 		var filterActiveClass = 'filter__item--active';
 
-		var grid = $('.__js_works-filter').isotope({
-			itemSelector: '.works__item',
+		var grid = $('.__js_projects-grid').isotope({
+			itemSelector: '.__js_masonry-item',
 			layoutMode: 'packery',
 			packery: {
 				gutter: 0
@@ -761,21 +719,6 @@ AOS.init({
 				layoutMode: 'packery'
 			});
 		}, 100);
-
-		select.on('change', function () {
-			var value = select.val();
-			var filterValue = value !== '*' ? '.__js_' + value : value;
-
-			if (value !== '*') {
-				var filterValue = '.__js_' + value;
-				filterItem.removeClass(filterActiveClass);
-			} else {
-				filterItemAll.addClass(filterActiveClass);
-				var filterValue = value;
-			}
-
-			grid.isotope({ filter: filterValue });
-		});
 
 		filterItem.on('click', function() {
 			var filterValue = $(this).attr('data-filter');
