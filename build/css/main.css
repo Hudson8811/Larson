@@ -3021,3 +3021,9 @@ textarea.custom-input {
     margin-bottom: 96px;
   }
 }
+
+@media (min-width: 1200px) {
+  .article__main--width-full {
+    max-width: 1830px;
+  }
+}

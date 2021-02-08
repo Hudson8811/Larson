@@ -27,4 +27,12 @@
 
 	&__filter {
 	}
+
+	&__main {
+		&--width-full {
+			@include media(xl) {
+				max-width: $width--full;
+			}
+		}
+	}
 }
