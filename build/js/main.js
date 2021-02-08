@@ -734,13 +734,12 @@ AOS.init({
 /* 18. Packery init */
 (function() {
 	$(window).on('load', function(){
-		var select = $('.__js_filter-select');
 		var filterItem = $('.filter__item');
 		var filterItemAll = $('.filter__item[data-filter="*"]');
 		var filterActiveClass = 'filter__item--active';
 
-		var grid = $('.__js_works-filter').isotope({
-			itemSelector: '.works__item',
+		var grid = $('.__js_projects-grid').isotope({
+			itemSelector: '.__js_masonry-item',
 			layoutMode: 'packery',
 			packery: {
 				gutter: 0
@@ -761,21 +760,6 @@ AOS.init({
 				layoutMode: 'packery'
 			});
 		}, 100);
-
-		select.on('change', function () {
-			var value = select.val();
-			var filterValue = value !== '*' ? '.__js_' + value : value;
-
-			if (value !== '*') {
-				var filterValue = '.__js_' + value;
-				filterItem.removeClass(filterActiveClass);
-			} else {
-				filterItemAll.addClass(filterActiveClass);
-				var filterValue = value;
-			}
-
-			grid.isotope({ filter: filterValue });
-		});
 
 		filterItem.on('click', function() {
 			var filterValue = $(this).attr('data-filter');

@@ -2976,12 +2976,12 @@ textarea.custom-input {
 }
 
 /* Latest news block */
-.works-masonry {
+.projects-masonry {
   list-style: none;
   padding: 0;
 }
 
-.works-masonry__item {
+.projects-masonry__item {
   margin-bottom: 30px;
 }
 
