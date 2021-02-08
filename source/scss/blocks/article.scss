@@ -13,19 +13,30 @@
 		padding: 150px 0 200px;
 	}
 
+	&--pb-0 {
+		padding-bottom: 0;
+	}
+
 	&__header {
 		margin-bottom: 50px;
 	}
 
-	&__heading {
-		margin: 0 0 24px;
-
+	&__projects-carousel {
 		@include media(xl) {
-			margin-bottom: 96px;
+			margin-top: 100px;
 		}
 	}
 
+	&__heading {
+		margin: 0;
+	}
+
 	&__filter {
+		margin-top: 24px;
+
+		@include media(xl) {
+			margin-top: 96px;
+		}
 	}
 
 	&__main {

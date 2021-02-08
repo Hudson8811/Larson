@@ -6,7 +6,8 @@
 	box-sizing: border-box;
 	//max-width: 290px;
 
-	&--masonry {
+	&--masonry,
+	&--carousel {
 		#{$self}__heading {
 			visibility: hidden;
 
@@ -20,6 +21,18 @@
 			#{$self}__heading {
 				visibility: visible;
 			}
+		}
+	}
+
+	&--carousel {
+		#{$self}__heading {
+			br {
+				display: block;
+			}
+		}
+
+		#{$self}__text {
+			max-width: 472px;
 		}
 	}
 
@@ -45,11 +58,10 @@
 		}
 
 		#{$self}__text {
-			max-width: 340px;
 			opacity: 1;
 			transform: translateY(0);
 
-			transition: all 0.4s 0.2s ease;
+			transition: transform 0.4s 0.2s ease, opacity 0.4s 0.2s ease;
 		}
 
 		#{$self}__link {
@@ -100,6 +112,7 @@
 	}
 
 	&__text {
+		max-width: 340px;
 		margin-top: 24px;
 		margin-bottom: auto;
 		opacity: 0;
