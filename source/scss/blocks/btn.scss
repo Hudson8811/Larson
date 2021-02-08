@@ -1,30 +1,29 @@
 .btn {
 	display: inline-block;
 	vertical-align: top;
-	padding: 16px 20px;
+	padding: 17px 20px;
 
-	@include text(16px, 1, $color-default-white);
-	letter-spacing: 0.05em;
+	@include text(16px, 1, $color-default-black);
 	text-transform: uppercase;
 	text-align: center;
+	font-weight: 500;
 
-	border-radius: 5px;
-	//border: solid 1px $color-orange;
-	//background-color: $color-orange;
+	border: solid 1px $color-yellow;
+	background-color: $color-yellow;
 
 	cursor: pointer;
 
 	@include transition(background-color);
 
-	@include media(xl) {
-		padding: 20px 32px;
+	@include media(md) {
+		padding: 17px 44px;
 	}
 
 	&:hover,
 	&:focus {
 		outline: none;
-		//background-color: $color-orange-hover;
-		color: $color-default-white;
+		background-color: $color-yellow-hover;
+		color: $color-default-black;
 		box-shadow: none;
 	}
 
@@ -35,15 +34,15 @@
 
 	&--outline {
 		background-color: transparent;
-		//color: $color-orange;
-		//border-color: $color-orange;
+		color: $color-yellow;
+		border-color: $color-yellow;
 		transition: background-color $default-transition-settings,
 			color $default-transition-settings;
 
 		&:hover,
 		&:focus {
 			outline: none;
-			//background-color: $color-orange;
+			background-color: $color-yellow;
 			color: $color-default-white;
 		}
 	}

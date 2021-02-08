@@ -1,8 +1,5 @@
 'use strict';
 
-
-//const { default: Swiper } = require("swiper");
-
 /*------------------------------------------------
 
 	1. Global
@@ -82,13 +79,17 @@ AOS.init({
 /* 3. Mobile menu */
 (function() {
 	var menuOpenBtn = $('.menu-toggle');
-	var menuCloseBtn = $('.menu__close');
-	var menu = $('.menu');
+	var menu = $('.__js_mobile-canvas');
+	var menuCloseBtn = menu.find('.mobile-canvas__close');
+	var headerInner = $('.header__inner');
+	var animsition = $('.animsition');
+	var isHandled = false;
 
-	var dropdownLinks = menu.find('.__js_menu-dropdown-link');
+	//var dropdownLinks = menu.find('.__js_menu-dropdown-link');
+	var mobileDropdownLinks = $('.navigation__link');
 
 	var ModifierClass = {
-		MENU: 'menu--opened',
+		MENU: 'mobile-canvas--opened',
 		TOGGLE: 'menu-toggle--opened'
 	};
 
@@ -106,11 +107,64 @@ AOS.init({
 		}, DURATION + 50);
 	});
 
-	dropdownLinks.on('click', function(evt) {
-		evt.preventDefault();
-		$(this).next().find('a').on('click', closeMenu);
-		$(this).next().slideToggle(DURATION);
-	});
+	if ($(window).width() >= mobileBreakpoint) {
+		headerInner.append(menu);
+		menu.addClass('header__mobile');
+	}
+
+	if ($(window).width() < mobileBreakpoint) {
+		mobileDropdownLinks.each(function() {
+			if($(this).next().length !== 0) {
+				$(this).removeClass('animsition-link');
+			}
+		});
+	}
+
+	if ($(window).width() < mobileBreakpoint && !isHandled) {
+		mobileDropdownLinks.on('click', openMobileDropdown);
+		isHandled = true;
+	}
+
+	$(window).on('resize', function() {
+		if ($(window).width() >= mobileBreakpoint) {
+			headerInner.append(menu);
+			menu.addClass('header__mobile');
+		} else {
+			animsition.prepend(menu);
+			menu.removeClass('header__mobile');
+		}
+
+		if ($(window).width() < mobileBreakpoint && !isHandled) {
+			mobileDropdownLinks.on('click', openMobileDropdown);
+			isHandled = true;
+		} else {
+			mobileDropdownLinks.off('click', openMobileDropdown);
+			isHandled = false;
+		}
+
+
+		if ($(window).width() < mobileBreakpoint) {
+			mobileDropdownLinks.each(function() {
+				if($(this).next().length !== 0) {
+					$(this).removeClass('animsition-link');
+				}
+			});
+		} else {
+			mobileDropdownLinks.addClass('animsition-link');
+		}
+	})
+
+
+
+
+
+	function openMobileDropdown(evt) {
+		if ($(this).next().length !== 0) {
+			evt.preventDefault();
+			$(this).next().find('a[href]').on('click', closeMenu);
+			$(this).next().slideToggle(DURATION);
+		}
+	}
 
 	function closeMenu() {
 		menuCloseBtn.off('click', closeMenu);
@@ -387,17 +441,21 @@ AOS.init({
 		},
 	});
 
-	var modernCarousel = new Swiper('.__js_slider-carousel-double', {
+	var latestProjectsInHomeCarousel = new Swiper('.__js_latest-projects-carousel', {
 		slidesPerView: 1,
 		loop: false,
 		breakpoints: {
 			768: {
 				slidesPerView: 2,
-				spaceBetween: 30,
+				spaceBetween: 15
 			},
 			992: {
-				slidesPerView: 2,
-				spaceBetween: 70,
+				slidesPerView: 3,
+				spaceBetween: 24
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 30
 			},
 		},
 
@@ -407,28 +465,32 @@ AOS.init({
 		},
 	});
 
-	var thCarouselPrev = document.querySelector('.__js_th-latest-projects__btn--prev');
-	var thCarouselNext = document.querySelector('.__js_th-latest-projects__btn--next');
+})();
 
-	var thСarousel = new Swiper('.__js_th-latest-projects-carousel', {
+(function() {
+	var reviewCarousel = new Swiper('.__js_review-carousel', {
 		slidesPerView: 1,
 		loop: false,
-		spaceBetween: -4,
+		spaceBetween: 15,
 		breakpoints: {
 			768: {
-				slidesPerView: 2
-			}
+				slidesPerView: 2,
+				spaceBetween: 15
+			},
+			992: {
+				slidesPerView: 2,
+				spaceBetween: 30
+			},
+			1200: {
+				slidesPerView: 2,
+				spaceBetween: 60
+			},
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
 		},
 	});
-
-	if (thCarouselPrev && thCarouselNext) {
-		thCarouselPrev.addEventListener('click', function() {
-			thСarousel.slidePrev(DURATION);
-		});
-		thCarouselNext.addEventListener('click', function() {
-			thСarousel.slideNext(DURATION);
-		});
-	}
 })();
 
 /* 9. Hero slider */
