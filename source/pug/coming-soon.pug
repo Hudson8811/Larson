@@ -2,7 +2,7 @@ include templates/_vars.pug
 include mixins/mixins.pug
 
 - let pageTitle = 'Liarch - Architecture & Interior HTML Template - News';
-- let isHome = true; //- Если true то логотип не будет ссылкой
+- let isHome = false; //- Если true то логотип не будет ссылкой
 - let currentPage = 5.08; // Для каждой страницы уникален. Номер смотреть в файле pug/templates/_vars.pug в массивах с пунктами меню
 - let currentSection = 5; // // Для каждой раздела уникален. Home -1, about - 2, works - 3, news - 4, pages - 5
 
@@ -28,35 +28,35 @@ html.no-js(lang="ru")
 		div(style="display: none")
 			include ../../build/img/sprite.svg
 
-		article.launch-page(style='background-image: url("img/bg-launch.jpg")')
-			.container.launch-page__container
-				.launch-page__wrapper
-					+logo(isHome, 'launch-page__logo')
-					.launch-page__title Coming Soon...
-					.launch-page__subtitle Condimentum ipsum a adipiscing hac dolor set consectetur urna commodo elit parturient
-																|	a molestie ut nisl partu convallier ullamcorpe.
-					.launch-page__timer-title our website we be launched in:
+		article.coming-soon
+			.container.coming-soon__container
+				.coming-soon__wrapper
+					+logo(isHome, 'coming-soon__logo')
+					.coming-soon__content
+						.coming-soon__title Coming Soon...
+						.coming-soon__subtitle Condimentum ipsum a adipiscing hac dolor set consectetur urna commodo elit parturient
+																	|	a molestie ut nisl partu convallier ullamcorpe.
+						.coming-soon__timer-title our website we be launched in:
+						include modules/timer
+						// Social
+						ul.social.coming-soon__social
+							li.social__item
+								a.social__link(href="#", target="_blank")
+									+icon('facebook')(width="18", height="18")
+									span.visually-hidden Facebook
+							li.social__item
+								a.social__link(href="#", target="_blank")
+									+icon('twitter')(width="18", height="18")
+									span.visually-hidden Twitter
+							li.social__item
+								a.social__link(href="#", target="_blank")
+									+icon('google-plus')(width="18", height="18")
+									span.visually-hidden Instagram
+							li.social__item
+								a.social__link(href="#", target="_blank")
+									+icon('linkedin-original')(width="18", height="18")
+									span.visually-hidden Pinterest
 
-					include modules/timer
-
-					// Social
-					ul.social.launch-page__social
-						li.social__item
-							a.social__link(href="#", target="_blank")
-								+icon('twitter')(width="18", height="18", aria-label="twitter icon")
-								span.visually-hidden Twitter
-						li.social__item
-							a.social__link(href="#", target="_blank")
-								+icon('facebook')(width="18", height="18", aria-label="facebook icon")
-								span.visually-hidden Facebook
-						li.social__item
-							a.social__link(href="#", target="_blank")
-								+icon('instagram')(width="18", height="18", aria-label="instagram icon")
-								span.visually-hidden Instagram
-						li.social__item
-							a.social__link(href="#", target="_blank")
-								+icon('pinterest')(width="18", height="18", aria-label="pinterest icon")
-								span.visually-hidden Pinterest
 
 
 		// Optional JavaScript

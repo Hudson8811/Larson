@@ -83,3 +83,12 @@
 		@content;
 	}
 }
+
+@mixin hover {
+	@media (min-width: 992px) {
+		&:hover,
+		&:focus {
+			@content;
+		}
+	}
+}
