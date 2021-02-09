@@ -1,64 +1,59 @@
-.projects-carousel {
-	position: relative;
-	padding-bottom: 32px;
-
-	@include media(sm) {
-		padding-bottom: 40px;
-	}
-
-	@include media(md) {
-		padding-bottom: 60px;
-	}
-
-	@include media(lg) {
-		padding-bottom: 80px;
-	}
-
-	@include media(xl) {
-		padding-bottom: 92px;
-	}
-
+.projects-slider {
 	&__item {
-		width: 100%;
+		max-width: 510px;
 
-		@include media(sm) {
-			width: 80%;
+		&.swiper-slide-prev,
+		&.swiper-slide-next {
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($color-default-white, 0.4);
+			}
 		}
+
 		@include media(md) {
-			width: 65%;
+			max-width: 690px;
 		}
+
 		@include media(lg) {
-			width: 55%;
+			max-width: 930px;
 		}
+
 		@include media(xl) {
-			width: 40%;
-			max-width: 658px;
+			max-width: 1110px;
 		}
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
 	}
 
 	&__navigation {
 		position: absolute;
-		left: 0;
-		top: calc(50% - 16px);
+		left: 50%;
+		top: 50%;
 		z-index: 1;
+		transform: translateX(-50%);
 		width: 100%;
+		max-width: 510px;
 		height: 0;
 		box-sizing: border-box;
 
-		@include media(sm) {
-			top: calc(50% - 20px);
-		}
-
 		@include media(md) {
-			top: calc(50% - 30px);
+			max-width: 690px;
 		}
 
 		@include media(lg) {
-			top: calc(50% - 40px);
+			max-width: 930px;
 		}
 
 		@include media(xl) {
-			top: calc(50% - 46px);
+			max-width: 1110px;
 		}
 	}
 
@@ -67,11 +62,16 @@
 		position: absolute;
 		top: 0;
 		transform: translateY(-50%);
-		width: 64px;
-		height: 64px;
+		width: 32px;
+		height: 32px;
 		border: none;
 		background-color: transparent;
 		cursor: pointer;
+
+		@include media(lg) {
+			width: 64px;
+			height: 64px;
+		}
 
 		&.swiper-button-disabled {
 			display: none;
@@ -80,6 +80,14 @@
 		svg {
 			fill: $color-default-white;
 			@include transition(fill);
+
+			width: 32px;
+			height: 32px;
+
+			@include media(lg) {
+				width: 64px;
+				height: 64px;
+			}
 		}
 
 		&:hover,
