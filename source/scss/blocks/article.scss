@@ -29,11 +29,76 @@
 				margin-top: 70px;
 			}
 		}
+
+		&-meta {
+			margin-top: 40px;
+
+			@include media(sm) {
+				margin-top: 60px;
+			}
+
+			@include media(md) {
+				margin-top: 80px;
+			}
+
+			@include media(lg) {
+				margin-top: 100px;
+			}
+
+			@include media(xl) {
+				margin-top: 127px;
+			}
+		}
 	}
 
-	&__projects-carousel {
+	&__projects-carousel,
+	&__project-hero {
 		@include media(xl) {
 			margin-top: 100px;
+		}
+	}
+
+	&__project-hero {
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__project-text {
+		margin: 40px 0;
+		font-size: 18px;
+		line-height: 1.8;
+
+		strong {
+			color: $color-default-black;
+			font-weight: 600;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		p + p {
+			margin-top: 1.5em;
+		}
+
+		@include media(sm) {
+			margin: 60px 0;
+		}
+
+		@include media(md) {
+			margin: 100px 0;
+		}
+
+		@include media(lg) {
+			margin: 140px 0;
+			font-size: 25px;
+		}
+
+		@include media(xl) {
+			margin: 180px 0;
 		}
 	}
 
@@ -94,6 +159,45 @@
 
 		@include media(xl) {
 			margin-bottom: 190px;
+		}
+	}
+
+	&__project-images {
+		margin-bottom: 80px;
+
+		@include media(md) {
+			margin-bottom: 120px;
+		}
+
+		@include media(lg) {
+			margin-bottom: 160px;
+		}
+
+		@include media(xl) {
+			max-width: $width--full;
+			margin-bottom: 210px;
+		}
+
+		&-cell {
+			margin-top: 24px;
+
+			@include media(md) {
+				margin-top: 0;
+			}
+
+			.article__project-images-cell {
+				@include media(md) {
+					margin-top: 24px;
+				}
+				@include media(xxl) {
+					margin-top: 30px;
+				}
+			}
+		}
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
 		}
 	}
 

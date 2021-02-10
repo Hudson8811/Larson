@@ -64,12 +64,14 @@
 			transition: transform 0.4s 0.2s ease, opacity 0.4s 0.2s ease;
 		}
 
-		#{$self}__link {
+		#{$self}__bottom {
 			opacity: 1;
 		}
 	}
 
 	&__image {
+		display: block;
+
 		img {
 			display: block;
 			width: 100%;
@@ -112,6 +114,7 @@
 	}
 
 	&__text {
+		display: block;
 		max-width: 340px;
 		margin-top: 24px;
 		margin-bottom: auto;
@@ -122,13 +125,14 @@
 	}
 
 	&__bottom {
+		display: block;
 		margin-top: 12px;
+		opacity: 0;
 	}
 
 	&__link {
 		display: flex;
 		align-items: center;
-		opacity: 0;
 
 		//transition: opacity 0.5s ease;
 

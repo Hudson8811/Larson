@@ -29,6 +29,15 @@
 	position: $pos;
 }
 
+@mixin hover {
+	@media (min-width: 992px) {
+		&:hover,
+		&:focus {
+			@content;
+		}
+	}
+}
+
 // Media
 //---------------------------------------
 @mixin media($media) {
