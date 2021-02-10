@@ -2200,6 +2200,55 @@ textarea.custom-input {
   font-size: 25px;
 }
 
+.card--team .card__heading {
+  visibility: hidden;
+}
+
+.card--team:focus .card__heading {
+  visibility: visible;
+}
+
+.card--team:focus .card__content {
+  border: solid 4px #fbc710;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+@media (min-width: 992px) {
+  .card--team:hover .card__heading, .card--team:focus .card__heading {
+    visibility: visible;
+  }
+  .card--team:hover .card__content, .card--team:focus .card__content {
+    border: solid 4px #fbc710;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+}
+
+.card--send {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: solid 1px #ababab;
+  transition: border-color 0.3s ease;
+}
+
+.card--send:focus {
+  border-color: #fbc710;
+}
+
+.card--send:focus .card__send-text {
+  color: #fbc710;
+}
+
+@media (min-width: 992px) {
+  .card--send:hover, .card--send:focus {
+    border-color: #fbc710;
+  }
+  .card--send:hover .card__send-text, .card--send:focus .card__send-text {
+    color: #fbc710;
+  }
+}
+
 .card:hover, .card:focus {
   outline: none;
 }
@@ -2223,6 +2272,17 @@ textarea.custom-input {
 
 .card:hover .card__bottom, .card:focus .card__bottom {
   opacity: 1;
+}
+
+.card__send-text {
+  max-width: 100px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 25px;
+  line-height: 1.2;
+  color: #000000;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
 .card__image {
@@ -3680,6 +3740,22 @@ textarea.custom-input {
 }
 
 .architects__column {
+  margin-top: 30px;
+}
+
+/* Team list block */
+.team-list {
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 1200px) {
+  .team-list {
+    padding-top: 50px;
+  }
+}
+
+.team-list__item {
   margin-top: 30px;
 }
 

@@ -42,6 +42,60 @@
 		}
 	}
 
+	&--team {
+		#{$self}__heading {
+			visibility: hidden;
+		}
+
+		&:focus {
+			#{$self}__heading {
+				visibility: visible;
+			}
+
+			#{$self}__content {
+				border: solid 4px $color-yellow;
+				background-color: rgba($color-default-white, 0.9) !important;
+			}
+		}
+
+		@include hover {
+			#{$self}__heading {
+				visibility: visible;
+			}
+
+			#{$self}__content {
+				border: solid 4px $color-yellow;
+				background-color: rgba($color-default-white, 0.9) !important;
+			}
+		}
+	}
+
+	&--send {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		border: solid 1px $color-grey5;
+
+		@include transition(border-color);
+
+		&:focus {
+			border-color: $color-yellow;
+
+			#{$self}__send-text {
+				color: $color-yellow;
+			}
+		}
+
+		@include hover {
+			border-color: $color-yellow;
+
+			#{$self}__send-text {
+				color: $color-yellow;
+			}
+		}
+	}
+
 	&:hover,
 	&:focus {
 		outline: none;
@@ -67,6 +121,17 @@
 		#{$self}__bottom {
 			opacity: 1;
 		}
+	}
+
+	&__send-text {
+		max-width: 100px;
+		font-family: $font-family--secondary;
+
+		@include text(25px, 1.2, $color-default-black);
+		font-weight: 700;
+		text-transform: uppercase;
+
+		@include transition(color);
 	}
 
 	&__image {
