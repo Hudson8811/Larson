@@ -1,0 +1,12 @@
+.team-list {
+	list-style: none;
+	padding: 0;
+
+	@include media(xl) {
+		padding-top: 50px;
+	}
+
+	&__item {
+		margin-top: 30px;
+	}
+}
