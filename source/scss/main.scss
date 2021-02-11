@@ -146,8 +146,25 @@
 @import "blocks/services-provided";
 @import "blocks/architects";
 
-/* Main slider */
-@import "blocks/main-slider";
+/* Team list block */
+@import "blocks/team-list";
+
+/* Blocks for services pages */
+@import "blocks/service-card";
+@import "blocks/services-list";
+@import "blocks/single-service-block";
+
+/* Feedback block */
+@import "blocks/feedback";
+
+/* Contact block */
+@import "blocks/contact-block";
+
+/* Block in About page */
+@import "blocks/about-block";
+
+/* Map block */
+@import "blocks/map";
 
 /* Article */
 @import "blocks/article";
