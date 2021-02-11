@@ -14,7 +14,7 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/main.css">
-  <title>Larson Interior Studio | Projects Masonry 2</title>
+  <title>Larson Interior Studio | Contact</title>
 </head>
 
 <body class="webpage">
@@ -83,7 +83,7 @@
     <header class="header __js_fixed-header">
       <div class="header__inner">
         <!-- Logo-->
-        <a class="header__logo logo">
+        <a class="header__logo logo animsition-link" href="home-default.html">
           <span class="logo__large">Larson</span>
           <span class="logo__small">Architecture studio</span>
         </a>
@@ -168,11 +168,11 @@
               </div>
             </div>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link animsition-link" href="about.html">About</a>
-          </li>
           <li class="navigation__item navigation__item--current">
-            <a class="navigation__link" href="projects-grid.html">Projects</a>
+            <a class="navigation__link" href="about.html">About</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link animsition-link" href="projects-grid.html">Projects</a>
             <div class="navigation__dropdown navigation__dropdown--columns">
               <div class="navigation__dropdown-wrapper">
                 <div class="navigation__dropdown-column">
@@ -187,8 +187,8 @@
                     <li class="navigation__dropdown-item">
                       <a class="animsition-link" href="projects-masonry.html">Projects Masonry</a>
                     </li>
-                    <li class="navigation__dropdown-item navigation__dropdown-item--current">
-                      <a>Projects Masonry 2</a>
+                    <li class="navigation__dropdown-item">
+                      <a class="animsition-link" href="projects-masonry-2.html">Projects Masonry 2</a>
                     </li>
                     <li class="navigation__dropdown-item">
                       <a class="animsition-link" href="projects-carousel.html">Projects Carousel</a>
@@ -283,8 +283,8 @@
               </div>
             </div>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link animsition-link" href="contact.html">Contact</a>
+          <li class="navigation__item navigation__item--current">
+            <a class="navigation__link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -335,272 +335,95 @@
       <article class="article">
         <header class="article__header">
           <div class="container">
-            <h1 class="article__heading heading heading--size-large">Projects</h1>
-            <!-- Filter projects-->
-            <div class="article__filter filter">
-              <button class="filter__item filter__item--active __js_filter-btn" type="button" data-filter="*">all</button>
-              <button class="filter__item __js_filter-btn" type="button" data-filter=".__js_interior">interior</button>
-              <button class="filter__item __js_filter-btn" type="button" data-filter=".__js_architecture">architecture</button>
-              <button class="filter__item __js_filter-btn" type="button" data-filter=".__js_building">building</button>
-              <button class="filter__item __js_filter-btn" type="button" data-filter=".__js_exterior">exterior</button>
-            </div>
+            <h1 class="article__heading heading heading--size-large">Contact</h1>
           </div>
         </header>
-        <div class="article__main article__main--width-full container">
-          <ul class="projects-masonry row __js_projects-grid">
-            <li class="projects-masonry__item col-12 col-md-6 col-xl-3 __js_masonry-item">
-              <a class="card card--small card--masonry" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/masonry-2/1.jpg" srcset="img/picture/projects/masonry-2/1@2x.jpg" width="428" height="428" alt="">
+        <div class="article__map map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6303.983230561337!2d144.94987278893993!3d-37.813665379798834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4949e03ba7%3A0x3a4bed3cd2de0c6!2zMjY5IEtpbmcgU3QsIE1lbGJvdXJuZSBWSUMgMzAwMCwg0JDQstGB0YLRgNCw0LvQuNGP!5e0!3m2!1sru!2sru!4v1613041664241!5m2!1sru!2sru" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <div class="map__inner container">
+            <div class="contact-block">
+              <div class="contact-block__heading">Melbourne, <span class="color-yellow">Australia</span>
+              </div>
+              <address class="contact-block__address">269 King Str, 05th Floor, Utral Hosue Building, Melbourne, VIC 3000, Australia.</address>
+              <div class="contact-block__phone">
+                <a href="tel:+9903449564050">+99 (0) 344 956 4050</a>
+              </div>
+              <div class="contact-block__item">
+                <div class="contact-block__item-hint">Email:</div>
+                <div class="contact-block__item-val">
+                  <a href="mailto:info@sparch.co">info@sparch.co</a>
                 </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Villa
-                    <br>In
-                    <br>London
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
+              </div>
+              <div class="contact-block__item">
+                <div class="contact-block__item-hint">Follow us:</div>
+                <div class="contact-block__item-val">
+                  <!-- Social-->
+                  <ul class="contact-block__social social--contact social">
+                    <li class="social__item">
+                      <a class="social__link" href="#" target="_blank">
+                        <svg width="20" height="20" aria-label="facebook icon">
+                          <use xlink:href="#facebook"></use>
+                        </svg>
+                        <span class="visually-hidden">facebook</span>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social__link" href="#" target="_blank">
+                        <svg width="20" height="20" aria-label="twitter icon">
+                          <use xlink:href="#twitter"></use>
+                        </svg>
+                        <span class="visually-hidden">twitter</span>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social__link" href="#" target="_blank">
+                        <svg width="20" height="20" aria-label="pinterest icon">
+                          <use xlink:href="#pinterest"></use>
+                        </svg>
+                        <span class="visually-hidden">pinterest</span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-              </a>
-            </li>
-            <li class="projects-masonry__item col-12 col-md-6 col-xl-3 __js_masonry-item __js_architecture">
-              <a class="card card--small card--masonry" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/masonry-2/2.jpg" srcset="img/picture/projects/masonry-2/2@2x.jpg" width="428" height="428" alt="">
+              </div>
+              <div class="contact-block__item">
+                <div class="contact-block__item-hint">Work Hours:</div>
+                <div class="contact-block__item-val">Monday - Friday : 08h00 - 17h30</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article__main container">
+          <section class="article__feedback feedback">
+            <h2 class="feedback__heading heading" data-aos="fade">Let's grab a coffee and jump on
+              <br>conversation <span class="color-yellow">chat with us.</span>
+            </h2>
+            <form action="#" method="post">
+              <div class="row">
+                <div class="feedback__field-wrapper col-12 col-md-6 col-lg-4" data-aos="fade">
+                  <label class="field" aria-label="Name">
+                    <input type="text" name="name" placeholder="Name">
+                  </label>
                 </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Villa
-                    <br>In
-                    <br>London
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
+                <div class="feedback__field-wrapper col-12 col-md-6 col-lg-4" data-aos="fade">
+                  <label class="field" aria-label="Email">
+                    <input type="email" name="email" placeholder="Email*" required>
+                  </label>
                 </div>
-              </a>
-            </li>
-            <li class="projects-masonry__item col-12 col-xl-3 __js_masonry-item __js_building">
-              <a class="card card--small card--masonry" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/masonry-2/3.jpg" srcset="img/picture/projects/masonry-2/3@2x.jpg" width="428" height="428" alt="">
+                <div class="feedback__field-wrapper col-12 col-lg-4" data-aos="fade">
+                  <label class="field" aria-label="Subject">
+                    <input type="text" name="subject" placeholder="Subject">
+                  </label>
                 </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Villa
-                    <br>In
-                    <br>London
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
+                <div class="feedback__field-wrapper col-12" data-aos="fade">
+                  <label class="field" aria-label="message">
+                    <textarea name="message" placeholder="Message*" required></textarea>
+                  </label>
                 </div>
-              </a>
-            </li>
-            <li class="projects-masonry__item col-12 col-xl-3 __js_masonry-item __js_interior">
-              <a class="card card--small card--masonry" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/masonry-2/4.jpg" srcset="img/picture/projects/masonry-2/4@2x.jpg" width="428" height="886" alt="">
-                </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Villa
-                    <br>In
-                    <br>London
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="projects-masonry__item col-12 col-xl-6 __js_masonry-item __js_building">
-              <a class="card card--small card--masonry" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/masonry-2/5.jpg" srcset="img/picture/projects/masonry-2/5@2x.jpg" width="886" height="428" alt="">
-                </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Villa
-                    <br>In
-                    <br>London
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="projects-masonry__item col-12 col-md-6 col-xl-3 __js_masonry-item __js_interior">
-              <a class="card card--small card--masonry" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/masonry-2/6.jpg" srcset="img/picture/projects/masonry-2/6@2x.jpg" width="428" height="428" alt="">
-                </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Villa
-                    <br>In
-                    <br>London
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="projects-masonry__item col-12 col-md-6 col-xl-3 __js_masonry-item __js_exterior">
-              <a class="card card--small card--masonry" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/masonry-2/7.jpg" srcset="img/picture/projects/masonry-2/7@2x.jpg" width="428" height="886" alt="">
-                </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Villa
-                    <br>In
-                    <br>London
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="projects-masonry__item col-12 col-md-6 col-xl-3 __js_masonry-item __js_exterior">
-              <a class="card card--small card--masonry" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/masonry-2/8.jpg" srcset="img/picture/projects/masonry-2/8@2x.jpg" width="428" height="428" alt="">
-                </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Villa
-                    <br>In
-                    <br>London
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="projects-masonry__item col-12 col-md-6 col-xl-3 __js_masonry-item __js_exterior">
-              <a class="card card--small card--masonry" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/masonry-2/9.jpg" srcset="img/picture/projects/masonry-2/9@2x.jpg" width="428" height="428" alt="">
-                </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Villa
-                    <br>In
-                    <br>London
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="projects-masonry__item col-12 col-md-6 col-xl-3 __js_masonry-item __js_exterior">
-              <a class="card card--small card--masonry" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/masonry-2/10.jpg" srcset="img/picture/projects/masonry-2/10@2x.jpg" width="428" height="428" alt="">
-                </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Villa
-                    <br>In
-                    <br>London
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="projects-masonry__item col-12 col-md-6 col-xl-3 __js_masonry-item __js_exterior">
-              <a class="card card--small card--masonry" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/masonry-2/11.jpg" srcset="img/picture/projects/masonry-2/11@2x.jpg" width="886" height="428" alt="">
-                </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Villa
-                    <br>In
-                    <br>London
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="projects-masonry__item col-12 col-xl-6 __js_masonry-item __js_exterior">
-              <a class="card card--small card--masonry" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/masonry-2/12.jpg" srcset="img/picture/projects/masonry-2/12@2x.jpg" width="428" height="428" alt="">
-                </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Villa
-                    <br>In
-                    <br>London
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
+              </div>
+              <button class="btn" type="submit" data-aos="fade">Submit</button>
+            </form>
+          </section>
         </div>
       </article>
     </main>
@@ -608,7 +431,7 @@
       <div class="footer__inner container">
         <div class="row">
           <div class="footer__column col-12 col-sm">
-            <a class="footer__logo logo--borderless logo">
+            <a class="footer__logo logo--borderless logo animsition-link" href="home-default.html">
               <span class="logo__large">Larson</span>
               <span class="logo__small">Architecture studio</span>
             </a>
@@ -648,11 +471,11 @@
               <li class="footer__column-item">
                 <a class="footer__column-link animsition-link" href="#">Career</a>
               </li>
-              <li class="footer__column-item">
-                <a class="footer__column-link animsition-link" href="about.html">About</a>
+              <li class="footer__column-item footer__column-item--current">
+                <a class="footer__column-link">About</a>
               </li>
-              <li class="footer__column-item">
-                <a class="footer__column-link animsition-link" href="contact.html">Contact</a>
+              <li class="footer__column-item footer__column-item--current">
+                <a class="footer__column-link">Contact</a>
               </li>
             </ul>
           </div>
