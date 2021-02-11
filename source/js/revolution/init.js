@@ -1,6 +1,7 @@
 var tpj=jQuery;
 var revapi24;
 tpj(document).ready(function() {
+
 	if(tpj("#rev_slider").revolution == undefined){
 		revslider_showDoubleJqueryError("#rev_slider");
 	}else{
