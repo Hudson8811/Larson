@@ -9,7 +9,8 @@
 	&__partners,
 	&__reviews-carousel,
 	&__latest-news,
-	&__services-provided {
+	&__services-provided,
+	&__about-block {
 		margin-bottom: 80px;
 
 		@include media(md) {
