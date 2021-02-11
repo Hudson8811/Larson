@@ -47,7 +47,7 @@ AOS.init({
 
 /* 2. Animsition init */
 (function() {
-	/*$(document).ready(function() {
+	$(document).ready(function() {
 		$(".animsition").animsition({
 			inClass: 'fade-in',
 			outClass: 'fade-out',
@@ -73,7 +73,7 @@ AOS.init({
 			overlayParentElement : 'body',
 			transition: function(url){ window.location.href = url; }
 		});
-	})*/
+	})
 })();
 
 /* 3. Mobile menu */

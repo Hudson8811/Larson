@@ -6,7 +6,7 @@
 	position: relative;
 
 	@include retina {
-		background-image: url("../img/picture/launch@2x.jpg");
+		background-image: url("../img/picture/bg-launch@2x.jpg");
 	}
 
 	&::before {
@@ -20,33 +20,39 @@
 	}
 
 	&__container {
-		max-width: 750px;
-		min-height: 100vh;
-		padding: 30px 10px;
+		max-width: 730px;
 		position: relative;
 		margin: 0 auto;
-
-		@include media(md) {
-			padding: 60px 10px;
-		}
-
-		@include media(lg) {
-			padding: 82px 0;
-		}
 	}
 
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: space-between;
 		min-height: 100vh;
+		padding: 30px 10px 60px;
 		color: $color-default-white;
-		text-align: center;
+
+		@media (min-height: 550px) {
+			padding: 30px 10px 10px;
+		}
+
+		@include media(md) {
+			padding-top: 50px;
+		}
+
+		@include media(lg) {
+			padding: 83px 0 10px;
+		}
 	}
 
 	&__logo {
 		padding-bottom: 17px;
+		margin-bottom: 20px;
+
+		@media (min-height: 800px) {
+			margin-bottom: 0;
+		}
 
 		.logo {
 			&__large,
@@ -68,6 +74,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
+		flex-grow: 1;
 	}
 
 	&__title {
@@ -75,54 +83,48 @@
 		font-size: 36px;
 		line-height: 46px;
 		font-weight: bold;
+		text-align: center;
 		margin-bottom: 20px;
 
 		@include media(md) {
 			font-size: 50px;
 			line-height: 62px;
-			margin-bottom: 50px;
+			margin-bottom: 30px;
 		}
 
 		@include media(lg) {
 			font-size: 60px;
 			line-height: 75px;
-			margin-bottom: 65px;
+			margin-bottom: 46px;
 		}
 	}
 
 	&__subtitle {
-		font-size: 16px;
-		line-height: 28px;
-		margin-bottom: 45px;
+		margin-bottom: 40px;
+		font-size: 14px;
+		line-height: 24px;
+		text-align: center;
 
 		@include media(lg) {
-			font-size: 18px;
-			line-height: 30px;
-			letter-spacing: -0.27px;
-		}
-
-		@media (min-height: 930px) {
-			margin-bottom: 87px;
+			max-width: 650px;
+			margin-bottom: 96px;
+			font-size: 16px;
+			line-height: 26px;
 		}
 	}
 
 	&__timer-title {
-		font-size: 22px;
-		line-height: 22px;
-		text-transform: uppercase;
+		font-family: $font-family--secondary;
+		font-size: 25px;
+		line-height: 35px;
+		font-weight: bold;
+		text-align: center;
 		margin-bottom: 30px;
-
-		@include media(md) {
-			margin-bottom: 45px;
-		}
 
 		@include media(lg) {
 			font-size: 24px;
 			line-height: 24px;
-		}
-
-		@media (min-height: 930px) {
-			margin-bottom: 72px;
+			margin-bottom: 76px;
 		}
 	}
 
@@ -133,16 +135,8 @@
 			margin-top: 68px;
 		}
 
-		@media (min-height: 930px) {
-			margin-top: 119px;
-		}
-
-		.social {
-			&__link {
-				svg {
-					fill: $color-default-white;
-				}
-			}
+		@include media(lg) {
+			margin-top: 100px;
 		}
 	}
 }

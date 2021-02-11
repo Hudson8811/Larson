@@ -1241,28 +1241,30 @@ textarea.custom-input {
 }
 
 .social__item + .social__item {
-  margin-left: 23px;
+  margin-left: 28px;
 }
 
 .social__link {
   display: flex;
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   justify-content: center;
 }
 
 .social__link svg {
   display: block;
   align-self: center;
+  fill: #ffffff;
   transition: fill 0.3s ease;
 }
 
-.social__link:hover, .social__link:focus {
-  outline: none;
-}
-
-.social__link:hover svg, .social__link:focus svg {
-  fill: #fbc710;
+@media (min-width: 992px) {
+  .social__link:hover, .social__link:focus {
+    outline: none;
+  }
+  .social__link:hover svg, .social__link:focus svg {
+    fill: #fbc710;
+  }
 }
 
 .social__link:active {
@@ -2104,22 +2106,25 @@ textarea.custom-input {
 
 @media (min-width: 992px) {
   .timer__digit:not(:last-child) {
-    margin-right: 54px;
+    margin-right: 131px;
   }
 }
 
 .timer__digit p {
   width: 30px;
-  font-size: 30px;
-  line-height: 30px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
   text-transform: uppercase;
-  margin: 0 auto;
+  margin: 0 0 12px;
 }
 
 @media (min-width: 992px) {
   .timer__digit p {
     width: 85px;
-    font-size: 72px;
+    margin: 0 auto 12px;
+    font-size: 70px;
     line-height: 72px;
   }
 }
@@ -2127,7 +2132,14 @@ textarea.custom-input {
 .timer__digit span {
   font-size: 14px;
   line-height: 24px;
-  letter-spacing: 0.35px;
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  .timer__digit span {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 
 /* 4.33 Menu */
@@ -2226,7 +2238,7 @@ textarea.custom-input {
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .coming-soon {
-    background-image: url("../img/picture/launch@2x.jpg");
+    background-image: url("../img/picture/bg-launch@2x.jpg");
   }
 }
 
@@ -2241,37 +2253,47 @@ textarea.custom-input {
 }
 
 .coming-soon__container {
-  max-width: 750px;
-  min-height: 100vh;
-  padding: 30px 10px;
+  max-width: 730px;
   position: relative;
   margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .coming-soon__container {
-    padding: 60px 10px;
-  }
-}
-
-@media (min-width: 992px) {
-  .coming-soon__container {
-    padding: 82px 0;
-  }
 }
 
 .coming-soon__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   min-height: 100vh;
+  padding: 30px 10px 60px;
   color: #ffffff;
-  text-align: center;
+}
+
+@media (min-height: 550px) {
+  .coming-soon__wrapper {
+    padding: 30px 10px 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .coming-soon__wrapper {
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .coming-soon__wrapper {
+    padding: 83px 0 10px;
+  }
 }
 
 .coming-soon__logo {
   padding-bottom: 17px;
+  margin-bottom: 20px;
+}
+
+@media (min-height: 800px) {
+  .coming-soon__logo {
+    margin-bottom: 0;
+  }
 }
 
 .coming-soon__logo .logo__large, .coming-soon__logo .logo__small {
@@ -2294,6 +2316,8 @@ textarea.custom-input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .coming-soon__title {
@@ -2301,6 +2325,7 @@ textarea.custom-input {
   font-size: 36px;
   line-height: 46px;
   font-weight: bold;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -2308,7 +2333,7 @@ textarea.custom-input {
   .coming-soon__title {
     font-size: 50px;
     line-height: 62px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 
@@ -2316,53 +2341,40 @@ textarea.custom-input {
   .coming-soon__title {
     font-size: 60px;
     line-height: 75px;
-    margin-bottom: 65px;
+    margin-bottom: 46px;
   }
 }
 
 .coming-soon__subtitle {
-  font-size: 16px;
-  line-height: 28px;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
 }
 
 @media (min-width: 992px) {
   .coming-soon__subtitle {
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: -0.27px;
-  }
-}
-
-@media (min-height: 930px) {
-  .coming-soon__subtitle {
-    margin-bottom: 87px;
+    max-width: 650px;
+    margin-bottom: 96px;
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 
 .coming-soon__timer-title {
-  font-size: 22px;
-  line-height: 22px;
-  text-transform: uppercase;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: bold;
+  text-align: center;
   margin-bottom: 30px;
-}
-
-@media (min-width: 768px) {
-  .coming-soon__timer-title {
-    margin-bottom: 45px;
-  }
 }
 
 @media (min-width: 992px) {
   .coming-soon__timer-title {
     font-size: 24px;
     line-height: 24px;
-  }
-}
-
-@media (min-height: 930px) {
-  .coming-soon__timer-title {
-    margin-bottom: 72px;
+    margin-bottom: 76px;
   }
 }
 
@@ -2376,14 +2388,10 @@ textarea.custom-input {
   }
 }
 
-@media (min-height: 930px) {
+@media (min-width: 992px) {
   .coming-soon__social {
-    margin-top: 119px;
+    margin-top: 100px;
   }
-}
-
-.coming-soon__social .social__link svg {
-  fill: #ffffff;
 }
 
 /* Statistics block */
