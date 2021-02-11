@@ -266,6 +266,12 @@
 		}
 	}
 
+	&__map {
+		@include media(xl) {
+			margin-top: 100px;
+		}
+	}
+
 	.single-service-block + .single-service-block {
 		margin-top: 60px;
 

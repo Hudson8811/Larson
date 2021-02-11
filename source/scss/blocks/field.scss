@@ -12,7 +12,14 @@
 		width: 100%;
 		padding: 15px 16px;
 		border: solid 1px $color-grey7;
-		font-size: 16px;
+		font-family: $font-family--main;
+
+		@include text(16px, 1);
+
+		&::placeholder {
+			@include text(16px, 1);
+			opacity: 1;
+		}
 
 		@include transition(border-color);
 
@@ -30,6 +37,7 @@
 	textarea {
 		resize: none;
 		height: 150px;
+		padding: 24px;
 
 		@include media(xl) {
 			height: 174px;
