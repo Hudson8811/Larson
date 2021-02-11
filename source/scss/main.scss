@@ -137,5 +137,26 @@
 /* Latest news block */
 @import "blocks/projects-carousel";
 
+/* Project detail blocks */
+@import "blocks/projects-slider";
+@import "blocks/project-meta";
+@import "blocks/project-designer";
+@import "blocks/steps";
+@import "blocks/process";
+@import "blocks/services-provided";
+@import "blocks/architects";
+
+/* Team list block */
+@import "blocks/team-list";
+
+/* Blocks for services pages */
+@import "blocks/service-card";
+@import "blocks/services-list";
+@import "blocks/single-service-block";
+
+/* Feedback block */
+
+@import "blocks/feedback";
+
 /* Article */
 @import "blocks/article";

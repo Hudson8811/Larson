@@ -299,53 +299,16 @@ AOS.init({
 
 /* 6. Project slider */
 (function(){
-	var mySwiper = new Swiper('.__js_slider-single', {
+	var projectsSlider = new Swiper('.__js_projects-slider', {
 		slidesPerView: 'auto',
-		spaceBetween: 10,
+		spaceBetween: 30,
 		loop: true,
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true
-		},
+		centeredSlides: true,
 		navigation: {
-			nextEl: '.slider__nav-btn--next',
-			prevEl: '.slider__nav-btn--prev',
-		}
-	});
+			nextEl: '.projects-slider__next',
+			prevEl: '.projects-slider__prev',
+		},
 
-	var thumbsForLatestProjects = new Swiper('.__js_slider-thumbs', {
-		slidesPerView: 3,
-		loop: false,
-		freeMode: true,
-		loopedSlides: 3, //looped slides should be the same
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-		breakpoints: {
-		// when window width is >= 320px
-		320: {
-			slidesPerView: 1,
-		},
-		// when window width is >= 480px
-		576: {
-			slidesPerView: 2,
-		},
-		// when window width is >= 640px
-		768: {
-			slidesPerView: 3,
-		}
-	}
-	});
-
-	var latestProjectsSlider = new Swiper('.__js_slider-simple', {
-		slidesPerView: 1,
-		loop: false,
-		thumbs: {
-			swiper: thumbsForLatestProjects,
-		},
-		navigation: {
-			nextEl: '.slider__nav-btn--next',
-			prevEl: '.slider__nav-btn--prev',
-		}
 	});
 
 })();
