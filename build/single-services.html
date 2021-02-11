@@ -14,7 +14,7 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/main.css">
-  <title>Larson Interior Studio | Projects Detail</title>
+  <title>Larson Interior Studio | Single services</title>
 </head>
 
 <body class="webpage">
@@ -80,7 +80,7 @@
     <header class="header __js_fixed-header">
       <div class="header__inner">
         <!-- Logo-->
-        <a class="header__logo logo">
+        <a class="header__logo logo animsition-link" href="home-default.html">
           <span class="logo__large">Larson</span>
           <span class="logo__small">Architecture studio</span>
         </a>
@@ -165,11 +165,11 @@
               </div>
             </div>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link animsition-link" href="about.html">About</a>
-          </li>
           <li class="navigation__item navigation__item--current">
-            <a class="navigation__link" href="projects-grid.html">Projects</a>
+            <a class="navigation__link" href="about.html">About</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link animsition-link" href="projects-grid.html">Projects</a>
             <div class="navigation__dropdown navigation__dropdown--columns">
               <div class="navigation__dropdown-wrapper">
                 <div class="navigation__dropdown-column">
@@ -190,8 +190,8 @@
                     <li class="navigation__dropdown-item">
                       <a class="animsition-link" href="projects-carousel.html">Projects Carousel</a>
                     </li>
-                    <li class="navigation__dropdown-item navigation__dropdown-item--current">
-                      <a>Projects Detail</a>
+                    <li class="navigation__dropdown-item">
+                      <a class="animsition-link" href="projects-detail.html">Projects Detail</a>
                     </li>
                     <li class="navigation__dropdown-item">
                       <a class="animsition-link" href="projects-detail-2.html">Projects Detail 2</a>
@@ -280,8 +280,8 @@
               </div>
             </div>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link animsition-link" href="contact.html">Contact</a>
+          <li class="navigation__item navigation__item--current">
+            <a class="navigation__link" href="contact.html">Contact</a>
           </li>
         </ul>
       </nav>
@@ -332,90 +332,50 @@
       <article class="article">
         <header class="article__header">
           <div class="container">
-            <h1 class="article__heading heading heading--size-large">Residence in Forest</h1>
-            <div class="article__header-text">“Totally focused on tools to enhance and help your content shine. We have created this theme thinking only in options helpfully for the daily needs in a creative environment like an agency,”</div>
+            <h1 class="article__heading heading heading--size-large">Architecture</h1>
           </div>
         </header>
-        <div class="article__projects-slider projects-slider swiper-container __js_projects-slider">
-          <div class="swiper-wrapper">
-            <div class="projects-slider__item swiper-slide">
-              <img src="img/picture/projects/detail/1.jpg" srcset="img/picture/projects/detail/1@2x.jpg" width="1111" height="768" alt="">
-            </div>
-            <div class="projects-slider__item swiper-slide">
-              <img src="img/picture/projects/detail/2.jpg" srcset="img/picture/projects/detail/2@2x.jpg" width="1111" height="768" alt="">
-            </div>
-            <div class="projects-slider__item swiper-slide">
-              <img src="img/picture/projects/detail/3.jpg" srcset="img/picture/projects/detail/3@2x.jpg" width="1111" height="768" alt="">
-            </div>
-          </div>
-          <div class="projects-slider__navigation">
-            <button class="projects-slider__next" type="button" aria-label="next">
-              <svg width="64" height="64">
-                <use xlink:href="#chevron-right"></use>
-              </svg>
-            </button>
-            <button class="projects-slider__prev" type="button" aria-label="prev">
-              <svg width="64" height="64">
-                <use xlink:href="#chevron-left"></use>
-              </svg>
-            </button>
-          </div>
+        <div class="article__single-service-image container">
+          <img src="img/picture/single-services/hero.jpg" srcset="img/picture/single-services/hero@2x.jpg" width="1110" height="538" alt="">
         </div>
-        <div class="article__main container">
-          <ul class="article__project-meta project-meta">
-            <li class="project-meta__item">
-              <div class="project-meta__item-title">Client</div>
-              <div class="project-meta__item-text">Richard Hunt</div>
-            </li>
-            <li class="project-meta__item">
-              <div class="project-meta__item-title">Completion</div>
-              <div class="project-meta__item-text">February 5th, 2017</div>
-            </li>
-            <li class="project-meta__item">
-              <div class="project-meta__item-title">Project type</div>
-              <div class="project-meta__item-text">Villar, Residence</div>
-            </li>
-            <li class="project-meta__item">
-              <div class="project-meta__item-title">Designer</div>
-              <div class="project-meta__item-text">Samuel</div>
-            </li>
-          </ul>
-          <div class="article__project-designer project-designer row">
-            <div class="project-designer__image col-12 col-md-6 col-lg-4 order-md-1">
-              <img src="img/picture/projects/detail/designer.jpg" srcset="img/picture/projects/detail/designer@2x.jpg" width="350" height="532" alt="Samuel">
-            </div>
-            <div class="project-designer__content col-12 col-md-6 col-lg-8">
-              <div class="project-designer__title">
-                <b>Samuel</b> / Designer
-              </div>
-              <div class="project-designer__text">
-                <p>“Totally focused on tools to enhance and help your content shine. We have created this theme thinking only in options helpfully for the daily needs in a creative environment like an agency,”</p>
-                <p>I knew everything…been there, done that. She was in the moment,
-                  <br>I was in the past. She was mindful. I was mindless.
-                </p>
-              </div>
-            </div>
+        <div class="article__main article__main--width-small container">
+          <div class="single-service-text">
+            <h2>Methods for Everyone</h2>
+            <p>Everything along the way, to and from, fascinated her: every pebble, ant, stick, leaf, blade of grass, and crack in the sidewalk was something to be picked up, looked at, tasted, smelled, and shaken. Everything was interesting to her. She knew nothing. I knew everything…been there, done that. She was in the moment, I was in the past. She was mindful. I was mindless.</p>
+            <p>One touch of a red-hot stove is usually all we need to avoid that kind of discomfort in the future. The same is true as we experience the emotional sensation of stress from our first instances of social rejection or ridicule. We quickly learn to fear and thus automatically avoid potentially stressful situations of all kinds, including the most common of all: making mistakes.</p>
           </div>
-          <div class="process">
-            <h2 class="process__heading heading">Process:</h2>
-            <img src="img/picture/projects/detail/sketch.jpg" srcset="img/picture/projects/detail/sketch@2x.jpg" width="1111" height="768" alt="">
-            <ul class="process__steps steps">
-              <li class="steps__item" data-aos="fade">
-                <div class="steps__item-title">Come up with a solution</div>
-                <div class="steps__item-text">“Totally focused on tools to enhance and help your content shine. We have created this theme thinking only in options helpfully for the daily needs in a creative environment like an agency,”</div>
-              </li>
-              <li class="steps__item" data-aos="fade">
-                <div class="steps__item-title">Planing</div>
-                <div class="steps__item-text">“Totally focused on tools to enhance and help your content shine. We have created this theme thinking only in options helpfully for the daily needs in a creative environment like an agency,”</div>
-              </li>
-              <li class="steps__item" data-aos="fade">
-                <div class="steps__item-title">Design</div>
-                <div class="steps__item-text">“Totally focused on tools to enhance and help your content shine. We have created this theme thinking only in options helpfully for the daily needs in a creative environment like an agency,”</div>
-              </li>
-            </ul>
-            <img src="img/picture/projects/detail/result.jpg" srcset="img/picture/projects/detail/result@2x.jpg" width="1111" height="768" alt="">
-            <div class="process__text">Totally focused on tools to enhance and help your content shine. We have created this theme thinking only in options helpfully for the daily needs in a creative environment like an agency, a small studio.</div>
+          <img src="img/picture/single-services/drawing.jpg" srcset="img/picture/single-services/drawing@2x.jpg" width="730" height="405" alt="">
+          <div class="single-service-text">
+            <h2>Culture</h2>
+            <p>Everything along the way, to and from, fascinated her: every pebble, ant, stick, leaf, blade of grass, and crack in the sidewalk was something to be picked up, looked at, tasted, smelled, and shaken. Everything was interesting to her. She knew nothing. I knew everything…been there, done that. She was in the moment, I was in the past. She was mindful. I was mindless.</p>
           </div>
+          <div class="single-service-text">
+            <h2>Work</h2>
+            <p>One touch of a red-hot stove is usually all we need to avoid that kind of discomfort in the future. The same is true as we experience the emotional sensation of stress from our first instances of social rejection or ridicule. We quickly learn to fear and thus automatically avoid potentially stressful situations of all kinds, including the most common of all: making mistakes.</p>
+          </div>
+          <section class="feedback">
+            <h2 class="feedback__heading heading">Live a reply</h2>
+            <form action="#" method="post">
+              <div class="row">
+                <div class="feedback__field-wrapper col-12 col-md-6">
+                  <label class="field" aria-label="Name">
+                    <input type="text" name="name" placeholder="Name*" required>
+                  </label>
+                </div>
+                <div class="feedback__field-wrapper col-12 col-md-6">
+                  <label class="field" aria-label="Email">
+                    <input type="email" name="email" placeholder="Email*" required>
+                  </label>
+                </div>
+                <div class="feedback__field-wrapper col-12">
+                  <label class="field" aria-label="Comment">
+                    <textarea name="comment" placeholder="Comment"></textarea>
+                  </label>
+                </div>
+              </div>
+              <button class="btn" type="submit">Post comment</button>
+            </form>
+          </section>
         </div>
       </article>
     </main>
@@ -423,7 +383,7 @@
       <div class="footer__inner container">
         <div class="row">
           <div class="footer__column col-12 col-sm">
-            <a class="footer__logo logo--borderless logo">
+            <a class="footer__logo logo--borderless logo animsition-link" href="home-default.html">
               <span class="logo__large">Larson</span>
               <span class="logo__small">Architecture studio</span>
             </a>
@@ -463,11 +423,11 @@
               <li class="footer__column-item">
                 <a class="footer__column-link animsition-link" href="#">Career</a>
               </li>
-              <li class="footer__column-item">
-                <a class="footer__column-link animsition-link" href="about.html">About</a>
+              <li class="footer__column-item footer__column-item--current">
+                <a class="footer__column-link">About</a>
               </li>
-              <li class="footer__column-item">
-                <a class="footer__column-link animsition-link" href="contact.html">Contact</a>
+              <li class="footer__column-item footer__column-item--current">
+                <a class="footer__column-link">Contact</a>
               </li>
             </ul>
           </div>

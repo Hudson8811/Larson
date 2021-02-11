@@ -613,85 +613,29 @@ textarea.custom-input {
   cursor: text;
 }
 
-.field .underline {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.field .underline::before, .field .underline::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  background-color: #000000;
-  transition: width 0.3s ease;
-}
-
-.field .underline::before {
-  left: 50%;
-}
-
-.field .underline::after {
-  right: 50%;
-}
-
-.field__hint {
-  position: absolute;
-  top: -1.7em;
-  display: block;
-  transition: 0.3s;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #787878;
-}
-
-.field__hint .red {
-  display: inline;
-  position: relative;
-  top: -7px;
-  color: #ff0000;
-}
-
 .field input,
 .field textarea {
-  width: 100%;
-  padding-bottom: 10px;
-  font-size: 20px;
-}
-
-.field input::placeholder,
-.field textarea::placeholder {
-  color: transparent;
-}
-
-.field input:placeholder-shown ~ .field__hint,
-.field textarea:placeholder-shown ~ .field__hint {
-  font-size: 20px;
-  text-transform: none;
-  top: -5px;
-}
-
-.field input:focus ~ .field__hint,
-.field textarea:focus ~ .field__hint {
-  position: absolute;
-  top: -1.7em;
   display: block;
-  font-size: 12px;
-  text-transform: uppercase;
+  width: 100%;
+  padding: 15px 16px;
+  border: solid 1px #c9c9c9;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
 }
 
-.field input:focus ~ .underline::before,
-.field textarea:focus ~ .underline::before {
-  width: 50%;
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #000000;
+  color: #000000;
 }
 
-.field input:focus ~ .underline::after,
-.field textarea:focus ~ .underline::after {
-  width: 50%;
+@media (min-width: 992px) {
+  .field input:hover, .field input:focus,
+  .field textarea:hover,
+  .field textarea:focus {
+    border-color: #000000;
+  }
 }
 
 .field textarea {
@@ -701,66 +645,7 @@ textarea.custom-input {
 
 @media (min-width: 1200px) {
   .field textarea {
-    height: 209px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .field--md-small .field__hint {
-    top: -1.2em;
-    font-size: 10px;
-  }
-  .field--md-small input,
-  .field--md-small textarea {
-    padding-bottom: 6px;
-    font-size: 14px;
-  }
-  .field--md-small input:placeholder-shown ~ .field__hint,
-  .field--md-small textarea:placeholder-shown ~ .field__hint {
-    font-size: 14px;
-  }
-  .field--md-small input:focus,
-  .field--md-small textarea:focus {
-    border-bottom-color: #000000;
-  }
-  .field--md-small input:focus ~ .field__hint,
-  .field--md-small textarea:focus ~ .field__hint {
-    top: -1.2em;
-    font-size: 10px;
-  }
-}
-
-.field--bordered input,
-.field--bordered textarea {
-  padding: 16px 20px;
-  font-size: 16px;
-  line-height: 1;
-  color: #787878;
-  transition: border-color 0.3s ease;
-}
-
-@media (min-width: 1200px) {
-  .field--bordered input,
-  .field--bordered textarea {
-    padding: 18px 30px;
-  }
-}
-
-.field--bordered input:hover, .field--bordered input:focus,
-.field--bordered textarea:hover,
-.field--bordered textarea:focus {
-  outline: none;
-  border-color: #000000;
-}
-
-.field--bordered input::placeholder,
-.field--bordered textarea::placeholder {
-  color: #787878;
-}
-
-@media (min-width: 1200px) {
-  .field--bordered textarea {
-    height: 180px;
+    height: 174px;
   }
 }
 
@@ -4309,5 +4194,11 @@ textarea.custom-input {
 @media (min-width: 1200px) {
   .article__main--width-full {
     max-width: 1830px;
+  }
+}
+
+@media (min-width: 992px) {
+  .article__main--width-small {
+    max-width: 760px;
   }
 }

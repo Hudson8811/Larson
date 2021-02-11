@@ -219,5 +219,11 @@
 				max-width: $width--full;
 			}
 		}
+
+		&--width-small {
+			@include media(lg) {
+				max-width: $width--small;
+			}
+		}
 	}
 }
