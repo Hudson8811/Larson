@@ -1386,6 +1386,28 @@ textarea.custom-input {
   }
 }
 
+.webpage__main-slider {
+  margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .webpage__main-slider {
+    margin-bottom: 120px;
+  }
+}
+
+@media (min-width: 992px) {
+  .webpage__main-slider {
+    margin-bottom: 160px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .webpage__main-slider {
+    margin-bottom: 232px;
+  }
+}
+
 /* 1.24 Language switcher */
 .lang-switcher {
   list-style: none;
@@ -2078,6 +2100,118 @@ textarea.custom-input {
 }
 
 /* 4.58 Launch page */
+/* Link with arrow */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  font-size: 20px;
+  line-height: 1.15;
+  color: #000000;
+  font-weight: 600;
+}
+
+.link-arrow svg {
+  margin-left: 16px;
+  fill: #000000;
+  transition: fill 0.3s ease;
+}
+
+.link-arrow--white {
+  color: #ffffff;
+}
+
+.link-arrow--white svg {
+  fill: #ffffff;
+}
+
+@media (min-width: 992px) {
+  .link-arrow:hover, .link-arrow:focus {
+    outline: none;
+    color: #fbc710;
+  }
+  .link-arrow:hover svg, .link-arrow:focus svg {
+    fill: #fbc710;
+  }
+}
+
+/* Tab rev slider */
+.slide-tab {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px 8px;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .slide-tab {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .slide-tab {
+    padding: 58px 60px;
+  }
+}
+
+.slide-tab__number {
+  margin-right: 8px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  color: #787878;
+  font-weight: 700;
+  color: #000000 !important;
+  transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .slide-tab__number {
+    margin-right: 16px;
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 992px) {
+  .slide-tab__number {
+    margin-right: 36px;
+    font-size: 60px;
+    line-height: 0.9;
+  }
+}
+
+.slide-tab__title {
+  max-width: 110px;
+  font-size: 12px;
+  line-height: 1.625;
+  color: #787878;
+  font-weight: 600;
+  color: #000000 !important;
+  transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .slide-tab__title {
+    font-size: 16px;
+  }
+}
+
+.slide-tab:focus {
+  outline: none;
+}
+
+@media (min-width: 992px) {
+  .slide-tab:hover .slide-tab__number,
+  .slide-tab:hover .slide-tab__title, .slide-tab:focus .slide-tab__number,
+  .slide-tab:focus .slide-tab__title {
+    color: #fbc710 !important;
+  }
+}
+
 /* Statistics block */
 .card {
   position: relative;
@@ -2660,12 +2794,24 @@ textarea.custom-input {
   color: #787878;
   font-family: "Swansea", "Arial", sans-serif;
   text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
 .services-section__link::before {
   content: "0" counter(list) ".";
   display: inline-block;
   margin-right: 8px;
+}
+
+.services-section__link:focus {
+  outline: none;
+  color: #000000;
+}
+
+@media (min-width: 992px) {
+  .services-section__link:hover, .services-section__link:focus {
+    color: #000000;
+  }
 }
 
 .services-section__image {
@@ -4321,6 +4467,61 @@ textarea.custom-input {
     width: calc(100% - 30px);
     height: 100%;
   }
+}
+
+/* Main slider */
+.main-slider .tp-tabs {
+  padding: 0 !important;
+  background-color: #ffffff !important;
+}
+
+.main-slider .tp-tab {
+  opacity: 1 !important;
+}
+
+.main-slider .tp-tab.selected .slide-tab {
+  cursor: default;
+}
+
+.main-slider .tp-tab.selected .slide-tab__number {
+  color: #fbc710 !important;
+}
+
+.main-slider .tp-tab.selected .slide-tab__title {
+  color: #000000 !important;
+}
+
+.main-slider .tparrows {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+}
+
+.main-slider .tparrows:hover {
+  background-color: transparent;
+}
+
+.main-slider .tparrows:hover::before {
+  opacity: 0.6 !important;
+}
+
+.main-slider .tparrows::before {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+.main-slider .tp-leftarrow::before {
+  content: "prev";
+}
+
+.main-slider .tp-rightarrow::before {
+  content: "next";
 }
 
 /* Article */

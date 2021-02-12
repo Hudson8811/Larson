@@ -43,10 +43,21 @@
 		font-family: $font-family--third;
 		text-transform: uppercase;
 
+		@include transition(color);
+
 		&::before {
 			content: "0" counter(list) ".";
 			display: inline-block;
 			margin-right: 8px;
+		}
+
+		&:focus {
+			outline: none;
+			color: $color-default-black;
+		}
+
+		@include hover {
+			color: $color-default-black;
 		}
 	}
 
