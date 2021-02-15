@@ -42,6 +42,36 @@
 		}
 	}
 
+	&--white {
+		#{$self}__large,
+		#{$self}__small {
+			color: $color-default-white;
+			opacity: 1;
+		}
+	}
+
+	&--large {
+		@include media(md) {
+			padding: 32px 0 42px 40px;
+
+			&::before,
+			&::after {
+				width: 88px;
+				border-width: 4px;
+			}
+
+			#{$self}__large {
+				font-size: 70px;
+				line-height: 1.28;
+			}
+
+			#{$self}__small {
+				font-size: 19px;
+				line-height: 1.16;
+			}
+		}
+	}
+
 	&__large {
 		display: block;
 

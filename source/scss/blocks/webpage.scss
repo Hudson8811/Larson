@@ -2,6 +2,21 @@
 	$self: &;
 	background-color: $color-default-white;
 
+	&--home-grid {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-image: url("../img/home-grid-bg.jpg");
+
+		@include retina {
+			background-image: url("../img/home-grid-bg@2x.jpg");
+		}
+
+		main {
+			background-color: transparent;
+		}
+	}
+
 	&__about-section,
 	&__services-section,
 	&__statistics,
