@@ -6,4 +6,5 @@ section.webpage__latest-news.latest-news
 				+icon('chevron-right')(width="20", height="20")
 		.row
 			each item in LATEST_NEWS_CARDS
-				+latest-news-card(item)(class="latest-news__item col-12 col-lg-4")
+				.latest-news__item.col-12.col-lg-4
+					+latest-news-card(item)

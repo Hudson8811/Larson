@@ -1,11 +1,11 @@
 mixin latest-news-card(item)
 	- let tag = item.tag ? item.tag : 'div';
-	#{tag}.news-preview(tabindex="0")&attributes(attributes)
-		.news-preview__image
+	#{tag}.preview-card(tabindex="0")&attributes(attributes)
+		.preview-card__image
 			img(src= item.img.path + item.img.name + '.jpg', srcset= item.img.path + item.img.name + '@2x.jpg', width="350", height="352", alt="")
-		.news-preview__content
-			time.news-preview__date(datetime= item.date.datetime)= item.date.text
-			h3.news-preview__heading= item.title
-			.news-preview__text= item.text
-			a.news-preview__btn(href= isDark ? URLS.news.postDark : URLS.news.post) Learn more
+		.preview-card__content
+			time.preview-card__date(datetime= item.date.datetime)= item.date.text
+			h3.preview-card__heading= item.title
+			.preview-card__text= item.text
+			a.preview-card__btn(href= isDark ? URLS.news.postDark : URLS.news.post) Learn more
 
