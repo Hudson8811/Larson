@@ -244,6 +244,7 @@ AOS.init({
 /* 4. Fixed header */
 (function() {
 	var header = $('.__js_fixed-header');
+	var headerOffset = header.offset().top;
 	var classes = 'header--fixed';
 	var headerHeight = header.outerHeight();
 	var scroll = $(window).scrollTop();
@@ -253,7 +254,7 @@ AOS.init({
 	$(window).on('scroll', function() {
 		scroll = $(window).scrollTop();
 
-		if (scroll >= headerHeight) {
+		if (scroll >= headerOffset + headerHeight) {
 			isScroll = true;
 
 			headerHeight = isScroll ? header.outerHeight() : null;
@@ -278,7 +279,7 @@ AOS.init({
 	$(window).on('resize', function() {
 		headerHeight = header.outerHeight();
 
-		if (scroll >= headerHeight) {
+		if (scroll >= headerOffset + headerHeight) {
 			header.css('top', -headerHeight + 'px');
 			body.css('padding-top', headerHeight + 'px');
 		}
@@ -663,6 +664,11 @@ AOS.init({
 		var grid = $('.__js_projects-grid').isotope({
 			itemSelector: '.__js_masonry-item',
 			layoutMode: 'packery',
+			getSortData: {
+        order: '[data-order]',
+      },
+      sortBy: 'order',
+      //sortAscending: false,
 			packery: {
 				gutter: 0
 			},
@@ -912,7 +918,7 @@ AOS.init({
 		if(footer.length !== 0) {
 			if (footerHeight <= $(window).height()) {
 				var leftValue = footerParent.css('padding-left');
-				footer.css({ 'position': 'fixed', 'left': leftValue, 'right': '0', 'bottom': '0'});
+				footer.css({ 'position': 'fixed', 'left': leftValue, 'right': '0', 'bottom': '0', 'z-index': '-1'});
 				body.css('padding-bottom', footerHeight);
 			} else {
 				body.css('padding-bottom', '0');
