@@ -7,59 +7,23 @@
 
 	&--white {
 		border: none !important;
+		background-color: transparent;
 
-		.header__inner {
-			position: relative;
-
+		#{$self}__inner {
 			&::after {
-				content: "";
-				position: absolute;
-				bottom: 0;
-				left: 15px;
-				right: 15px;
-				border-top: solid 1px rgba($color-default-white, 0.2);
-			}
-		}
-
-		#{$self}__lang-switcher {
-			@include media(xl) {
-				margin-right: 5.41vw;
+				display: none;
 			}
 		}
 
 		.logo {
-			&__text {
+			&__large,
+			&__small {
 				color: $color-default-white;
 			}
 
 			&[href]:hover,
 			&[href]:focus {
 				//color: $color-orange;
-			}
-		}
-
-		.lang-switcher {
-			&__link {
-				color: $color-default-white;
-
-				&:hover,
-				&:focus {
-					//color: $color-orange;
-				}
-			}
-		}
-
-		.header-search {
-			&__toggle {
-				svg {
-					fill: $color-default-white;
-				}
-				&:hover,
-				&:focus {
-					svg {
-						//fill: $color-orange;
-					}
-				}
 			}
 		}
 
@@ -73,7 +37,7 @@
 			&:focus {
 				&::before,
 				&::after {
-					//border-top-color: $color-orange;
+					border-top-color: $color-yellow;
 				}
 			}
 		}
@@ -86,26 +50,40 @@
 
 				&:hover,
 				&:focus {
-					//color: $color-orange;
+					color: $color-yellow;
 				}
 			}
 
 			&__item {
 				&--current {
 					#{$navigation}__link {
-						//color: $color-orange !important;
+						color: $color-yellow !important;
 					}
 				}
 			}
 		}
-	}
 
-	&--absolute {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 2;
+		@include media(lg) {
+			.social {
+				&__link {
+					svg {
+						fill: $color-default-white;
+					}
+
+					&:focus {
+						svg {
+							fill: $color-yellow;
+						}
+					}
+
+					@include hover {
+						svg {
+							fill: $color-yellow;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	&--intro {
@@ -133,10 +111,34 @@
 
 			&__large {
 				font-size: 20px;
+				color: $color-default-black;
 			}
 
 			&__small {
 				font-size: 9px;
+				color: $color-default-black;
+			}
+		}
+
+		@include media(lg) {
+			.social {
+				&__link {
+					svg {
+						fill: $color-default-black;
+					}
+
+					&:focus {
+						svg {
+							fill: $color-yellow;
+						}
+					}
+
+					@include hover {
+						svg {
+							fill: $color-yellow;
+						}
+					}
+				}
 			}
 		}
 
@@ -151,9 +153,37 @@
 			}
 		}
 
-		.navigation__dropdown {
-			@include media(lg) {
-				bottom: -25px;
+		.navigation {
+			$navigation: &;
+
+			&__link {
+				color: $color-default-black;
+
+				&:hover,
+				&:focus {
+					color: $color-yellow;
+				}
+			}
+
+			&__item {
+				&--current {
+					#{$navigation}__link {
+						color: $color-yellow !important;
+					}
+				}
+			}
+
+			&__dropdown {
+				@include media(lg) {
+					bottom: -25px;
+				}
+			}
+		}
+
+		.menu-toggle {
+			&::before,
+			&::after {
+				border-top: solid 3px $color-default-black;
 			}
 		}
 	}

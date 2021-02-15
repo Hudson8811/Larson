@@ -9,7 +9,8 @@
 		}
 	}
 
-	&--menu {
+	&--menu,
+	&--line {
 		display: flex;
 		flex-wrap: wrap;
 

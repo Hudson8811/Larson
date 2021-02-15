@@ -14,10 +14,10 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/main.css">
-  <title>Larson Interior Studio | Team</title>
+  <title>Larson Interior Studio | Home Grid</title>
 </head>
 
-<body class="webpage">
+<body class="webpage webpage--home-grid">
   <div style="display: none">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <symbol id="facebook" viewBox="0 0 64 64">
@@ -89,10 +89,10 @@
     </svg>
   </div>
   <div class="animsition">
-    <header class="header __js_fixed-header">
+    <header class="header header--white __js_fixed-header">
       <div class="header__inner">
         <!-- Logo-->
-        <a class="header__logo logo animsition-link" href="home-default.html">
+        <a class="header__logo logo">
           <span class="logo__large">Larson</span>
           <span class="logo__small">Architecture studio</span>
         </a>
@@ -103,7 +103,7 @@
       </div>
     </header>
     <!-- Site menu-->
-    <div class="mobile-canvas __js_mobile-canvas">
+    <div class="mobile-canvas mobile-canvas--social __js_mobile-canvas">
       <button class="mobile-canvas__close" type="button">
         <svg width="24" height="24">
           <use xlink:href="#close"></use>
@@ -124,8 +124,8 @@
       </ul>
       <nav class="mobile-canvas__nav navigation">
         <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link animsition-link" href="home-default.html">Home</a>
+          <li class="navigation__item navigation__item--current">
+            <a class="navigation__link" href="home-default.html">Home</a>
             <div class="navigation__dropdown navigation__dropdown--columns">
               <div class="navigation__dropdown-wrapper">
                 <div class="navigation__dropdown-column">
@@ -140,8 +140,8 @@
                     <li class="navigation__dropdown-item">
                       <a class="animsition-link" href="home-interior.html">Home Interior</a>
                     </li>
-                    <li class="navigation__dropdown-item">
-                      <a class="animsition-link" href="home-grid.html">Home Grid</a>
+                    <li class="navigation__dropdown-item navigation__dropdown-item--current">
+                      <a>Home Grid</a>
                     </li>
                     <li class="navigation__dropdown-item">
                       <a class="animsition-link" href="home-parallax.html">Home Parallax</a>
@@ -177,8 +177,8 @@
               </div>
             </div>
           </li>
-          <li class="navigation__item navigation__item--current">
-            <a class="navigation__link" href="about.html">About</a>
+          <li class="navigation__item">
+            <a class="navigation__link animsition-link" href="about.html">About</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link animsition-link" href="projects-grid.html">Projects</a>
@@ -292,13 +292,12 @@
               </div>
             </div>
           </li>
-          <li class="navigation__item navigation__item--current">
-            <a class="navigation__link" href="contact.html">Contact</a>
+          <li class="navigation__item">
+            <a class="navigation__link animsition-link" href="contact.html">Contact</a>
           </li>
         </ul>
       </nav>
       <div class="mobile-canvas__bottom">
-        <a class="mobile-canvas__phone" href="tel:+72126742510">+7 (212) 674-25-10</a>
         <div class="mobile-canvas__copy">
           © 2021 <span>Larson.</span> All Rights Reserved.
           <br>Development by <span>Paul Studio</span>
@@ -341,400 +340,129 @@
       </div>
     </div>
     <main>
-      <article class="article">
-        <header class="article__header">
-          <div class="container">
-            <h1 class="article__heading heading heading--size-large">Meet our highly
-              <br>
-              <span class="color-yellow">professional</span> team
-            </h1>
-          </div>
-        </header>
-        <div class="article__main container">
-          <ul class="team-list row">
-            <li class="team-list__item col-12 col-md-6 col-lg-4">
-              <div class="card card--team" tabindex="0">
-                <div class="card__image">
-                  <img src="img/picture/team/1.jpg" srcset="img/picture/team/1@2x.jpg" width="350" height="530" alt="">
-                </div>
+      <div class="projects-grid">
+        <div class="projects-grid__inner container">
+          <ul class="projects-grid__list row">
+            <li class="projects-grid__item col-md-6 col-lg-4 col-xl-3">
+              <a class="card card--transparent" href="projects-detail.html">
                 <div class="card__content">
-                  <h3 class="card__heading">Jack WIlshere</h3>
-                  <div class="card__text">CEO / Founder</div>
-                  <div class="card__bottom">
-                    <!-- Social-->
-                    <ul class="card__social social">
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="facebook icon">
-                            <use xlink:href="#facebook"></use>
-                          </svg>
-                          <span class="visually-hidden">facebook</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="twitter icon">
-                            <use xlink:href="#twitter"></use>
-                          </svg>
-                          <span class="visually-hidden">twitter</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="linkedin-original icon">
-                            <use xlink:href="#linkedin-original"></use>
-                          </svg>
-                          <span class="visually-hidden">linkedin-original</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <div class="card__tag">Architecture</div>
+                  <h3 class="card__heading">House in Forest</h3>
+                  <div class="card__text">Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007</div>
                 </div>
-              </div>
+              </a>
             </li>
-            <li class="team-list__item col-12 col-md-6 col-lg-4">
-              <div class="card card--team" tabindex="0">
-                <div class="card__image">
-                  <img src="img/picture/team/2.jpg" srcset="img/picture/team/2@2x.jpg" width="350" height="530" alt="">
-                </div>
+            <li class="projects-grid__item col-md-6 col-lg-4 col-xl-3">
+              <a class="card card--transparent" href="projects-detail.html">
                 <div class="card__content">
-                  <h3 class="card__heading">Jack WIlshere</h3>
-                  <div class="card__text">CEO / Founder</div>
-                  <div class="card__bottom">
-                    <!-- Social-->
-                    <ul class="card__social social">
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="facebook icon">
-                            <use xlink:href="#facebook"></use>
-                          </svg>
-                          <span class="visually-hidden">facebook</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="twitter icon">
-                            <use xlink:href="#twitter"></use>
-                          </svg>
-                          <span class="visually-hidden">twitter</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="linkedin-original icon">
-                            <use xlink:href="#linkedin-original"></use>
-                          </svg>
-                          <span class="visually-hidden">linkedin-original</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <div class="card__tag">Architecture</div>
+                  <h3 class="card__heading">No 202 Apartment</h3>
+                  <div class="card__text">Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007</div>
                 </div>
-              </div>
+              </a>
             </li>
-            <li class="team-list__item col-12 col-md-6 col-lg-4">
-              <div class="card card--team" tabindex="0">
-                <div class="card__image">
-                  <img src="img/picture/team/3.jpg" srcset="img/picture/team/3@2x.jpg" width="350" height="530" alt="">
-                </div>
+            <li class="projects-grid__item col-md-6 col-lg-4 col-xl-3">
+              <a class="card card--transparent" href="projects-detail.html">
                 <div class="card__content">
-                  <h3 class="card__heading">Jack WIlshere</h3>
-                  <div class="card__text">CEO / Founder</div>
-                  <div class="card__bottom">
-                    <!-- Social-->
-                    <ul class="card__social social">
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="facebook icon">
-                            <use xlink:href="#facebook"></use>
-                          </svg>
-                          <span class="visually-hidden">facebook</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="twitter icon">
-                            <use xlink:href="#twitter"></use>
-                          </svg>
-                          <span class="visually-hidden">twitter</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="linkedin-original icon">
-                            <use xlink:href="#linkedin-original"></use>
-                          </svg>
-                          <span class="visually-hidden">linkedin-original</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <div class="card__tag">Interior</div>
+                  <h3 class="card__heading">Living Room Interior Design</h3>
+                  <div class="card__text">Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007</div>
                 </div>
-              </div>
+              </a>
             </li>
-            <li class="team-list__item col-12 col-md-6 col-lg-4">
-              <div class="card card--team" tabindex="0">
-                <div class="card__image">
-                  <img src="img/picture/team/4.jpg" srcset="img/picture/team/4@2x.jpg" width="350" height="530" alt="">
-                </div>
+            <li class="projects-grid__item col-md-6 col-lg-4 col-xl-3">
+              <a class="card card--transparent" href="projects-detail.html">
                 <div class="card__content">
-                  <h3 class="card__heading">Jack WIlshere</h3>
-                  <div class="card__text">CEO / Founder</div>
-                  <div class="card__bottom">
-                    <!-- Social-->
-                    <ul class="card__social social">
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="facebook icon">
-                            <use xlink:href="#facebook"></use>
-                          </svg>
-                          <span class="visually-hidden">facebook</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="twitter icon">
-                            <use xlink:href="#twitter"></use>
-                          </svg>
-                          <span class="visually-hidden">twitter</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="linkedin-original icon">
-                            <use xlink:href="#linkedin-original"></use>
-                          </svg>
-                          <span class="visually-hidden">linkedin-original</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <div class="card__tag">Exterior</div>
+                  <h3 class="card__heading">Redesign Exterior</h3>
+                  <div class="card__text">Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007</div>
                 </div>
-              </div>
+              </a>
             </li>
-            <li class="team-list__item col-12 col-md-6 col-lg-4">
-              <div class="card card--team" tabindex="0">
-                <div class="card__image">
-                  <img src="img/picture/team/5.jpg" srcset="img/picture/team/5@2x.jpg" width="350" height="530" alt="">
-                </div>
+            <li class="projects-grid__item col-md-6 col-lg-4 col-xl-3">
+              <a class="card card--transparent" href="projects-detail.html">
                 <div class="card__content">
-                  <h3 class="card__heading">Jack WIlshere</h3>
-                  <div class="card__text">CEO / Founder</div>
-                  <div class="card__bottom">
-                    <!-- Social-->
-                    <ul class="card__social social">
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="facebook icon">
-                            <use xlink:href="#facebook"></use>
-                          </svg>
-                          <span class="visually-hidden">facebook</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="twitter icon">
-                            <use xlink:href="#twitter"></use>
-                          </svg>
-                          <span class="visually-hidden">twitter</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="linkedin-original icon">
-                            <use xlink:href="#linkedin-original"></use>
-                          </svg>
-                          <span class="visually-hidden">linkedin-original</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <div class="card__tag">Interior</div>
+                  <h3 class="card__heading">Bauhaus Architecture Studio</h3>
+                  <div class="card__text">Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007</div>
                 </div>
-              </div>
+              </a>
             </li>
-            <li class="team-list__item col-12 col-md-6 col-lg-4">
-              <div class="card card--team" tabindex="0">
-                <div class="card__image">
-                  <img src="img/picture/team/3.jpg" srcset="img/picture/team/3@2x.jpg" width="350" height="530" alt="">
-                </div>
+            <li class="projects-grid__item col-md-6 col-lg-4 col-xl-3">
+              <a class="card card--transparent" href="projects-detail.html">
                 <div class="card__content">
-                  <h3 class="card__heading">Jack WIlshere</h3>
-                  <div class="card__text">CEO / Founder</div>
-                  <div class="card__bottom">
-                    <!-- Social-->
-                    <ul class="card__social social">
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="facebook icon">
-                            <use xlink:href="#facebook"></use>
-                          </svg>
-                          <span class="visually-hidden">facebook</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="twitter icon">
-                            <use xlink:href="#twitter"></use>
-                          </svg>
-                          <span class="visually-hidden">twitter</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="linkedin-original icon">
-                            <use xlink:href="#linkedin-original"></use>
-                          </svg>
-                          <span class="visually-hidden">linkedin-original</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <div class="card__tag">Architecture</div>
+                  <h3 class="card__heading">Luthor’s Villa</h3>
+                  <div class="card__text">Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007</div>
                 </div>
-              </div>
+              </a>
             </li>
-            <li class="team-list__item col-12 col-md-6 col-lg-4">
-              <div class="card card--team" tabindex="0">
-                <div class="card__image">
-                  <img src="img/picture/team/1.jpg" srcset="img/picture/team/1@2x.jpg" width="350" height="530" alt="">
-                </div>
+            <li class="projects-grid__item col-md-6 col-lg-4 col-xl-3">
+              <a class="card card--transparent" href="projects-detail.html">
                 <div class="card__content">
-                  <h3 class="card__heading">Jack WIlshere</h3>
-                  <div class="card__text">CEO / Founder</div>
-                  <div class="card__bottom">
-                    <!-- Social-->
-                    <ul class="card__social social">
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="facebook icon">
-                            <use xlink:href="#facebook"></use>
-                          </svg>
-                          <span class="visually-hidden">facebook</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="twitter icon">
-                            <use xlink:href="#twitter"></use>
-                          </svg>
-                          <span class="visually-hidden">twitter</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="linkedin-original icon">
-                            <use xlink:href="#linkedin-original"></use>
-                          </svg>
-                          <span class="visually-hidden">linkedin-original</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <div class="card__tag">Interior</div>
+                  <h3 class="card__heading">IBM Office</h3>
+                  <div class="card__text">Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007</div>
                 </div>
-              </div>
+              </a>
             </li>
-            <li class="team-list__item col-12 col-md-6 col-lg-4">
-              <div class="card card--team" tabindex="0">
-                <div class="card__image">
-                  <img src="img/picture/team/4.jpg" srcset="img/picture/team/4@2x.jpg" width="350" height="530" alt="">
-                </div>
+            <li class="projects-grid__item col-md-6 col-lg-4 col-xl-3">
+              <a class="card card--transparent" href="projects-detail.html">
                 <div class="card__content">
-                  <h3 class="card__heading">Jack WIlshere</h3>
-                  <div class="card__text">CEO / Founder</div>
-                  <div class="card__bottom">
-                    <!-- Social-->
-                    <ul class="card__social social">
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="facebook icon">
-                            <use xlink:href="#facebook"></use>
-                          </svg>
-                          <span class="visually-hidden">facebook</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="twitter icon">
-                            <use xlink:href="#twitter"></use>
-                          </svg>
-                          <span class="visually-hidden">twitter</span>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a class="social__link" href="#" target="_blank">
-                          <svg width="20" height="20" aria-label="linkedin-original icon">
-                            <use xlink:href="#linkedin-original"></use>
-                          </svg>
-                          <span class="visually-hidden">linkedin-original</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <div class="card__tag">Architecture</div>
+                  <h3 class="card__heading">Architecture</h3>
+                  <div class="card__text">Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007</div>
                 </div>
-              </div>
+              </a>
             </li>
-            <li class="team-list__item col-12 col-md-6 col-lg-4">
-              <a class="card card--send" href="#">
-                <div class="card__send-text">submit your resume</div>
+            <li class="projects-grid__item col-md-6 col-lg-4 col-xl-3">
+              <a class="card card--transparent" href="projects-detail.html">
+                <div class="card__content">
+                  <div class="card__tag">Architecture</div>
+                  <h3 class="card__heading">Marton Hotel</h3>
+                  <div class="card__text">Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007</div>
+                </div>
+              </a>
+            </li>
+            <li class="projects-grid__item col-md-6 col-lg-4 col-xl-3">
+              <a class="card card--transparent" href="projects-detail.html">
+                <div class="card__content">
+                  <div class="card__tag">Architecture</div>
+                  <h3 class="card__heading">Luthor’s Villa</h3>
+                  <div class="card__text">Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007</div>
+                </div>
+              </a>
+            </li>
+            <li class="projects-grid__item col-md-6 col-lg-4 col-xl-3">
+              <a class="card card--transparent" href="projects-detail.html">
+                <div class="card__content">
+                  <div class="card__tag">Exterior</div>
+                  <h3 class="card__heading">No 8 Trump Apartment</h3>
+                  <div class="card__text">Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007</div>
+                </div>
+              </a>
+            </li>
+            <li class="projects-grid__item col-md-6 col-lg-4 col-xl-3">
+              <a class="card card--transparent" href="projects-detail.html">
+                <div class="card__content">
+                  <div class="card__tag">Residental</div>
+                  <h3 class="card__heading">Recntagle House</h3>
+                  <div class="card__text">Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007</div>
+                </div>
               </a>
             </li>
           </ul>
         </div>
-      </article>
+      </div>
     </main>
-    <footer class="footer __js_fixed-footer">
+    <footer class="footer footer--lite footer--white">
       <div class="footer__inner container">
         <div class="row">
-          <div class="footer__column col-12 col-sm">
-            <a class="footer__logo logo--borderless logo animsition-link" href="home-default.html">
-              <span class="logo__large">Larson</span>
-              <span class="logo__small">Architecture studio</span>
-            </a>
+          <div class="col-6">
+            <div class="footer__copy">© LarsonR 2021.</div>
           </div>
-          <!-- Copyrights-->
-          <div class="footer__column col-12 col-lg order-2 order-lg-0">
-            <div class="footer__copyright">© Larson. 2020
-              <br> All Rights Resevered
-            </div>
-            <!-- Footer menu-->
-          </div>
-          <div class="footer__column col-6 col-sm">
-            <ul class="footer__column-menu">
-              <li class="footer__column-item">
-                <a class="footer__column-link animsition-link" href="#">Site Map</a>
-              </li>
-              <li class="footer__column-item">
-                <a class="footer__column-link animsition-link" href="#">Terms &amp; Conditions</a>
-              </li>
-              <li class="footer__column-item">
-                <a class="footer__column-link animsition-link" href="#">Privacy Policy</a>
-              </li>
-              <li class="footer__column-item">
-                <a class="footer__column-link animsition-link" href="#">Help</a>
-              </li>
-              <li class="footer__column-item">
-                <a class="footer__column-link animsition-link" href="#">Affiliatep</a>
-              </li>
-            </ul>
-          </div>
-          <!-- Footer menu-->
-          <div class="footer__column col-6 col-sm">
-            <ul class="footer__column-menu">
-              <li class="footer__column-item">
-                <a class="footer__column-link animsition-link" href="#">Our Location</a>
-              </li>
-              <li class="footer__column-item">
-                <a class="footer__column-link animsition-link" href="#">Career</a>
-              </li>
-              <li class="footer__column-item footer__column-item--current">
-                <a class="footer__column-link">About</a>
-              </li>
-              <li class="footer__column-item footer__column-item--current">
-                <a class="footer__column-link">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__column col-12 col-lg-1 order-md-1 order-lg-0">
-            <ul class="footer__lang-switcher lang-switcher lang-switcher--footer">
+          <div class="col-6 d-flex">
+            <ul class="footer__lang-switcher lang-switcher lang-switcher--line">
               <li class="lang-switcher__item">
                 <a class="lang-switcher__link lang-switcher__link--current">Eng</a>
               </li>
@@ -743,43 +471,6 @@
               </li>
               <li class="lang-switcher__item">
                 <a class="lang-switcher__link" href="#">Ger</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__column footer__column col-12 col-md col-lg-3 col-xl-2">
-            <!-- Social-->
-            <ul class="footer__social social">
-              <li class="social__item">
-                <a class="social__link" href="#" target="_blank">
-                  <svg width="20" height="20" aria-label="facebook icon">
-                    <use xlink:href="#facebook"></use>
-                  </svg>
-                  <span class="visually-hidden">facebook</span>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link" href="#" target="_blank">
-                  <svg width="20" height="20" aria-label="twitter icon">
-                    <use xlink:href="#twitter"></use>
-                  </svg>
-                  <span class="visually-hidden">twitter</span>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link" href="#" target="_blank">
-                  <svg width="20" height="20" aria-label="google-plus icon">
-                    <use xlink:href="#google-plus"></use>
-                  </svg>
-                  <span class="visually-hidden">google-plus</span>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link" href="#" target="_blank">
-                  <svg width="20" height="20" aria-label="linkedin-original icon">
-                    <use xlink:href="#linkedin-original"></use>
-                  </svg>
-                  <span class="visually-hidden">linkedin-original</span>
-                </a>
               </li>
             </ul>
           </div>

@@ -49,6 +49,14 @@
 		transform: translateX(0);
 	}
 
+	&--social {
+		#{$self}__social {
+			@include media(lg) {
+				display: flex;
+			}
+		}
+	}
+
 	&__wrapper {
 		//max-height: //280px;
 		//height: 54vh; //330px;
