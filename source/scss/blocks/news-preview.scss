@@ -1,6 +1,7 @@
 .news-preview {
 	$self: &;
-	overflow: hidden;
+	position: relative;
+	overflow: hidden !important;
 
 	&:focus {
 		outline: none;

@@ -1,0 +1,42 @@
+section.featured-projects
+	- let fpPath = 'img/picture/featured-projects/';
+	.featured-projects__inner.container
+		header.featured-projects__header
+			h2.featured-projects__heading.heading Featured projects
+			a.featured-projects__more.more(href= isDark ? URLS.news.listingDark : URLS.news.listing) View all projects
+				+icon('chevron-right')(width="20", height="20")
+		.row
+			.col-12.col-md-6.col-lg-4(data-aos="fade")
+				.news-preview(tabindex="0")
+					.news-preview__image
+						img(src= fpPath + '1.jpg', srcset= fpPath + '1@2x.jpg', width="600", height="1176", alt="")
+					.news-preview__content
+						h3.news-preview__heading Spain <br>Working <br>Building
+						.news-preview__text Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&B, education, communication.
+						a.news-preview__btn(href= isDark ? URLS.news.postDark : URLS.news.post) See project
+			.col-12.col-md-6.col-lg-8(data-aos="fade")
+				.row
+					.col-12.col-md-6(data-aos="fade")
+						.news-preview(tabindex="0")
+							.news-preview__image
+								img(src= fpPath + '2.jpg', srcset= fpPath + '2@2x.jpg', width="600", height="573", alt="")
+							.news-preview__content
+								h3.news-preview__heading Spain <br>Working <br>Building
+								.news-preview__text Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&B, education, communication.
+								a.news-preview__btn(href= isDark ? URLS.news.postDark : URLS.news.post) See project
+					.col-12.col-md-6(data-aos="fade")
+						.news-preview(tabindex="0")
+							.news-preview__image
+								img(src= fpPath + '3.jpg', srcset= fpPath + '3@2x.jpg', width="600", height="573", alt="")
+							.news-preview__content
+								h3.news-preview__heading Spain <br>Working <br>Building
+								.news-preview__text Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&B, education, communication.
+								a.news-preview__btn(href= isDark ? URLS.news.postDark : URLS.news.post) See project
+
+				.news-preview(tabindex="0")
+					.news-preview__image
+						img(src= fpPath + '4.jpg', srcset= fpPath + '4@2x.jpg', width="1227", height="573", alt="")
+					.news-preview__content
+						h3.news-preview__heading Spain <br>Working <br>Building
+						.news-preview__text Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&B, education, communication.
+						a.news-preview__btn(href= isDark ? URLS.news.postDark : URLS.news.post) See project

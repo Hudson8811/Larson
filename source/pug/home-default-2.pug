@@ -1,9 +1,9 @@
 extends templates/main
 block variables
-	- let pageTitle = TITLE_PART + ' | Home Default';
+	- let pageTitle = TITLE_PART + ' | Home Default 2';
 	- let isHome = true; //- Если true то логотип не будет ссылкой
 	- let isDark = false;
-	- let currentPage = 1.01; // Для каждой страницы уникален. Номер смотреть в файле pug/templates/_vars.pug в массивах с пунктами меню
+	- let currentPage = 1.02; // Для каждой страницы уникален. Номер смотреть в файле pug/templates/_vars.pug в массивах с пунктами меню
 	- let currentSection = 1; // // Для каждой раздела уникален. Home -1, projects - 2, news - 3, pages - 4
 	- let isRevolution = true; // Если true, то подключаем скрипты слайдера
 
@@ -12,14 +12,13 @@ block header
 	//-include modules/menu
 
 block content
-	include modules/main-slider
-	include modules/about-section
-	include modules/services-section
+	include modules/main-slider-2
+	include modules/featured-projects
+	include modules/services
+	include modules/team-section
 	include modules/statistics
-	include modules/latest-projects
-	include modules/partners
-	include modules/reviews-carousel
 	include modules/latest-news
+	include modules/partners
 
 
 block footer

@@ -85,6 +85,7 @@ main {
   position: relative;
   z-index: 1;
   flex-grow: 1;
+  border-bottom: solid 1px transparent;
   background-color: #ffffff;
 }
 
@@ -1364,47 +1365,25 @@ textarea.custom-input {
   background-color: #ffffff;
 }
 
-.webpage__about-section, .webpage__services-section, .webpage__statistics, .webpage__latest-projects, .webpage__partners, .webpage__reviews-carousel, .webpage__latest-news, .webpage__services-provided, .webpage__about-block {
+.webpage__about-section, .webpage__services-section, .webpage__statistics, .webpage__latest-projects, .webpage__partners, .webpage__reviews-carousel, .webpage__latest-news, .webpage__services-provided, .webpage__about-block, .webpage__main-slider, .webpage__featured-projects, .webpage__services, .webpage__team-section {
   margin-bottom: 80px;
 }
 
 @media (min-width: 768px) {
-  .webpage__about-section, .webpage__services-section, .webpage__statistics, .webpage__latest-projects, .webpage__partners, .webpage__reviews-carousel, .webpage__latest-news, .webpage__services-provided, .webpage__about-block {
+  .webpage__about-section, .webpage__services-section, .webpage__statistics, .webpage__latest-projects, .webpage__partners, .webpage__reviews-carousel, .webpage__latest-news, .webpage__services-provided, .webpage__about-block, .webpage__main-slider, .webpage__featured-projects, .webpage__services, .webpage__team-section {
     margin-bottom: 120px;
   }
 }
 
 @media (min-width: 992px) {
-  .webpage__about-section, .webpage__services-section, .webpage__statistics, .webpage__latest-projects, .webpage__partners, .webpage__reviews-carousel, .webpage__latest-news, .webpage__services-provided, .webpage__about-block {
+  .webpage__about-section, .webpage__services-section, .webpage__statistics, .webpage__latest-projects, .webpage__partners, .webpage__reviews-carousel, .webpage__latest-news, .webpage__services-provided, .webpage__about-block, .webpage__main-slider, .webpage__featured-projects, .webpage__services, .webpage__team-section {
     margin-bottom: 160px;
   }
 }
 
 @media (min-width: 1200px) {
-  .webpage__about-section, .webpage__services-section, .webpage__statistics, .webpage__latest-projects, .webpage__partners, .webpage__reviews-carousel, .webpage__latest-news, .webpage__services-provided, .webpage__about-block {
+  .webpage__about-section, .webpage__services-section, .webpage__statistics, .webpage__latest-projects, .webpage__partners, .webpage__reviews-carousel, .webpage__latest-news, .webpage__services-provided, .webpage__about-block, .webpage__main-slider, .webpage__featured-projects, .webpage__services, .webpage__team-section {
     margin-bottom: 210px;
-  }
-}
-
-.webpage__main-slider {
-  margin-bottom: 80px;
-}
-
-@media (min-width: 768px) {
-  .webpage__main-slider {
-    margin-bottom: 120px;
-  }
-}
-
-@media (min-width: 992px) {
-  .webpage__main-slider {
-    margin-bottom: 160px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .webpage__main-slider {
-    margin-bottom: 232px;
   }
 }
 
@@ -2465,7 +2444,8 @@ textarea.custom-input {
 
 /* News preview card */
 .news-preview {
-  overflow: hidden;
+  position: relative;
+  overflow: hidden !important;
 }
 
 .news-preview:focus {
@@ -3264,6 +3244,55 @@ textarea.custom-input {
 @media (min-width: 1200px) {
   .projects-carousel__prev {
     left: 48px;
+  }
+}
+
+/* Featured projects block */
+@media (min-width: 1200px) {
+  .featured-projects__inner {
+    max-width: 1830px;
+  }
+}
+
+.featured-projects__header {
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .featured-projects__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .featured-projects__header {
+    margin-bottom: 70px;
+  }
+}
+
+.featured-projects__heading {
+  margin: 0 0 16px;
+}
+
+@media (min-width: 768px) {
+  .featured-projects__heading {
+    margin-bottom: 0;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .featured-projects__more {
+    flex-shrink: 0;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .featured-projects__more {
+    margin-left: 45px;
   }
 }
 
