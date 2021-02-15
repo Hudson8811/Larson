@@ -1,6 +1,45 @@
 .footer {
 	$self: &;
 
+	&--lite {
+		#{$self}__inner {
+			padding-top: 46px;
+			padding-bottom: 46px;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		#{$self}__lang-switcher {
+			margin-left: auto;
+		}
+	}
+
+	&--white {
+		#{$self}__copy {
+			color: $color-default-white;
+		}
+
+		.lang-switcher {
+			&__link {
+				color: $color-default-white;
+
+				&--current {
+					color: $color-yellow;
+				}
+
+				&:focus {
+					color: $color-yellow;
+				}
+
+				@include hover {
+					color: $color-yellow;
+				}
+			}
+		}
+	}
+
 	&__inner {
 		position: relative;
 		padding-top: 32px;
