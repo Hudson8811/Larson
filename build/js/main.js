@@ -668,8 +668,8 @@ AOS.init({
 			},
 		});
 
-		var grid2 = $('.__js_news-list-filter').isotope({
-			itemSelector: '.__js_news-list-item',
+		var grid2 = $('.__js_news-grid').isotope({
+			itemSelector: '.__js_masonry-item',
 			layoutMode: 'packery',
 			packery: {
 				gutter: 0
