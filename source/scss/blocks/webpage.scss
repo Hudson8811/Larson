@@ -29,7 +29,8 @@
 	&__main-slider,
 	&__featured-projects,
 	&__services,
-	&__team-section {
+	&__team-section,
+	&__hero {
 		margin-bottom: 80px;
 
 		@include media(md) {
