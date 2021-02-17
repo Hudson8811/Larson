@@ -802,15 +802,11 @@ AOS.init({
 	}
 
 	function setDark() {
-		$('.header-3').addClass('header-3--dark');
-		$('.footer-3').addClass('footer-3--dark');
-		$('#pp-nav').addClass('dark');
+		$('.webpage--home-parallax').addClass('dark');
 	}
 
 	function removeDark() {
-		$('.header-3').removeClass('header-3--dark');
-		$('.footer-3').removeClass('footer-3--dark');
-		$('#pp-nav').removeClass('dark');
+		$('.webpage--home-parallax').removeClass('dark');
 	}
 })();
 

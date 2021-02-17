@@ -311,21 +311,18 @@ textarea.custom-input {
 }
 
 #pp-nav.dark ul li a span {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 #pp-nav ul li {
-  width: 80px;
+  width: 11px;
+  height: 11px;
   margin: 0;
-}
-
-#pp-nav ul li:hover a.active span {
-  height: 1px !important;
-  border-radius: 0 !important;
 }
 
 #pp-nav ul li:hover a span {
   margin: 0;
+  background-color: #fcd54c;
 }
 
 #pp-nav ul li + li {
@@ -333,11 +330,9 @@ textarea.custom-input {
 }
 
 #pp-nav ul li a span {
-  width: 30px;
-  height: 1px;
-  border-radius: 0;
-  clip: unset;
-  background-color: #ffffff;
+  width: 11px;
+  height: 11px;
+  background-color: #000000;
   left: unset;
   right: 0;
   border: none;
@@ -345,9 +340,8 @@ textarea.custom-input {
 }
 
 #pp-nav ul li a.active span {
-  margin: 0;
-  width: 80px;
-  transition: width 0.3s ease;
+  background-color: #fcd54c;
+  transition: background-color 0.3s ease;
 }
 
 /* 1.2  Typography */
@@ -1427,6 +1421,30 @@ textarea.custom-input {
 
 .webpage--home-grid main {
   background-color: transparent;
+}
+
+.webpage--home-parallax .header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+.webpage--home-parallax .header .social__link svg {
+  fill: #000000;
+}
+
+.webpage--home-parallax main {
+  min-height: 100vh;
+}
+
+.webpage--home-parallax .footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .webpage__about-section, .webpage__services-section, .webpage__statistics, .webpage__latest-projects, .webpage__partners, .webpage__reviews-carousel, .webpage__latest-news, .webpage__services-provided, .webpage__about-block {
@@ -6864,15 +6882,11 @@ textarea.custom-input {
   min-height: 100vh;
   overflow-y: auto;
   color: #000000;
-  background-image: url("../img/picture/home-parallax/item-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .parallax {
-    background-image: url("../img/picture/home-parallax/item-1@2x.jpg");
-  }
+  /*@include retina {
+		background-image: url("../img/picture/home-parallax/item-1@2x.jpg");
+	}*/
 }
 
 .parallax .scroll-wrap {

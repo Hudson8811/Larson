@@ -195,23 +195,19 @@ textarea.custom-input {
 
 	&.dark {
 		ul li a span {
-			background-color: $color-default-black;
+			background-color: $color-default-white;
 		}
 	}
 
 	ul li {
-		width: 80px;
+		width: 11px;
+		height: 11px;
 		margin: 0;
 
 		&:hover a {
-			&.active span {
-				height: 1px !important;
-				border-radius: 0 !important;
-			}
-
 			span {
 				margin: 0;
-				//background-color: $color-orange;
+				background-color: $color-yellow3;
 			}
 		}
 
@@ -221,11 +217,9 @@ textarea.custom-input {
 
 		a {
 			span {
-				width: 30px;
-				height: 1px;
-				border-radius: 0;
-				clip: unset;
-				background-color: $color-default-white;
+				width: 11px;
+				height: 11px;
+				background-color: $color-default-black;
 				left: unset;
 				right: 0;
 				border: none;
@@ -233,10 +227,8 @@ textarea.custom-input {
 			}
 
 			&.active span {
-				margin: 0;
-				width: 80px;
-				//background-color: $color-orange--dark;
-				@include transition(width);
+				background-color: $color-yellow3;
+				@include transition(background-color);
 			}
 		}
 	}

@@ -2,13 +2,12 @@
 	min-height: 100vh;
 	overflow-y: auto;
 	color: $color-default-black;
-	background-image: url("../img/picture/home-parallax/item-1.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	@include retina {
+	/*@include retina {
 		background-image: url("../img/picture/home-parallax/item-1@2x.jpg");
-	}
+	}*/
 
 	.scroll-wrap {
 		display: flex;
