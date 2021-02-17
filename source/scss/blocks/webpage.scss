@@ -17,6 +17,32 @@
 		}
 	}
 
+	&--home-parallax {
+		.header {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: transparent;
+
+			.social__link svg {
+				fill: $color-default-black;
+			}
+		}
+
+		main {
+			min-height: 100vh;
+		}
+
+		.footer {
+			width: 100%;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+		}
+	}
+
 	&__about-section,
 	&__services-section,
 	&__statistics,
