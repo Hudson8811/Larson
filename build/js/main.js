@@ -249,7 +249,7 @@ AOS.init({
 	var headerHeight = header.outerHeight();
 	var scroll = $(window).scrollTop();
 	var isScroll = false;
-	var isAbsoluteHeader = header.hasClass('header--absolute');
+	var isNotStatic = header.hasClass('header--half') && $(window).width() >= mobileBreakpoint ? true : false;//(header.css('position') === 'absolute') || (header.css('position') === 'fixed') ? true : false;
 
 	$(window).on('scroll', function() {
 		scroll = $(window).scrollTop();
@@ -263,25 +263,32 @@ AOS.init({
 			if (!header.hasClass('is-fixed')) {
 				header.css({'top': -headerHeight + 'px', 'transform': 'translateY(' + headerHeight + 'px)'}).addClass('is-fixed');
 
-				if (!isAbsoluteHeader) {
+				if (!isNotStatic) {
 					body.css('padding-top', headerHeight + 'px');
 				}
 			}
 		} else {
 			isScroll = false;
 			header.removeClass(classes + ' is-fixed').removeAttr('style');
-			if (!isAbsoluteHeader) {
-				body.css('padding-top', 0);
+			body.css('padding-top', 0);
+
+			if (!isNotStatic) {
+				//body.css('padding-top', 0);
 			}
 		}
 	});
 
 	$(window).on('resize', function() {
 		headerHeight = header.outerHeight();
+		isNotStatic = header.hasClass('header--half') && $(window).width() >= mobileBreakpoint ? true : false;
 
-		if (scroll >= headerOffset + headerHeight) {
-			header.css('top', -headerHeight + 'px');
-			body.css('padding-top', headerHeight + 'px');
+		if (scroll >= headerOffset + headerHeight && isScroll) {
+			header.css({'top': -headerHeight + 'px', 'transform': 'translateY(' + headerHeight + 'px)'});
+			//body.css('padding-top', headerHeight + 'px');
+
+			if (!isNotStatic) {
+				body.css('padding-top', headerHeight + 'px');
+			}
 		}
 	});
 })();

@@ -90,6 +90,38 @@
 		background-color: transparent;
 	}
 
+	&--half {
+		@include media(xl) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			background-color: transparent;
+
+			#{$self}__logo {
+				margin-right: 6.25vw;
+			}
+
+			.navigation {
+				&__item {
+					margin-right: 2.7vw;
+				}
+			}
+
+			.mobile-canvas__phone {
+				display: none;
+			}
+		}
+
+		@include media(xxx) {
+			.navigation {
+				&__item {
+					margin-right: 52px;
+				}
+			}
+		}
+	}
+
 	&--fixed {
 		position: fixed;
 		top: 0;

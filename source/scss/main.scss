@@ -119,6 +119,9 @@
 /* About us block */
 @import "blocks/about-section";
 
+/* Hero block */
+@import "blocks/hero";
+
 /* Services block */
 @import "blocks/services-section";
 
@@ -143,6 +146,9 @@
 /* Latest news block */
 @import "blocks/projects-carousel";
 
+/* Featured projects block */
+@import "blocks/featured-projects";
+
 /* Project detail blocks */
 @import "blocks/projects-slider";
 @import "blocks/project-meta";
@@ -151,6 +157,9 @@
 @import "blocks/process";
 @import "blocks/services-provided";
 @import "blocks/architects";
+
+/* Services section */
+@import "blocks/services";
 
 /* Home Grid page blocks */
 @import "blocks/projects-grid";
