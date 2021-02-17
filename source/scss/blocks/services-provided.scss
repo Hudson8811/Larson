@@ -55,4 +55,50 @@
 			}
 		}
 	}
+
+	&__icon {
+		height: 60px;
+		margin-bottom: 20px;
+
+		@include media(md) {
+			margin-bottom: 40px;
+		}
+
+		svg {
+		}
+	}
+
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		margin-top: 32px;
+
+		@include text(20px, 1.15, $color-default-black);
+		font-weight: 600;
+
+		@include transition(color);
+
+		svg {
+			margin-left: 8px;
+
+			@include transition(fill);
+		}
+
+		&:focus {
+			outline: none;
+			color: $color-yellow;
+
+			svg {
+				fill: $color-yellow;
+			}
+		}
+
+		@include hover {
+			color: $color-yellow;
+
+			svg {
+				fill: $color-yellow;
+			}
+		}
+	}
 }

@@ -101,6 +101,12 @@
 /* 4.58 Coming soon */
 @import "blocks/coming-soon";
 
+/* Link with arrow */
+@import "blocks/link-arrow";
+
+/* Tab rev slider */
+@import "blocks/slide-tab";
+
 /* Statistics block */
 @import "blocks/card";
 
@@ -108,7 +114,7 @@
 @import "blocks/review-card";
 
 /* News preview card */
-@import "blocks/news-preview";
+@import "blocks/preview-card";
 
 /* About us block */
 @import "blocks/about-section";
@@ -146,6 +152,9 @@
 @import "blocks/services-provided";
 @import "blocks/architects";
 
+/* Home Grid page blocks */
+@import "blocks/projects-grid";
+
 /* Team list block */
 @import "blocks/team-list";
 
@@ -161,8 +170,22 @@
 @import "blocks/single-service-block";
 
 /* Feedback block */
-
 @import "blocks/feedback";
+
+/* Contact block */
+@import "blocks/contact-block";
+
+/* Block in About page */
+@import "blocks/about-block";
+
+/* Map block */
+@import "blocks/map";
+
+/* Video section in homepage */
+@import "blocks/video-section";
+
+/* Main slider */
+@import "blocks/main-slider";
 
 /* Article */
 @import "blocks/article";

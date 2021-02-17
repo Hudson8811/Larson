@@ -75,6 +75,7 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%;
+		padding: 60px 40px;
 		border: solid 1px $color-grey5;
 
 		@include transition(border-color);
@@ -96,6 +97,55 @@
 		}
 	}
 
+	&--transparent {
+		min-height: 340px;
+		border: solid 1px $color-default-white;
+
+		@include transition(border-color);
+
+		#{$self}__heading {
+			position: static;
+			font-size: 27px;
+			line-height: 1.29;
+		}
+
+		#{$self}__content {
+			padding: 24px 30px 4px;
+			justify-content: flex-end;
+		}
+
+		#{$self}__text {
+			position: absolute;
+			margin-bottom: 20px;
+		}
+
+		&:focus {
+			border-color: $color-yellow;
+
+			#{$self}__text {
+				position: static;
+				transition: transform 0.4s 0.4s ease, opacity 0.4s 0.4s ease;
+			}
+
+			#{$self}__heading {
+				//transition: transform 0.4s 0.2s ease !important;
+			}
+		}
+
+		@include hover {
+			border-color: $color-yellow;
+			transition: transform 0.4s 0.4s ease, opacity 0.4s 0.4s ease;
+
+			#{$self}__text {
+				position: static;
+			}
+
+			#{$self}__heading {
+				//transition: transform 0.4s 0.2s ease !important;
+			}
+		}
+	}
+
 	&:hover,
 	&:focus {
 		outline: none;
@@ -108,6 +158,12 @@
 			opacity: 1;
 			transform: translateY(0);
 			transition: transform 0.6s 0.4s ease, opacity 0.6s 0.4s ease;
+		}
+
+		#{$self}__tag {
+			color: $color-default-black;
+			transform: translateY(0);
+			transition: transform 0.5s ease;
 		}
 
 		#{$self}__heading {
@@ -127,6 +183,12 @@
 		#{$self}__bottom {
 			opacity: 1;
 		}
+	}
+
+	&__tag {
+		margin-bottom: 4px;
+		color: $color-default-white;
+		transform: translateY(-20px);
 	}
 
 	&__send-text {

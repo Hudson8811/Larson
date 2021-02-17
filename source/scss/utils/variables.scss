@@ -8,7 +8,7 @@ $color-default-black: #000000;
 //$color-main: #616161;
 //$color-dark: #141419;
 $color-smoky: #f1f1f1;
-//$color-smoky2: #fefefe;
+$color-smoky2: #f2f2f2;
 //$color-smoky3: #fbfaf6;
 
 $color-yellow: #fbc710;
@@ -24,6 +24,7 @@ $color-grey4: #c4c4c4;
 $color-grey5: #ababab;
 $color-grey6: #dcdcdc;
 $color-grey7: #c9c9c9;
+$color-grey8: #929292;
 $color-grey-76: #767676;
 $color-grey-c9: #c9c9c9;
 $color-grey-f4: #f4f4f4;
@@ -41,7 +42,7 @@ $color-base: $color-grey; // основной цвет текста, испол�
 //
 $fonts: "Gilroy" "gilroy-bold" 700 normal, "Gilroy" "gilroy-regular" 400 normal,
 	"Gilroy" "gilroy-regularitalic" 400 italic, "Swansea" "swansea" 400 normal,
-	"Gilroy" "gilroy-semibold" 600 normal,
+	"Swansea" "swansea-bold" 700 normal, "Gilroy" "gilroy-semibold" 600 normal,
 	"Gilroy" "gilroy-semibolditalic" 600 italic, "Work Sans" "worksans" 400 normal,
 	"Work Sans" "worksansmedium" 500 normal,
 	"Work Sans" "worksanssemibold" 600 normal,

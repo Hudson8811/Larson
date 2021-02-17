@@ -19,6 +19,9 @@ html.no-js(lang="en", class= htmlModClass)
 		meta(name='msapplication-TileColor' content='#da532c')
 		meta(name='theme-color' content='#ffffff')
 		link(rel="stylesheet", href="css/bootstrap-grid.css")
+
+		if isRevolution
+			link(rel="stylesheet", href="css/revolution.css")
 		link(rel="stylesheet", href="css/main.css")
 
 		if isDark
@@ -28,7 +31,7 @@ html.no-js(lang="en", class= htmlModClass)
 
 		title= pageTitle
 
-	- let modClass = bodyModClass ? bodyModClass : '';
+	- let modClass = bodyModClass ? ' ' + bodyModClass : '';
 
 	body(class="webpage" + modClass)
 		div(style="display: none")

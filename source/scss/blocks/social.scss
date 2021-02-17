@@ -5,6 +5,14 @@
 	display: flex;
 	flex-wrap: wrap;
 
+	&--contact {
+		#{$self}__link {
+			svg {
+				fill: $color-grey8;
+			}
+		}
+	}
+
 	&__item + &__item {
 		margin-left: 28px;
 	}
