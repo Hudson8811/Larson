@@ -14,7 +14,7 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/main.css">
-  <title>Larson Interior Studio | Projects Carousel</title>
+  <title>Larson Interior Studio| Home parallax</title>
 </head>
 
 <body class="webpage">
@@ -115,8 +115,8 @@
       </ul>
       <nav class="mobile-canvas__nav navigation">
         <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link animsition-link" href="home-default.html">Home</a>
+          <li class="navigation__item navigation__item--current">
+            <a class="navigation__link" href="home-default.html">Home</a>
             <div class="navigation__dropdown navigation__dropdown--columns">
               <div class="navigation__dropdown-wrapper">
                 <div class="navigation__dropdown-column">
@@ -134,8 +134,8 @@
                     <li class="navigation__dropdown-item">
                       <a class="animsition-link" href="home-grid.html">Home Grid</a>
                     </li>
-                    <li class="navigation__dropdown-item">
-                      <a class="animsition-link" href="home-parallax.html">Home Parallax</a>
+                    <li class="navigation__dropdown-item navigation__dropdown-item--current">
+                      <a>Home Parallax</a>
                     </li>
                     <li class="navigation__dropdown-item">
                       <a class="animsition-link" href="home-video.html">Home Video</a>
@@ -171,8 +171,8 @@
           <li class="navigation__item">
             <a class="navigation__link animsition-link" href="about.html">About</a>
           </li>
-          <li class="navigation__item navigation__item--current">
-            <a class="navigation__link" href="projects-grid.html">Projects</a>
+          <li class="navigation__item">
+            <a class="navigation__link animsition-link" href="projects-grid.html">Projects</a>
             <div class="navigation__dropdown navigation__dropdown--columns">
               <div class="navigation__dropdown-wrapper">
                 <div class="navigation__dropdown-column">
@@ -190,8 +190,8 @@
                     <li class="navigation__dropdown-item">
                       <a class="animsition-link" href="projects-masonry-2.html">Projects Masonry 2</a>
                     </li>
-                    <li class="navigation__dropdown-item navigation__dropdown-item--current">
-                      <a>Projects Carousel</a>
+                    <li class="navigation__dropdown-item">
+                      <a class="animsition-link" href="projects-carousel.html">Projects Carousel</a>
                     </li>
                     <li class="navigation__dropdown-item">
                       <a class="animsition-link" href="projects-detail.html">Projects Detail</a>
@@ -332,104 +332,53 @@
       </div>
     </div>
     <main>
-      <article class="article article--pb-0">
-        <header class="article__header">
-          <div class="container">
-            <h1 class="article__heading heading heading--size-large">Projects</h1>
-          </div>
-        </header>
-        <div class="article__main article__main--width-full container">
-          <div class="article__projects-carousel projects-carousel swiper-container __js_projects-carousel">
-            <div class="swiper-wrapper">
-              <a class="projects-carousel__item card card--carousel swiper-slide" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/carousel/1.jpg" srcset="img/picture/projects/carousel/1@2x.jpg" width="658" height="658" alt="">
+      <div class="homepage-parallax" id="pagepiling">
+        <!-- Section 1-->
+        <section class="section parallax pp-scrollable">
+          <div class="scroll-wrap">
+            <div class="container parallax__container">
+              <div class="parallax__wrapper">
+                <div class="parallax__project">
+                  <div class="parallax__tag">Architecture</div>
+                  <div class="parallax__title">House Near Wrocklow</div>
+                  <a class="parallax__link" href="projects-detail.html" target="_blank">See project
+                    <svg width="20" height="20">
+                      <use xlink:href="#chevron-right"></use>
+                    </svg>
+                  </a>
                 </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Interior
-                    <br>in Spain
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
+                <div class="parallax__counter">
+                  <span class="current">01</span>
+                  <span class="total">/ 05</span>
                 </div>
-              </a>
-              <a class="projects-carousel__item card card--carousel swiper-slide" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/carousel/2.jpg" srcset="img/picture/projects/carousel/2@2x.jpg" width="658" height="658" alt="">
-                </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Interior
-                    <br>in Spain
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <a class="projects-carousel__item card card--carousel swiper-slide" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/carousel/3.jpg" srcset="img/picture/projects/carousel/3@2x.jpg" width="658" height="658" alt="">
-                </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Interior
-                    <br>in Spain
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <a class="projects-carousel__item card card--carousel swiper-slide" href="projects-detail.html">
-                <div class="card__image">
-                  <img src="img/picture/projects/carousel/2.jpg" srcset="img/picture/projects/carousel/2@2x.jpg" width="658" height="658" alt="">
-                </div>
-                <div class="card__content">
-                  <h3 class="card__heading">Interior
-                    <br>in Spain
-                  </h3>
-                  <div class="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such Projects for many large domestic and foreign corporations, enterprises in many elds such</div>
-                  <div class="card__bottom">
-                    <span class="card__link">See project
-                      <svg width="20" height="20">
-                        <use xlink:href="#chevron-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
+              </div>
             </div>
-            <div class="projects-carousel__navigation">
-              <button class="projects-carousel__next" type="button" aria-label="next">
-                <svg width="64" height="64">
-                  <use xlink:href="#chevron-right"></use>
-                </svg>
-              </button>
-              <button class="projects-carousel__prev" type="button" aria-label="prev">
-                <svg width="64" height="64">
-                  <use xlink:href="#chevron-left"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="swiper-scrollbar"></div>
           </div>
-        </div>
-      </article>
+        </section>
+        <!-- Section 2-->
+        <section class="section parallax pp-scrollable">
+          <div class="scroll-wrap">
+            <div class="container parallax__container">
+              <div class="parallax__wrapper">
+                <div class="parallax__project">
+                  <div class="parallax__tag">Architecture</div>
+                  <div class="parallax__title">House Near Wrocklow</div>
+                  <a class="parallax__link" href="projects-detail.html" target="_blank">See project
+                    <svg width="20" height="20">
+                      <use xlink:href="#chevron-right"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="parallax__counter">
+                  <span class="current">01</span>
+                  <span class="total">/ 05</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Our story-->
+      </div>
     </main>
     <footer class="footer">
       <div class="footer__inner container">
