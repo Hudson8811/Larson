@@ -768,6 +768,10 @@ textarea.custom-input {
   outline: none;
 }
 
+.menu-toggle:hover::before, .menu-toggle:hover::after, .menu-toggle:focus::before, .menu-toggle:focus::after {
+  border-top-color: #fbc710;
+}
+
 /* 1.11 Navigation */
 .navigation__dropdown {
   display: none;
@@ -835,6 +839,7 @@ textarea.custom-input {
 
 @media (min-width: 992px) {
   .navigation__dropdown-column-title {
+    display: block;
     margin-bottom: 20px;
     font-size: 12px;
     line-height: 1;
@@ -1250,42 +1255,6 @@ textarea.custom-input {
 }
 
 /* 1.17 Filter */
-.filter--technical .filter__item {
-  font-weight: 400;
-  position: relative;
-  z-index: 1;
-}
-
-.filter--technical .filter__item::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 14px;
-  position: absolute;
-  bottom: -40%;
-  left: 0;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.filter--technical .filter__item:hover, .filter--technical .filter__item:focus {
-  color: #000000;
-}
-
-.filter--technical .filter__item:hover::before, .filter--technical .filter__item:focus::before {
-  opacity: 1;
-}
-
-.filter--technical .filter__item--active {
-  font-weight: 700;
-  color: #000000;
-}
-
-.filter--technical .filter__item--active::before {
-  opacity: 1;
-}
-
 .filter__item {
   margin-right: 20px;
   padding: 0;
@@ -4907,6 +4876,8 @@ textarea.custom-input {
 
 /* Video section in homepage */
 .video-section {
+  position: relative;
+  z-index: 1;
   padding-top: 15px;
   background-color: #ffffff;
 }

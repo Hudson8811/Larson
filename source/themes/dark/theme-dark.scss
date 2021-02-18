@@ -3,4 +3,29 @@
 @import "../../scss/utils/mixins";
 
 //
-//@import "blocks/components";
+@import "common/common";
+@import "blocks/logo";
+@import "blocks/navigation";
+@import "blocks/mobile-canvas";
+@import "blocks/menu-toggle";
+@import "blocks/header";
+@import "blocks/heading";
+@import "blocks/slide-tab";
+@import "blocks/main-slider";
+@import "blocks/about-section";
+@import "blocks/services-section";
+@import "blocks/statistics";
+@import "blocks/filter";
+@import "blocks/review-card";
+@import "blocks/preview-card";
+@import "blocks/lang-switcher";
+@import "blocks/social";
+@import "blocks/preloader";
+@import "blocks/hero";
+@import "blocks/services-provided";
+@import "blocks/card";
+@import "blocks/video-section";
+
+@import "blocks/footer";
+
+@import "blocks/webpage";

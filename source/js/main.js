@@ -925,7 +925,7 @@ AOS.init({
 		if(footer.length !== 0) {
 			if (footerHeight <= $(window).height()) {
 				var leftValue = footerParent.css('padding-left');
-				footer.css({ 'position': 'fixed', 'left': leftValue, 'right': '0', 'bottom': '0', 'z-index': '-1'});
+				footer.css({ 'position': 'fixed', 'left': leftValue, 'right': '0', 'bottom': '0'});
 				body.css('padding-bottom', footerHeight);
 			} else {
 				body.css('padding-bottom', '0');
