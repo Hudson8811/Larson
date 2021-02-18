@@ -16,7 +16,7 @@ html {
 	}
 
 	::-webkit-scrollbar-thumb {
-		background-color: #232323;
+		background-color: $color-dark;
 		border-radius: none;
 	}
 
@@ -27,26 +27,17 @@ html {
 	::-webkit-resizer {
 		background-color: #666;
 	}
-
-	&.beige {
-		::-webkit-scrollbar-thumb {
-			background-color: #232323;
-			border-radius: none;
-		}
-	}
-
-	&.modern {
-		::-webkit-scrollbar-thumb {
-			background-color: #232323;
-			border-radius: none;
-		}
-	}
 }
 
 body {
-	background-color: #181818;
+	background-color: $color-dark;
+	color: $color-grey8;
 }
 
 main {
-	background-color: #232323;
+	background-color: $color-dark;
+}
+
+.swiper-container-horizontal > .swiper-scrollbar .swiper-scrollbar-drag {
+	background-color: $color-default-white;
 }

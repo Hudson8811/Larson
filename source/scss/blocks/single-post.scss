@@ -668,6 +668,7 @@
 			@include transition(all);
 
 			@include hover {
+				outline: none;
 				border-color: $color-yellow;
 				background-color: $color-yellow;
 			}

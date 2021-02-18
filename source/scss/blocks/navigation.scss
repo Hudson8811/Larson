@@ -61,6 +61,7 @@
 				display: none;
 
 				@include media(lg) {
+					display: block;
 					margin-bottom: 20px;
 
 					@include text(12px, 1, $color-grey);

@@ -1,10 +1,10 @@
 .page-404 {
-	background-image: url("../img/picture/bg-404.jpg");
+	background-image: url("../img/bg-404.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 
 	@include retina {
-		background-image: url("../img/picture/bg-404@2x.jpg");
+		background-image: url("../img/bg-404@2x.jpg");
 	}
 
 	&__container {

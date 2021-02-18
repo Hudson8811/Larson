@@ -132,7 +132,6 @@
 		border-top: none;
 		transition: transform 0.5s ease;
 
-		//ToDo
 		.logo {
 			padding: 5px 0 8px 10px;
 
@@ -186,8 +185,6 @@
 		}
 
 		.navigation {
-			$navigation: &;
-
 			&__link {
 				color: $color-default-black;
 
@@ -199,7 +196,7 @@
 
 			&__item {
 				&--current {
-					#{$navigation}__link {
+					.navigation__link {
 						color: $color-yellow !important;
 					}
 				}

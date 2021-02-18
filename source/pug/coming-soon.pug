@@ -1,17 +1,16 @@
 include templates/_vars.pug
 include mixins/mixins.pug
 
-- let pageTitle = 'Liarch - Architecture & Interior HTML Template - News';
+- let pageTitle = TITLE_PART + ' | Coming Soon';
 - let isHome = false; //- Если true то логотип не будет ссылкой
-- let currentPage = 5.08; // Для каждой страницы уникален. Номер смотреть в файле pug/templates/_vars.pug в массивах с пунктами меню
-- let currentSection = 5; // // Для каждой раздела уникален. Home -1, about - 2, works - 3, news - 4, pages - 5
+- let currentPage = 4.06; // Для каждой страницы уникален. Номер смотреть в файле pug/templates/_vars.pug в массивах с пунктами меню
+- let currentSection = 4; // // Для каждой раздела уникален. Home -1, about - 2, works - 3, news - 4, pages - 5
 
 doctype html
 html.no-js(lang="ru")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1")
-		+fonts(FONTS)
 		// CSS
 		link(rel='apple-touch-icon' sizes='60x60' href='favicons/apple-touch-icon.png')
 		link(rel='icon' type='image/png' sizes='32x32' href='favicons/favicon-32x32.png')
