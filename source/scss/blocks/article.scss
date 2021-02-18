@@ -1,4 +1,6 @@
 .article {
+	$self: &;
+
 	overflow: hidden;
 	padding: 40px 0 60px;
 
@@ -49,6 +51,14 @@
 				margin-top: 127px;
 			}
 		}
+	}
+
+	&__tag {
+		font-size: 20px;
+		line-height: 26px;
+		color: $color-yellow;
+		text-transform: uppercase;
+		margin-bottom: 5px;
 	}
 
 	&__heading {
@@ -299,6 +309,47 @@
 
 		@include media(xl) {
 			margin-top: 80px;
+		}
+	}
+
+	&--news {
+		img {
+			max-width: 100%;
+			width: 100%;
+			height: 100%;
+		}
+
+		@include media(xl) {
+			padding: 125px 0 200px;
+		}
+
+		#{$self} {
+			&__header {
+				margin-bottom: 40px;
+			}
+
+			&__filter {
+				@include media(xl) {
+					margin-top: 81px;
+				}
+
+				.filter__item {
+					font-weight: 400;
+
+					@include media(xl) {
+						font-family: $font-family--main;
+						margin-right: 53px;
+					}
+				}
+			}
+		}
+	}
+
+	&--p0 {
+		padding: 0 0 100px;
+
+		@include media(lg) {
+			padding: 0 0 210px;
 		}
 	}
 }

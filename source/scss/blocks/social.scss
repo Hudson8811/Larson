@@ -14,24 +14,23 @@
 	}
 
 	&__item + &__item {
-		margin-left: 23px;
+		margin-left: 28px;
 	}
 
 	&__link {
 		display: flex;
-		width: 20px;
-		height: 20px;
+		width: 17px;
+		height: 17px;
 		justify-content: center;
 
 		svg {
 			display: block;
 			align-self: center;
-
+			fill: $color-default-white;
 			@include transition(fill);
 		}
 
-		&:hover,
-		&:focus {
+		@include hover {
 			outline: none;
 
 			svg {

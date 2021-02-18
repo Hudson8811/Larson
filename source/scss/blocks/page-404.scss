@@ -1,68 +1,66 @@
 .page-404 {
+	background-image: url("../img/picture/bg-404.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@include retina {
+		background-image: url("../img/picture/bg-404@2x.jpg");
+	}
+
 	&__container {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		align-items: center;
-		min-height: calc(100vh - 150px);
+		min-height: calc(100vh - 112px);
 		padding: 60px 10px;
 		text-align: center;
 
 		@include media(xl) {
 			padding: 140px 0;
 		}
+	}
 
-		img {
-			width: 100%;
-			max-width: 280px;
-			margin-bottom: 32px;
+	&__num {
+		font-family: $font-family--secondary;
+		@include text(65px, 65px, $color-default-black);
+		font-weight: bold;
+		margin-bottom: 30px;
 
-			@include media(md) {
-				max-width: 320px;
-			}
-
-			@include media(lg) {
-				max-width: 443px;
-				margin-bottom: 54px;
-			}
+		@include media(lg) {
+			font-size: 150px;
+			line-height: 150px;
+			margin-bottom: 46px;
 		}
 	}
 
 	&__title {
-		font-size: 32px;
-		margin-bottom: 14px;
+		font-family: $font-family--secondary;
+		@include text(18px, 24px, $color-default-black);
+		font-weight: bold;
+		margin-bottom: 36px;
 
 		@include media(md) {
-			font-size: 42px;
+			font-size: 20px;
+			line-height: 28px;
 		}
 
 		@include media(lg) {
-			font-size: 54px;
+			font-size: 25px;
+			line-height: 35px;
 		}
 	}
 
-	&__subtitle {
-		font-size: 16px;
-		//color: $color-grey2;
+	&__text {
+		@include text(16px, 26px, $color-grey-76);
+		margin-bottom: 40px;
 
-		@include media(md) {
-			font-size: 18px;
+		a {
+			color: $color-yellow;
 		}
 	}
 
-	&__btn {
-		width: 220px;
-		padding: 10px;
-		border-radius: 0;
-		margin-top: 32px;
-		cursor: pointer;
-
-		@include media(md) {
-			font-size: 14px;
-			padding: 21px 10px;
-		}
-
-		@include media(lg) {
-			margin-top: 54px;
-		}
+	&__search {
+		max-width: 347px;
 	}
 }

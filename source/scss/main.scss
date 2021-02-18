@@ -90,7 +90,7 @@
 -------------------------------------------------------------------------------*/
 
 /* 4.17 Timer */
-//@import "blocks/timer";
+@import "blocks/timer";
 
 /* 4.33 Menu */
 //@import "blocks/menu";
@@ -98,8 +98,8 @@
 /* 4.52 Error 404 */
 @import "blocks/page-404";
 
-/* 4.58 Launch page */
-//@import "blocks/launch-page";
+/* 4.58 Coming soon */
+@import "blocks/coming-soon";
 
 /* Link with arrow */
 @import "blocks/link-arrow";
@@ -167,6 +167,12 @@
 /* Team list block */
 @import "blocks/team-list";
 
+/* News blocks */
+@import "blocks/sidebar";
+@import "blocks/news-listing";
+@import "blocks/single-post";
+@import "blocks/quote";
+
 /* Blocks for services pages */
 @import "blocks/service-card";
 @import "blocks/services-list";
@@ -192,3 +198,6 @@
 
 /* Article */
 @import "blocks/article";
+
+/* Home parallax */
+@import "blocks/home-parallax";
