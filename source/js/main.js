@@ -779,6 +779,7 @@ AOS.init({
 
 /* 20. Pagepiling */
 (function(){
+	setDark();
 	initFullPage();
 
 	function initFullPage() {
@@ -802,11 +803,11 @@ AOS.init({
 	}
 
 	function setDark() {
-		$('.webpage--home-parallax').addClass('dark');
+		$('.webpage').addClass('webpage--parallax-dark');
 	}
 
 	function removeDark() {
-		$('.webpage--home-parallax').removeClass('dark');
+		$('.webpage').removeClass('webpage--parallax-dark');
 	}
 })();
 

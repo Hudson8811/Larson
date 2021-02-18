@@ -5,7 +5,7 @@ block variables
 	- let isDark = false;
 	- let currentPage = 1.05; // Для каждой страницы уникален. Номер смотреть в файле pug/templates/_vars.pug в массивах с пунктами меню
 	- let currentSection = 1; // // Для каждой раздела уникален. Home -1, projects - 2, news - 3, pages - 4
-	- let bodyModClass = 'webpage--home-parallax';
+	- let bodyModClass = 'webpage--parallax';
 
 block header
 	include modules/header-2
@@ -17,6 +17,7 @@ block content
 			.scroll-wrap
 				.container.parallax__container
 					.parallax__wrapper
+						.parallax__year 2020
 						.parallax__project
 							.parallax__tag Architecture
 							.parallax__title House Near Wrocklow
@@ -31,6 +32,7 @@ block content
 			.scroll-wrap
 				.container.parallax__container
 					.parallax__wrapper
+						.parallax__year 2020
 						.parallax__project
 							.parallax__tag Residence
 							.parallax__title Residence Near Forest
@@ -41,10 +43,11 @@ block content
 							span.current 02
 							span.total / 05
 		// Section 3
-		section.section.parallax.pp-scrollable(style='background-image: url("../img/picture/home-parallax/item-3.jpg");')
+		section.section.parallax.pp-scrollable.dark(style='background-image: url("../img/picture/home-parallax/item-3.jpg");')
 			.scroll-wrap
 				.container.parallax__container
 					.parallax__wrapper
+						.parallax__year 2020
 						.parallax__project
 							.parallax__tag Architecture
 							.parallax__title Modern House
@@ -59,6 +62,7 @@ block content
 			.scroll-wrap
 				.container.parallax__container
 					.parallax__wrapper
+						.parallax__year 2020
 						.parallax__project
 							.parallax__tag Exterior
 							.parallax__title Villa Near London
@@ -69,10 +73,11 @@ block content
 							span.current 04
 							span.total / 05
 		// Section 5
-		section.section.parallax.pp-scrollable(style='background-image: url("../img/picture/home-parallax/item-5.jpg");')
+		section.section.parallax.pp-scrollable.dark(style='background-image: url("../img/picture/home-parallax/item-5.jpg");')
 			.scroll-wrap
 				.container.parallax__container
 					.parallax__wrapper
+						.parallax__year 2020
 						.parallax__project
 							.parallax__tag Architecture
 							.parallax__title No 608 Apartment
@@ -84,7 +89,6 @@ block content
 							span.total / 05
 
 
-		// Our story
 
 
 block footer
