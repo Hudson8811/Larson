@@ -47,6 +47,11 @@
 				transform: none;
 			}
 
+			&:focus {
+				outline: none;
+				background-color: $color-default-white;
+			}
+
 			@include hover {
 				background-color: $color-default-white;
 			}

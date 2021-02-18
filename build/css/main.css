@@ -1276,6 +1276,7 @@ textarea.custom-input {
 .filter__item {
   margin-right: 20px;
   padding: 0;
+  font-family: "Work Sans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.3125;
   color: #000000;
@@ -1921,7 +1922,7 @@ textarea.custom-input {
   color: #fbc710;
 }
 
-.header--fixed .navigation__item--current .header--fixed .navigation__link {
+.header--fixed .navigation__item--current .navigation__link {
   color: #fbc710 !important;
 }
 
@@ -2191,14 +2192,14 @@ textarea.custom-input {
 /* 4.33 Menu */
 /* 4.52 Error 404 */
 .page-404 {
-  background-image: url("../img/picture/bg-404.jpg");
+  background-image: url("../img/bg-404.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .page-404 {
-    background-image: url("../img/picture/bg-404@2x.jpg");
+    background-image: url("../img/bg-404@2x.jpg");
   }
 }
 
@@ -4829,6 +4830,11 @@ textarea.custom-input {
   }
 }
 
+.sidebar__block input[type="search"]:focus {
+  outline: none;
+  background-color: #ffffff;
+}
+
 @media (min-width: 992px) {
   .sidebar__block input[type="search"]:hover, .sidebar__block input[type="search"]:focus {
     background-color: #ffffff;
@@ -5713,6 +5719,7 @@ textarea.custom-input {
 
 @media (min-width: 992px) {
   .comment .comment-item__reply:hover, .comment .comment-item__reply:focus {
+    outline: none;
     border-color: #fbc710;
     background-color: #fbc710;
   }
