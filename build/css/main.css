@@ -1830,10 +1830,6 @@ textarea.custom-input {
   }
 }
 
-.header--intro {
-  background-color: transparent;
-}
-
 @media (min-width: 1200px) {
   .header--half {
     position: absolute;
@@ -1976,6 +1972,7 @@ textarea.custom-input {
 
 .header__menu-toggle {
   margin-left: auto;
+  order: 2;
 }
 
 @media (min-width: 992px) {
@@ -1985,6 +1982,38 @@ textarea.custom-input {
   .header__menu-toggle--always {
     display: block;
   }
+}
+
+.header__purchase {
+  margin-left: auto;
+  border-radius: 0;
+  align-self: center;
+  order: 1;
+}
+
+.header__purchase-text {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .header__purchase-text {
+    display: inline;
+  }
+}
+
+.header__purchase svg {
+  display: block;
+  fill: #ffffff;
+}
+
+@media (min-width: 576px) {
+  .header__purchase svg {
+    display: none;
+  }
+}
+
+.header__purchase + .header__menu-toggle {
+  margin-left: 20px;
 }
 
 /*-------------------------------------------------------------------------------

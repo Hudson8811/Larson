@@ -86,10 +86,6 @@
 		}
 	}
 
-	&--intro {
-		background-color: transparent;
-	}
-
 	&--half {
 		@include media(xl) {
 			position: absolute;
@@ -260,6 +256,7 @@
 
 	&__menu-toggle {
 		margin-left: auto;
+		order: 2;
 
 		@include media(lg) {
 			display: none;
@@ -268,5 +265,33 @@
 				display: block;
 			}
 		}
+	}
+
+	&__purchase {
+		margin-left: auto;
+		border-radius: 0;
+		align-self: center;
+		order: 1;
+
+		&-text {
+			display: none;
+
+			@include media(sm) {
+				display: inline;
+			}
+		}
+
+		svg {
+			display: block;
+			fill: $color-default-white;
+
+			@include media(sm) {
+				display: none;
+			}
+		}
+	}
+
+	&__purchase + &__menu-toggle {
+		margin-left: 20px;
 	}
 }
