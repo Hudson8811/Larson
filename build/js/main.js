@@ -395,6 +395,24 @@ AOS.init({
 		},
 	});
 
+
+	/* Filter carousel */
+	$('.__js_latest-projects-filter-item').on('click', function() {
+		var selector = $(this).attr('data-filter');
+
+		$('.__js_latest-projects-carousel').fadeOut(DURATION);
+		$('.__js_latest-projects-carousel').fadeIn(DURATION);
+
+		setTimeout(function(){
+			$('.__js_latest-projects-carousel .swiper-slide').hide();
+			$(selector).closest('.__js_latest-projects-carousel .swiper-slide').show();
+
+			latestProjectsInHomeCarousel.update();
+		}, DURATION);
+
+		return false;
+	});
+
 })();
 
 (function() {
