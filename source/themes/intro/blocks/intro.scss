@@ -1,148 +1,103 @@
 .intro {
 	&__header {
-		background-color: $color-smoky;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-image: url("../img/intro/intro-hero.jpg");
+		position: relative;
+		max-width: 1800px;
+		margin: 0 auto;
+		overflow: hidden;
 
-		@include media(sm) {
-			background-position: 50% 0;
-		}
-
-		&-inner {
-			display: flex;
-			flex-direction: column;
-			height: 100vh;
-			min-height: 480px;
-			max-height: 540px;
-			padding-top: 100px;
-			padding-bottom: 40px;
-
-			@include media(sm) {
-				min-height: 575px;
-				max-height: 700px;
-				padding-bottom: 80px;
-			}
+		img {
+			display: block;
+			width: 100%;
+			min-width: 768px;
+			height: auto;
+			margin-left: -384px;
 
 			@include media(md) {
-				padding-top: 160px;
-			}
-
-			@include media(xl) {
-				padding-top: 286px;
-				max-height: 960px;
-				padding-bottom: 130px;
-			}
-
-			@include media(xxl) {
-				max-width: $width--full;
+				margin-left: 0;
 			}
 		}
 	}
 
 	&__heading {
-		max-width: 160px;
-		margin: 0 0 32px;
+		margin: 0;
+		font-family: $font-family--secondary;
 
-		@include text(16px, 1.5);
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
-		font-weight: 400;
-
-		@include media(xl) {
-			margin-bottom: 62px;
-		}
-	}
-
-	&__text {
-		margin-bottom: 20px;
-
-		@include text(30px, 1.25);
+		@include text(32px, 1.45, $color-default-white);
+		font-weight: 700;
 
 		@include media(sm) {
 			font-size: 42px;
 		}
 
-		@include media(xl) {
-			font-size: 56px;
+		@include media(md) {
+			font-size: 52px;
 		}
 
-		span {
-			display: block;
-			//color: $color-orange;
-			font-weight: 600;
+		@include media(xl) {
+			font-size: 70px;
 		}
 	}
 
-	&__facts {
-		@include list-reset;
-		margin-top: auto;
+	&__wrapper {
+		position: absolute;
+		left: 50%;
+		bottom: 48px;
+		transform: translateX(-50%);
+		width: 100%;
+		max-width: 540px;
+		padding: 0 15px 0 55px;
 
-		@include media(sm) {
-			display: flex;
-			flex-wrap: wrap;
+		@include media(md) {
+			max-width: 720px;
+			bottom: 94px;
+			padding-left: 72px;
 		}
 
-		li {
-			display: flex;
-			align-items: center;
-
-			@include text(12px, 1.5);
-			text-transform: uppercase;
-			letter-spacing: 0.05em;
-
-			& + li {
-				margin-top: 6px;
-			}
-
-			span {
-				//width: 80px;
-				margin-right: 12px;
-				font-family: $font-family--secondary;
-				font-size: 40px;
-				line-height: 1;
-
-				@include media(xl) {
-					font-size: 48px;
-				}
-
-				sup {
-					font-size: 30px;
-				}
-			}
-
-			@include media(sm) {
-				display: block;
-				max-width: 80px;
-
-				& + li {
-					margin-left: 50px;
-					margin-top: 0;
-				}
-
-				span {
-					display: block;
-					margin-right: 0;
-					margin-bottom: 8px;
-				}
-			}
+		@include media(lg) {
+			max-width: 960px;
 		}
+
+		@include media(xl) {
+			max-width: 1140px;
+		}
+	}
+
+	&__tag {
+		position: absolute;
+		left: 15px;
+		top: 50%;
+		transform: translateY(-50%) rotate(180deg);
+
+		@include text(14px, 1.5, $color-default-white);
+		font-weight: 500;
+		text-align: center;
+		letter-spacing: 0.2em;
+		white-space: nowrap;
+		writing-mode: vertical-lr;
 	}
 
 	&__section {
+		$section: &;
 		padding: 60px 0;
 
 		@include media(xl) {
+			max-width: $width--full;
+			margin: 0 auto;
 			padding: 160px 0;
 		}
 
 		&--bg {
-			background-color: #ebeff3;
+			background-color: $color-smoky;
+		}
+
+		&--full {
+			max-width: none;
+			overflow: hidden;
 		}
 
 		&-inner {
-			@include media(xxl) {
-				max-width: $width--full;
+			@include media(xl) {
+				max-width: $width--large;
 			}
 		}
 
@@ -157,9 +112,10 @@
 
 		&-heading {
 			margin: 0;
+			font-family: $font-family--secondary;
 
-			@include text(36px, 1.25);
-			font-weight: 400;
+			@include text(36px, 1.25, $color-default-black);
+			font-weight: 700;
 
 			@include media(xl) {
 				font-size: 48px;
@@ -167,10 +123,11 @@
 		}
 
 		&-text {
-			max-width: 710px;
+			max-width: 446px;
 			margin: 20px auto 0;
+			font-family: $font-family--secondary;
 
-			@include text(16px, 1.875, $color-grey2);
+			@include text(16px, 1.625, $color-default-black);
 		}
 	}
 
