@@ -1,5 +1,5 @@
 section.webpage__latest-projects.latest-projects
-	header.latest-projects__header.container
+	header.latest-projects__header.container(data-aos="fade")
 		h2.latest-projects__heading.heading Latest projects
 
 		// Filter latest projects
@@ -12,7 +12,7 @@ section.webpage__latest-projects.latest-projects
 		a.latest-projects__more.more(href= isDark ? URLS.projects.gridDark : URLS.projects.grid) View all projects
 			+icon('chevron-right')(width="20", height="20")
 
-	.latest-projects__inner.container
+	.latest-projects__inner.container(data-aos="fade")
 		.latest-projects__carousel.swiper-container.__js_latest-projects-carousel
 			.swiper-wrapper
 				a.card.swiper-slide.__js_building(href= isDark ? URLS.projects.detailDark : URLS.projects.detail)

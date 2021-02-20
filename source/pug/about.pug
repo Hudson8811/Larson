@@ -19,19 +19,19 @@ block content
 
 		section.webpage__about-block.about-block.about-block--columns
 			.about-block__inner.container(data-number="01.")
-				header.about-block__header
+				header.about-block__header(data-aos="fade")
 					h2.about-block__heading.heading A few words About us
 				.about-block__main
-					.about-block__text
+					.about-block__text(data-aos="fade")
 						p Totally focused on tools to enhance and help your content shine. We have created this theme thinking only in options helpfully for the daily needs in a creative environment like an agency, a small studio.
 
 						p As a result working with hundred of creatives all these past years, we are now delivering a theme that will be part of your toolset.
 
-					blockquote.about-block__quote I knew everything…been there, done that. She was in the moment, <br>I was in the past. She was mindful. I was mindless.
+					blockquote.about-block__quote(data-aos="fade") I knew everything…been there, done that. She was in the moment, <br>I was in the past. She was mindful. I was mindless.
 
 		section.webpage__about-block.about-block
 			.about-block__inner.container(data-number="02.")
-				header.about-block__header
+				header.about-block__header(data-aos="fade")
 					h2.about-block__heading.heading Our Team
 				.about-block__main
 					ul.about-block__team.team-list.row
@@ -56,7 +56,7 @@ block content
 
 		section.webpage__about-block.about-block
 			.about-block__inner.container(data-number="03.")
-				header.about-block__header
+				header.about-block__header(data-aos="fade")
 					h2.about-block__heading.heading Services
 				.about-block__main.services-provided
 					.row
@@ -85,9 +85,9 @@ block content
 
 		section.webpage__about-block.about-block
 			.about-block__inner.container(data-number="04.")
-				header.about-block__header
+				header.about-block__header(data-aos="fade")
 					h2.about-block__heading.heading Testimonials
-				.about-block__main.reviews-carousel
+				.about-block__main.reviews-carousel(data-aos="fade")
 					.swiper-container.__js_review-carousel
 						.swiper-wrapper
 							.reviews-carousel__item.review-card.swiper-slide
@@ -120,10 +120,11 @@ block content
 			.partners__inner.container
 				ul.partners__list
 					- let delay = 0;
+					- let suf = isDark ? 'w': '';
 					each item, index in PARTNERS_LOGO
 						- delay = index % 5 === 0 ? 0 : delay + 200;
 						li.partners__item(data-aos="fade", data-aos-delay= delay)
-							img(src="img/picture/partners/" + item.name + ".png", srcset="img/picture/partners/" + item.name + "@2x.png", width= item.w, height= item.h, alt= item.alt)
+							img(src="img/picture/partners/" + item.name + suf + ".png", srcset="img/picture/partners/" + item.name + suf + "@2x.png", width= item.w, height= item.h, alt= item.alt)
 
 
 block footer

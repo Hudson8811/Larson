@@ -373,22 +373,25 @@
           </div>
           <section class="article__feedback feedback">
             <h2 class="feedback__heading heading" data-aos="fade">Live a reply</h2>
-            <form action="#" method="post">
+            <form class="js-form-validate" action="php/mail.php" method="POST">
               <div class="row">
                 <div class="feedback__field-wrapper col-12 col-md-6" data-aos="fade">
                   <label class="field" aria-label="Name">
                     <input type="text" name="name" placeholder="Name*" required>
                   </label>
+                  <div class="field-error" style="display: none"></div>
                 </div>
                 <div class="feedback__field-wrapper col-12 col-md-6" data-aos="fade">
                   <label class="field" aria-label="Email">
                     <input type="email" name="email" placeholder="Email*" required>
                   </label>
+                  <div class="field-error" style="display: none"></div>
                 </div>
                 <div class="feedback__field-wrapper col-12" data-aos="fade">
                   <label class="field" aria-label="Comment">
                     <textarea name="comment" placeholder="Comment"></textarea>
                   </label>
+                  <div class="field-error" style="display: none"></div>
                 </div>
               </div>
               <button class="btn" type="submit" data-aos="fade">Post comment</button>
@@ -441,11 +444,11 @@
               <li class="footer__column-item">
                 <a class="footer__column-link animsition-link" href="#">Career</a>
               </li>
-              <li class="footer__column-item footer__column-item--current">
-                <a class="footer__column-link">About</a>
+              <li class="footer__column-item">
+                <a class="footer__column-link animsition-link" href="about.html">About</a>
               </li>
-              <li class="footer__column-item footer__column-item--current">
-                <a class="footer__column-link">Contact</a>
+              <li class="footer__column-item">
+                <a class="footer__column-link animsition-link" href="contact.html">Contact</a>
               </li>
             </ul>
           </div>

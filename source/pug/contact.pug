@@ -40,20 +40,24 @@ block content
 			section.article__feedback.feedback
 				h2.feedback__heading.heading(data-aos="fade") Let's grab a coffee and jump on <br>conversation <span class="color-yellow">chat with us.</span>
 
-				form(action="#", method="post")
+				form.js-form-validate(action='php/mail.php', method='POST')
 					.row
 						.feedback__field-wrapper.col-12.col-md-6.col-lg-4(data-aos="fade")
 							label.field(aria-label="Name")
 								input(type="text", name="name", placeholder="Name")
+							.field-error(style='display: none')
 						.feedback__field-wrapper.col-12.col-md-6.col-lg-4(data-aos="fade")
 							label.field(aria-label="Email")
 								input(type="email", name="email", placeholder="Email*", required)
+							.field-error(style='display: none')
 						.feedback__field-wrapper.col-12.col-lg-4(data-aos="fade")
 							label.field(aria-label="Subject")
 								input(type="text", name="subject", placeholder="Subject")
+							.field-error(style='display: none')
 						.feedback__field-wrapper.col-12(data-aos="fade")
 							label.field(aria-label="message")
 								textarea(name="message", placeholder="Message*", required)
+							.field-error(style='display: none')
 
 					button.btn(type="submit", data-aos="fade") Submit
 block footer

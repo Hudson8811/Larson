@@ -68,6 +68,26 @@
 				background-color: rgba($color-default-white, 0.9) !important;
 			}
 		}
+
+		.social {
+			&__link {
+				svg {
+					fill: $color-default-black;
+				}
+
+				&:focus {
+					svg {
+						fill: $color-yellow;
+					}
+				}
+
+				@include hover {
+					svg {
+						fill: $color-yellow;
+					}
+				}
+			}
+		}
 	}
 
 	&--send {
