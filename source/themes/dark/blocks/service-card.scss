@@ -24,4 +24,22 @@
 	&__heading {
 		color: $color-default-white;
 	}
+
+	&__link {
+		&:focus {
+			color: $color-default-white;
+
+			svg {
+				fill: $color-default-white;
+			}
+		}
+
+		@include hover {
+			color: $color-default-white;
+
+			svg {
+				fill: $color-default-white;
+			}
+		}
+	}
 }

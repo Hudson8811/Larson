@@ -26,6 +26,13 @@
 				background-color: rgba($color-dark, 0.95) !important;
 			}
 		}
+		.social {
+			&__link {
+				svg {
+					fill: $color-default-white;
+				}
+			}
+		}
 	}
 
 	&--transparent {

@@ -30,4 +30,14 @@
 			background-color: lighten($color-dark, 10%) !important;
 		}
 	}
+
+	&__text a {
+		&:focus {
+			color: $color-default-white;
+		}
+
+		@include hover {
+			color: $color-default-white;
+		}
+	}
 }

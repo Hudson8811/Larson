@@ -32,7 +32,7 @@ header.header.__js_fixed-header
 						a.navigation__link= item.text
 						if item.submenu
 							+navigation-dropdown-home(item.submenu)
-				else if item.currentSection === currentSection && item.currentPage !== currentPage
+				else if item.currentSection === currentSection && item.currentPage !== currentPage && item.submenu !== false
 					li.navigation__item.navigation__item--current
 						a.navigation__link(href= item.url)= item.text
 						if item.submenu

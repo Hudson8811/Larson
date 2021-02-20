@@ -2297,6 +2297,18 @@ textarea.custom-input {
 
 .page-404__text a {
   color: #fbc710;
+  transition: color 0.3s ease;
+}
+
+.page-404__text a:focus {
+  outline: none;
+  color: #000000;
+}
+
+@media (min-width: 992px) {
+  .page-404__text a:hover, .page-404__text a:focus {
+    color: #000000;
+  }
 }
 
 .page-404__search {
@@ -2633,6 +2645,20 @@ textarea.custom-input {
   .card--team:hover .card__content, .card--team:focus .card__content {
     border: solid 4px #fbc710;
     background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+}
+
+.card--team .social__link svg {
+  fill: #000000;
+}
+
+.card--team .social__link:focus svg {
+  fill: #fbc710;
+}
+
+@media (min-width: 992px) {
+  .card--team .social__link:hover svg, .card--team .social__link:focus svg {
+    fill: #fbc710;
   }
 }
 
@@ -5905,7 +5931,7 @@ textarea.custom-input {
 }
 
 .quote::before {
-  content: ',,';
+  content: ",,";
   display: block;
   font-family: "Work Sans", "Arial", sans-serif;
   font-size: 70px;
@@ -5944,6 +5970,7 @@ textarea.custom-input {
 }
 
 .quote__name, .quote__position {
+  display: block;
   font-size: 14px;
   line-height: 22px;
   font-style: normal;
@@ -7159,7 +7186,7 @@ textarea.custom-input {
 }
 
 .parallax__project::before {
-  content: '';
+  content: "";
   display: block;
   width: 163px;
   height: 100%;
@@ -7190,10 +7217,30 @@ textarea.custom-input {
   font-size: 20px;
   font-weight: bold;
   color: #000000;
+  transition: color 0.3s ease;
 }
 
 .parallax__link svg {
   margin-left: 10px;
+  transition: fill 0.3s ease;
+}
+
+.parallax__link:focus {
+  outline: none;
+  color: #fbc710;
+}
+
+.parallax__link:focus svg {
+  fill: #fbc710;
+}
+
+@media (min-width: 992px) {
+  .parallax__link:hover, .parallax__link:focus {
+    color: #fbc710;
+  }
+  .parallax__link:hover svg, .parallax__link:focus svg {
+    fill: #fbc710;
+  }
 }
 
 .parallax__counter {

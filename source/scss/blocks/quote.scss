@@ -8,7 +8,7 @@
 	}
 
 	&::before {
-		content: ',,';
+		content: ",,";
 		display: block;
 		font-family: $font-family--main;
 		font-size: 70px;
@@ -44,6 +44,7 @@
 
 	&__name,
 	&__position {
+		display: block;
 		font-size: 14px;
 		line-height: 22px;
 		font-style: normal;

@@ -29,7 +29,7 @@
 		position: relative;
 
 		&::before {
-			content: '';
+			content: "";
 			display: block;
 			width: 163px;
 			height: 100%;
@@ -62,8 +62,29 @@
 		font-weight: bold;
 		color: $color-default-black;
 
+		@include transition(color);
+
 		svg {
 			margin-left: 10px;
+
+			@include transition(fill);
+		}
+
+		&:focus {
+			outline: none;
+			color: $color-yellow;
+
+			svg {
+				fill: $color-yellow;
+			}
+		}
+
+		@include hover {
+			color: $color-yellow;
+
+			svg {
+				fill: $color-yellow;
+			}
 		}
 	}
 

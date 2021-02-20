@@ -42,17 +42,20 @@ block content
 			section.article__feedback.feedback
 				h2.feedback__heading.heading(data-aos="fade") Live a reply
 
-				form(action="#", method="post")
+				form.js-form-validate(action='php/mail.php', method='POST')
 					.row
 						.feedback__field-wrapper.col-12.col-md-6(data-aos="fade")
 							label.field(aria-label="Name")
 								input(type="text", name="name", placeholder="Name*", required)
+							.field-error(style='display: none')
 						.feedback__field-wrapper.col-12.col-md-6(data-aos="fade")
 							label.field(aria-label="Email")
 								input(type="email", name="email", placeholder="Email*", required)
+							.field-error(style='display: none')
 						.feedback__field-wrapper.col-12(data-aos="fade")
 							label.field(aria-label="Comment")
 								textarea(name="comment", placeholder="Comment")
+							.field-error(style='display: none')
 
 					button.btn(type="submit", data-aos="fade") Post comment
 

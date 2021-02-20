@@ -217,6 +217,10 @@ main {
   color: #ffffff;
 }
 
+.preview-card__btn svg {
+  fill: #ffffff;
+}
+
 .lang-switcher__link {
   color: #ffffff;
 }
@@ -297,6 +301,10 @@ main {
   .card--team:hover .card__content, .card--team:focus .card__content {
     background-color: rgba(39, 39, 39, 0.95) !important;
   }
+}
+
+.card--team .social__link svg {
+  fill: #ffffff;
 }
 
 .card--transparent {
@@ -874,6 +882,23 @@ main {
   color: #ffffff;
 }
 
+.service-card__link:focus {
+  color: #ffffff;
+}
+
+.service-card__link:focus svg {
+  fill: #ffffff;
+}
+
+@media (min-width: 992px) {
+  .service-card__link:hover, .service-card__link:focus {
+    color: #ffffff;
+  }
+  .service-card__link:hover svg, .service-card__link:focus svg {
+    fill: #ffffff;
+  }
+}
+
 .page-404 {
   background-image: url("../img/bg-404.png");
 }
@@ -908,6 +933,28 @@ main {
   .page-404__search:hover, .page-404__search:focus {
     background-color: #414141 !important;
   }
+}
+
+.page-404__text a:focus {
+  color: #ffffff;
+}
+
+@media (min-width: 992px) {
+  .page-404__text a:hover, .page-404__text a:focus {
+    color: #ffffff;
+  }
+}
+
+.more:hover, .more:focus {
+  color: #fbc710;
+}
+
+.more:hover svg, .more:focus svg {
+  fill: #fbc710;
+}
+
+.single-service-block h2 {
+  color: #ffffff;
 }
 
 .article__project-text strong {

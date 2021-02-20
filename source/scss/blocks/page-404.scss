@@ -57,6 +57,17 @@
 
 		a {
 			color: $color-yellow;
+
+			@include transition(color);
+
+			&:focus {
+				outline: none;
+				color: $color-default-black;
+			}
+
+			@include hover {
+				color: $color-default-black;
+			}
 		}
 	}
 
