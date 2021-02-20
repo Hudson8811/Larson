@@ -910,6 +910,14 @@ main {
   }
 }
 
+.more:hover, .more:focus {
+  color: #fbc710;
+}
+
+.more:hover svg, .more:focus svg {
+  fill: #fbc710;
+}
+
 .article__project-text strong {
   color: #ffffff;
 }
