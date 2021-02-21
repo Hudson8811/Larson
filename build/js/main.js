@@ -25,6 +25,7 @@
 	20. Pagepiling
 	21. Form validation
 	22. Fixed footer
+	23. Parallax slider
 
 -------------------------------------------------*/
 

@@ -1,9 +1,9 @@
 extends templates/main
 block variables
-	- let pageTitle = TITLE_PART + ' | Home Interior';
+	- let pageTitle = TITLE_PART + ' | Home Interior Dark';
 	- let isHome = true; //- Если true то логотип не будет ссылкой
-	- let isDark = false;
-	- let currentPage = 1.03; // Для каждой страницы уникален. Номер смотреть в файле pug/templates/_vars.pug в массивах с пунктами меню
+	- let isDark = true;
+	- let currentPage = 1.09; // Для каждой страницы уникален. Номер смотреть в файле pug/templates/_vars.pug в массивах с пунктами меню
 	- let currentSection = 1; // // Для каждой раздела уникален. Home -1, projects - 2, news - 3, pages - 4
 	- let bodyModClass = 'webpage--parallax';
 
@@ -23,7 +23,7 @@ block content
 						.welcome__line
 
 		// Section 2
-		section.section.parallax.pp-scrollable.dark(style='background-color: #ffffff;')
+		section.section.parallax.pp-scrollable(style='background-color: #272727;')
 			.scroll-wrap
 				.container.parallax__container
 					.parallax__type services
@@ -107,7 +107,7 @@ block content
 								use(xlink:href="#chevron-right")
 
 		// Section 4
-		section.section.parallax.pp-scrollable.dark(style='background-color: #ffffff;')
+		section.section.parallax.pp-scrollable(style='background-color: #272727;')
 			.scroll-wrap
 				.container.parallax__container
 					.parallax__type reviews
@@ -186,7 +186,7 @@ block content
 								use(xlink:href="#chevron-right")
 
 		// Section 6
-		section.section.parallax.pp-scrollable.dark(style='background-color: #ffffff;')
+		section.section.parallax.pp-scrollable(style='background-color: #272727;')
 			.scroll-wrap
 				.container.parallax__container
 					.parallax__type news

@@ -961,6 +961,35 @@ main {
   color: #ffffff;
 }
 
+.services {
+  color: #ffffff;
+}
+
+.services__item-text {
+  color: #929292;
+}
+
+.contact-parallax__form input,
+.contact-parallax__form textarea {
+  background-color: transparent;
+  border-bottom-color: #ffffff;
+  color: #ffffff;
+}
+
+.contact-parallax__form input::placeholder,
+.contact-parallax__form textarea::placeholder {
+  opacity: 1;
+}
+
+@media (min-width: 992px) {
+  .contact-parallax__form input:hover, .contact-parallax__form input:focus,
+  .contact-parallax__form textarea:hover,
+  .contact-parallax__form textarea:focus {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+}
+
 .footer__copyright {
   color: #ffffff;
 }

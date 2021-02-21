@@ -9,7 +9,6 @@ require '../js/mailer/SMTP.php';
 
 $name = $_POST['name'];
 $email = $_POST['email'];
-$subject = $_POST['subject'];
 $message = $_POST['message'];
 
 try {
@@ -29,13 +28,13 @@ try {
      )
 );
 	$mail->Port = 587;
-	$mail->setFrom('address1', 'Liarch');
+	$mail->setFrom('address1', 'Larson');
 
 	$mail->addAddress('address2');
 
 	$mail->isHTML(true);
-	$mail->Subject = 'Message from Liarch';
-	$mail->Body = 'Client name - ' . $name . '<br>' . 'Email - ' . $email . '<br>' . 'Subject - ' . $subject . '<br>' . 'Message - ' . $message;
+	$mail->Subject = 'Message from Larson';
+	$mail->Body = 'Client name - ' . $name . '<br>' . 'Email - ' . $email . '<br>' . 'Message - ' . $message;
 	$mail->send();
 } catch (Exception $e) {
     echo $mail->ErrorInfo;
