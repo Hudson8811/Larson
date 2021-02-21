@@ -779,8 +779,11 @@ AOS.init({
 
 /* 20. Pagepiling */
 (function(){
-	setDark();
 	initFullPage();
+
+	if ($('#pagepiling .section.active').hasClass('dark')) {
+		setDark();
+	}
 
 	function initFullPage() {
 		if ($('#pagepiling') && $('#pagepiling').length > 0) {
@@ -935,5 +938,17 @@ AOS.init({
 				}
 			});
 		}
+	});
+})();
+
+/* 23. Parallax slider */
+(function(){
+	var elem = new Swiper('.__js_slider-parallax', {
+		navigation: {
+			prevEl: '.slider-parallax__nav-btn--prev',
+			nextEl: '.slider-parallax__nav-btn--next'
+		},
+		loop: true,
+		speed: 300
 	});
 })();

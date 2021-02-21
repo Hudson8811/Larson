@@ -11,12 +11,31 @@
 		justify-content: center;
 		position: relative;
 		min-height: 100%;
-		padding: 115px 0 110px;
+		padding: 115px 0 144px;
+
+		@include media(xl) {
+			padding: 115px 0 110px;
+		}
 	}
 
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	&__type {
+		display: none;
+		font-size: 16px;
+		line-height: 18.77px;
+		text-transform: uppercase;
+		transform: rotate(-90deg);
+		position: absolute;
+		top: 33.3%;
+		left: 18px;
+
+		@include media(xxl) {
+			display: block;
+		}
 	}
 
 	&__year {
@@ -161,5 +180,24 @@
 				font-size: 32px;
 			}
 		}
+	}
+
+	&__partners {
+		margin-top: 78px;
+
+		.partners__item {
+			width: auto;
+			text-align: left;
+		}
+	}
+
+	&__latest-news {
+		.latest-news__header {
+			margin-bottom: 85px;
+		}
+	}
+
+	.reviews-carousel .swiper-pagination {
+		margin-top: 50px;
 	}
 }
