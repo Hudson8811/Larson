@@ -187,16 +187,11 @@ textarea.custom-input {
 
 #pp-nav {
 	display: none;
-	right: 50px !important;
+	right: 64px !important;
+	top: 47%;
 
 	@include media(xxl) {
 		display: block;
-	}
-
-	&.dark {
-		ul li a span {
-			background-color: $color-default-white;
-		}
 	}
 
 	ul li {
@@ -212,14 +207,14 @@ textarea.custom-input {
 		}
 
 		+ li {
-			margin-top: 27px;
+			margin-top: 23px;
 		}
 
 		a {
 			span {
 				width: 11px;
 				height: 11px;
-				background-color: $color-default-black;
+				background-color: $color-default-white;
 				left: unset;
 				right: 0;
 				border: none;

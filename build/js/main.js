@@ -812,6 +812,10 @@ AOS.init({
 (function(){
 	initFullPage();
 
+	if ($('#pagepiling .section.active').hasClass('dark')) {
+		setDark();
+	}
+
 	function initFullPage() {
 		if ($('#pagepiling') && $('#pagepiling').length > 0) {
 			$('#pagepiling').pagepiling({
@@ -833,11 +837,11 @@ AOS.init({
 	}
 
 	function setDark() {
-		$('.webpage--home-parallax').addClass('dark');
+		$('.webpage').addClass('webpage--parallax-dark');
 	}
 
 	function removeDark() {
-		$('.webpage--home-parallax').removeClass('dark');
+		$('.webpage').removeClass('webpage--parallax-dark');
 	}
 })();
 
@@ -965,5 +969,17 @@ AOS.init({
 				}
 			});
 		}
+	});
+})();
+
+/* 23. Parallax slider */
+(function(){
+	var elem = new Swiper('.__js_slider-parallax', {
+		navigation: {
+			prevEl: '.slider-parallax__nav-btn--prev',
+			nextEl: '.slider-parallax__nav-btn--next'
+		},
+		loop: true,
+		speed: 300
 	});
 })();

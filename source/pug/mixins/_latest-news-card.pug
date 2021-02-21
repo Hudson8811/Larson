@@ -7,5 +7,7 @@ mixin latest-news-card(item)
 			time.preview-card__date(datetime= item.date.datetime)= item.date.text
 			h3.preview-card__heading= item.title
 			.preview-card__text= item.text
-			a.preview-card__btn(href= isDark ? URLS.news.postDark : URLS.news.post) Learn more
+			a.preview-card__btn(href= isDark ? URLS.news.postDark : URLS.news.post)
+				| Learn more
+				+icon('chevron-right')(width="20", height="20")
 
