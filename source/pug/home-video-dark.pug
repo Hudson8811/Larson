@@ -9,7 +9,7 @@ block variables
 block header
 	section.video-section
 		.video-section__inner.container
-			img(src="img/home-video-bg.jpg", srcset="img/home-video-bg@2x.jpg", width="1800", height="1020", alt="")
+			img(src="img/home-video-bg.jpg", srcset="img/home-video-bg@2x.jpg 2x", width="1800", height="1020", alt="")
 
 			+logo(isHome, 'video-section__logo logo--large logo--white')
 			.video-section__bottom
@@ -34,7 +34,7 @@ block content
 					.projects-masonry__item.__js_masonry-item(class= colCl, data-order= (index + 1))
 						.preview-card
 							.preview-card__image
-								img(src= pathM + item.img + '.jpg', srcset= pathM + item.img + '@2x.jpg', width= item.w, height= item.h, alt="")
+								img(src= pathM + item.img + '.jpg', srcset= pathM + item.img + '@2x.jpg 2x', width= item.w, height= item.h, alt="")
 							.preview-card__content
 								h3.preview-card__heading Interior in Spain
 								.preview-card__text Projects for many large domestic and foreign corporations, enterprises in many elds such

@@ -1,8 +1,65 @@
 /* ------------------------------------------------------------------------------
 
-  1.  Global
+  1. Global
+		1.1 General
+		1.2  Typography
+		1.3 Utils
+		1.4 Buttons
+		1.5 Fields
+		1.6 Heading
+		1.7 Menu toggle button
+		1.8 Navigation
+		1.9 Logo
+		1.10 Social
+		1.11 More
+		1.12 Play button
+		1.13 Filter
+		1.14 Overlay
+		1.15 Preloader
+		1.16 Webpage
+		1.17 Language switcher
 
+	2. Header
+		2.1 Mobile menu
+		2.2 Header
 
+	3. Footer
+		3.1 Footer
+
+	4. Main
+		4.1 Timer
+		4.2 Error 404
+		4.3 Coming soon
+		4.4 Link with arrow
+		4.5 Tab rev slider
+		4.6 Statistics block
+		4.7 Review card
+		4.8 News preview card
+		4.9 About us block
+		4.10 Hero block
+		4.11 Services block
+		4.12 Statistics block
+		4.12 Latest projects carousel block
+		4.13 Partners block
+		4.14 Partners block
+		4.15 Latest news block
+		4.16 Latest news block
+		4.17 Latest news block
+		4.18 Featured projects block
+		4.19 Project detail blocks
+		4.20 Services section
+		4.21 Home Grid page blocks
+		4.22 Team list block
+		4.23 News blocks
+		4.24 Blocks for services pages
+		4.25 Feedback block
+		4.26 Contact block
+		4.27 Block in About page
+		4.28 Map block
+		4.29 Video section in homepage
+		4.30 Main slider
+		4.31 Article
+		4.32 Home parallax
 
 -------------------------------------------------------------------------------*/
 @import url(aos.css);
@@ -683,7 +740,7 @@ textarea.custom-input {
   }
 }
 
-/* 1.7 Heading */
+/* 1.6 Heading */
 .heading {
   margin: 0;
   font-family: "Gilroy", "Arial", sans-serif;
@@ -730,7 +787,7 @@ textarea.custom-input {
   text-transform: uppercase;
 }
 
-/* 1.8 Menu toggle button */
+/* 1.7 Menu toggle button */
 .menu-toggle {
   position: relative;
   display: block;
@@ -785,7 +842,7 @@ textarea.custom-input {
   border-top-color: #fbc710;
 }
 
-/* 1.11 Navigation */
+/* 1.8 Navigation */
 .navigation__dropdown {
   display: none;
 }
@@ -1019,7 +1076,7 @@ textarea.custom-input {
   opacity: 0.7;
 }
 
-/* 1.12 Logo */
+/* 1.9 Logo */
 .logo {
   position: relative;
   z-index: 0;
@@ -1110,7 +1167,7 @@ textarea.custom-input {
   transform: translateX(0);
 }
 
-/* 1.13 Social */
+/* 1.10 Social */
 .social {
   list-style: none;
   padding: 0;
@@ -1213,7 +1270,7 @@ textarea.custom-input {
   opacity: 0.7;
 }
 
-/* 1.14 More */
+/* 1.11 More */
 .more {
   display: flex;
   align-items: center;
@@ -1244,6 +1301,7 @@ textarea.custom-input {
   opacity: 0.7;
 }
 
+/* 1.12 Play button */
 .play-btn {
   position: relative;
   display: inline-block;
@@ -1269,7 +1327,7 @@ textarea.custom-input {
   margin-left: 2px;
 }
 
-/* 1.17 Filter */
+/* 1.13 Filter */
 .filter__item {
   margin-right: 20px;
   padding: 0;
@@ -1305,7 +1363,7 @@ textarea.custom-input {
   color: #fbc710;
 }
 
-/* 1.20 Overlay */
+/* 1.14 Overlay */
 .overlay {
   position: fixed;
   top: 0;
@@ -1318,7 +1376,7 @@ textarea.custom-input {
   display: none;
 }
 
-/* 1.22 Preloader */
+/* 1.15 Preloader */
 .preloader {
   position: fixed;
   top: 0;
@@ -1369,7 +1427,7 @@ textarea.custom-input {
   }
 }
 
-/* 1.23 Webpage */
+/* 1.16 Webpage */
 .webpage {
   background-color: #ffffff;
 }
@@ -1481,7 +1539,7 @@ textarea.custom-input {
   }
 }
 
-/* 1.24 Language switcher */
+/* 1.17 Language switcher */
 .lang-switcher {
   list-style: none;
   padding: 0;
@@ -1566,7 +1624,7 @@ textarea.custom-input {
 /*-------------------------------------------------------------------------------
   2. Header
 -------------------------------------------------------------------------------*/
-/* 2.1 Header type 1 */
+/* 2.1 Mobile menu */
 .mobile-canvas {
   position: fixed;
   top: 0;
@@ -1817,6 +1875,7 @@ textarea.custom-input {
   }
 }
 
+/* 2.2 Header */
 .header {
   position: relative;
   z-index: 2;
@@ -2060,7 +2119,7 @@ textarea.custom-input {
 /*-------------------------------------------------------------------------------
   3. Footer
 -------------------------------------------------------------------------------*/
-/* 3.1 Footer type 1 */
+/* 3.1 Footer */
 .footer--lite .footer__inner {
   padding-top: 46px;
   padding-bottom: 46px;
@@ -2212,7 +2271,7 @@ textarea.custom-input {
 /*-------------------------------------------------------------------------------
   4. Main
 -------------------------------------------------------------------------------*/
-/* 4.17 Timer */
+/* 4.1 Timer */
 .timer {
   display: flex;
 }
@@ -2259,8 +2318,7 @@ textarea.custom-input {
   }
 }
 
-/* 4.33 Menu */
-/* 4.52 Error 404 */
+/* 4.2 Error 404 */
 .page-404 {
   background-image: url("../img/bg-404.jpg");
   background-repeat: no-repeat;
@@ -2356,7 +2414,7 @@ textarea.custom-input {
   max-width: 347px;
 }
 
-/* 4.58 Coming soon */
+/* 4.3 Coming soon */
 .coming-soon {
   width: 100%;
   background-image: url("../img/picture/bg-launch.jpg");
@@ -2523,7 +2581,7 @@ textarea.custom-input {
   }
 }
 
-/* Link with arrow */
+/* 4.4 Link with arrow */
 .link-arrow {
   display: inline-flex;
   align-items: center;
@@ -2558,7 +2616,7 @@ textarea.custom-input {
   }
 }
 
-/* Tab rev slider */
+/* 4.5 Tab rev slider */
 .slide-tab {
   display: flex;
   align-items: flex-start;
@@ -2635,7 +2693,7 @@ textarea.custom-input {
   }
 }
 
-/* Statistics block */
+/* 4.6 Statistics block */
 .card {
   position: relative;
   display: block;
@@ -3146,7 +3204,7 @@ textarea.custom-input {
   transition: fill 0.3s ease;
 }
 
-/* Review card */
+/* 4.7 Review card */
 .review-card {
   position: relative;
   box-sizing: border-box;
@@ -3201,7 +3259,7 @@ textarea.custom-input {
   color: #fbc710;
 }
 
-/* News preview card */
+/* 4.8 News preview card */
 .preview-card {
   position: relative;
   overflow: hidden;
@@ -3357,7 +3415,7 @@ textarea.custom-input {
   margin-left: 10px;
 }
 
-/* About us block */
+/* 4.9 About us block */
 .about-section__content {
   margin-bottom: 56px;
 }
@@ -3515,7 +3573,7 @@ textarea.custom-input {
   }
 }
 
-/* Hero block */
+/* 4.10 Hero block */
 @media (min-width: 1200px) {
   .hero__inner {
     position: relative;
@@ -3657,7 +3715,7 @@ textarea.custom-input {
   }
 }
 
-/* Services block */
+/* 4.11 Services block */
 .services-section__content {
   margin-bottom: 56px;
 }
@@ -3748,7 +3806,7 @@ textarea.custom-input {
   transform: translateY(-50%) translateX(-50%);
 }
 
-/* Statistics block */
+/* 4.12 Statistics block */
 .statistics__item {
   text-align: center;
   margin-bottom: 32px;
@@ -3805,7 +3863,7 @@ textarea.custom-input {
   }
 }
 
-/* Latest projects carousel block */
+/* 4.12 Latest projects carousel block */
 @media (min-width: 1200px) {
   .latest-projects__inner {
     max-width: 1830px;
@@ -3866,7 +3924,7 @@ textarea.custom-input {
   }
 }
 
-/* Partners block */
+/* 4.13 Partners block */
 .partners {
   /*
 	&__heading {
@@ -3970,7 +4028,7 @@ textarea.custom-input {
   filter: grayscale(0);
 }
 
-/* Partners block */
+/* 4.14 Partners block */
 .reviews-carousel__title {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 35px;
@@ -3996,7 +4054,7 @@ textarea.custom-input {
   margin-top: 58px;
 }
 
-/* Latest news block */
+/* 4.15 Latest news block */
 .latest-news {
   padding-bottom: 10px;
 }
@@ -4053,7 +4111,7 @@ textarea.custom-input {
   }
 }
 
-/* Latest news block */
+/* 4.16 Latest news block */
 .projects-masonry {
   list-style: none;
   padding: 0;
@@ -4073,7 +4131,7 @@ textarea.custom-input {
   margin-bottom: 30px;
 }
 
-/* Latest news block */
+/* 4.17 Latest news block */
 .projects-carousel {
   position: relative;
   padding-bottom: 32px;
@@ -4215,7 +4273,7 @@ textarea.custom-input {
   }
 }
 
-/* Featured projects block */
+/* 4.18 Featured projects block */
 @media (min-width: 1200px) {
   .featured-projects__inner {
     max-width: 1830px;
@@ -4268,7 +4326,7 @@ textarea.custom-input {
   margin-bottom: 28px;
 }
 
-/* Project detail blocks */
+/* 4.19 Project detail blocks */
 .projects-slider__item {
   max-width: 510px;
 }
@@ -4845,7 +4903,7 @@ textarea.custom-input {
   margin-top: 30px;
 }
 
-/* Services section */
+/* 4.20 Services section */
 .services {
   color: #000000;
 }
@@ -5055,7 +5113,7 @@ textarea.custom-input {
   margin-left: 16px;
 }
 
-/* Home Grid page blocks */
+/* 4.21 Home Grid page blocks */
 @media (min-width: 1200px) {
   .projects-grid__inner {
     max-width: 1830px;
@@ -5073,7 +5131,7 @@ textarea.custom-input {
   margin-top: 30px;
 }
 
-/* Team list block */
+/* 4.22 Team list block */
 .team-list {
   list-style: none;
   padding: 0;
@@ -5091,7 +5149,7 @@ textarea.custom-input {
   margin-top: 30px;
 }
 
-/* News blocks */
+/* 4.23 News blocks */
 .sidebar {
   width: 100%;
   margin-bottom: 50px;
@@ -6253,7 +6311,7 @@ textarea.custom-input {
   font-weight: 700;
 }
 
-/* Blocks for services pages */
+/* 4.24 Blocks for services pages */
 .service-card {
   counter-increment: services;
 }
@@ -6558,7 +6616,7 @@ textarea.custom-input {
   height: auto;
 }
 
-/* Feedback block */
+/* 4.25 Feedback block */
 .feedback__heading {
   font-size: 32px;
   margin: 0 0 32px;
@@ -6574,7 +6632,7 @@ textarea.custom-input {
   margin-bottom: 30px;
 }
 
-/* Contact block */
+/* 4.26 Contact block */
 .contact-block {
   max-width: 496px;
   background-color: #ffffff;
@@ -6686,7 +6744,7 @@ textarea.custom-input {
   margin-top: 30px;
 }
 
-/* Block in About page */
+/* 4.27 Block in About page */
 @media (min-width: 1200px) {
   .about-block--columns .about-block__inner {
     display: flex;
@@ -6825,7 +6883,7 @@ textarea.custom-input {
   padding-top: 0;
 }
 
-/* Map block */
+/* 4.28 Map block */
 .map {
   position: relative;
   max-width: 1830px;
@@ -6860,7 +6918,7 @@ textarea.custom-input {
   }
 }
 
-/* Video section in homepage */
+/* 4.29 Video section in homepage */
 .video-section {
   position: relative;
   z-index: 1;
@@ -6929,7 +6987,7 @@ textarea.custom-input {
   color: #000000;
 }
 
-/* Main slider */
+/* 4.30 Main slider */
 .main-slider .tp-tabs {
   padding: 0 !important;
   background-color: #ffffff !important;
@@ -6984,7 +7042,7 @@ textarea.custom-input {
   content: "next";
 }
 
-/* Article */
+/* 4.31 Article */
 .article {
   overflow: hidden;
   padding: 40px 0 60px;
@@ -7418,7 +7476,7 @@ textarea.custom-input {
   }
 }
 
-/* Home parallax */
+/* 4.32 Home parallax */
 .welcome {
   max-width: 480px;
 }
