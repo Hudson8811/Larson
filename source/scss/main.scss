@@ -1,8 +1,65 @@
 /* ------------------------------------------------------------------------------
 
-  1.  Global
+  1. Global
+		1.1 General
+		1.2  Typography
+		1.3 Utils
+		1.4 Buttons
+		1.5 Fields
+		1.6 Heading
+		1.7 Menu toggle button
+		1.8 Navigation
+		1.9 Logo
+		1.10 Social
+		1.11 More
+		1.12 Play button
+		1.13 Filter
+		1.14 Overlay
+		1.15 Preloader
+		1.16 Webpage
+		1.17 Language switcher
 
+	2. Header
+		2.1 Mobile menu
+		2.2 Header
 
+	3. Footer
+		3.1 Footer
+
+	4. Main
+		4.1 Timer
+		4.2 Error 404
+		4.3 Coming soon
+		4.4 Link with arrow
+		4.5 Tab rev slider
+		4.6 Statistics block
+		4.7 Review card
+		4.8 News preview card
+		4.9 About us block
+		4.10 Hero block
+		4.11 Services block
+		4.12 Statistics block
+		4.12 Latest projects carousel block
+		4.13 Partners block
+		4.14 Partners block
+		4.15 Latest news block
+		4.16 Latest news block
+		4.17 Latest news block
+		4.18 Featured projects block
+		4.19 Project detail blocks
+		4.20 Services section
+		4.21 Home Grid page blocks
+		4.22 Team list block
+		4.23 News blocks
+		4.24 Blocks for services pages
+		4.25 Feedback block
+		4.26 Contact block
+		4.27 Block in About page
+		4.28 Map block
+		4.29 Video section in homepage
+		4.30 Main slider
+		4.31 Article
+		4.32 Home parallax
 
 -------------------------------------------------------------------------------*/
 
@@ -35,121 +92,122 @@
 /* 1.5 Fields */
 @import "blocks/field";
 
-/* 1.7 Heading */
+/* 1.6 Heading */
 @import "blocks/heading";
 @import "blocks/heading-small";
 
-/* 1.8 Menu toggle button */
+/* 1.7 Menu toggle button */
 @import "blocks/menu-toggle";
 
-/* 1.11 Navigation */
+/* 1.8 Navigation */
 @import "blocks/navigation";
 
-/* 1.12 Logo */
+/* 1.9 Logo */
 @import "blocks/logo";
 
-/* 1.13 Social */
+/* 1.10 Social */
 @import "blocks/social";
 
-/* 1.14 More */
+/* 1.11 More */
 @import "blocks/more";
+
+/* 1.12 Play button */
 @import "blocks/play-btn";
 
-/* 1.17 Filter */
+/* 1.13 Filter */
 @import "blocks/filter";
 
-/* 1.20 Overlay */
+/* 1.14 Overlay */
 @import "blocks/overlay";
 
-/* 1.22 Preloader */
+/* 1.15 Preloader */
 @import "blocks/preloader";
 
-/* 1.23 Webpage */
+/* 1.16 Webpage */
 @import "blocks/webpage";
 
-/* 1.24 Language switcher */
+/* 1.17 Language switcher */
 @import "blocks/lang-switcher";
 
 /*-------------------------------------------------------------------------------
   2. Header
 -------------------------------------------------------------------------------*/
 
-/* 2.1 Header type 1 */
+/* 2.1 Mobile menu */
 @import "blocks/mobile-canvas";
+
+/* 2.2 Header */
 @import "blocks/header";
 
 /*-------------------------------------------------------------------------------
   3. Footer
 -------------------------------------------------------------------------------*/
 
-/* 3.1 Footer type 1 */
+/* 3.1 Footer */
 @import "blocks/footer";
 
 /*-------------------------------------------------------------------------------
   4. Main
 -------------------------------------------------------------------------------*/
 
-/* 4.17 Timer */
+/* 4.1 Timer */
 @import "blocks/timer";
 
-/* 4.33 Menu */
-//@import "blocks/menu";
-
-/* 4.52 Error 404 */
+/* 4.2 Error 404 */
 @import "blocks/page-404";
 
-/* 4.58 Coming soon */
+/* 4.3 Coming soon */
 @import "blocks/coming-soon";
 
-/* Link with arrow */
+/* 4.4 Link with arrow */
 @import "blocks/link-arrow";
 
-/* Tab rev slider */
+/* 4.5 Tab rev slider */
 @import "blocks/slide-tab";
 
-/* Statistics block */
+/* 4.6 Statistics block */
 @import "blocks/card";
 
-/* Review card */
+/* 4.7 Review card */
 @import "blocks/review-card";
 
-/* News preview card */
+/* 4.8 News preview card */
 @import "blocks/preview-card";
 
-/* About us block */
+/* 4.9 About us block */
 @import "blocks/about-section";
 
-/* Hero block */
+/* 4.10 Hero block */
 @import "blocks/hero";
 
-/* Services block */
+/* 4.11 Services block */
 @import "blocks/services-section";
 
-/* Statistics block */
+/* 4.12 Statistics block */
 @import "blocks/statistics";
 
-/* Latest projects carousel block */
+/* 4.12 Latest projects carousel block */
 @import "blocks/latest-projects";
 
-/* Partners block */
+/* 4.13 Partners block */
 @import "blocks/partners";
 
-/* Partners block */
+/* 4.14 Partners block */
 @import "blocks/reviews-carousel";
 
-/* Latest news block */
+/* 4.15 Latest news block */
 @import "blocks/latest-news";
 
-/* Latest news block */
+/* 4.16 Latest news block */
 @import "blocks/projects-masonry";
 
-/* Latest news block */
+/* 4.17 Latest news block */
 @import "blocks/projects-carousel";
 
-/* Featured projects block */
+/* 4.18 Featured projects block */
 @import "blocks/featured-projects";
 
-/* Project detail blocks */
+/* 4.19 Project detail blocks */
 @import "blocks/projects-slider";
 @import "blocks/project-meta";
 @import "blocks/project-designer";
@@ -158,48 +216,48 @@
 @import "blocks/services-provided";
 @import "blocks/architects";
 
-/* Services section */
+/* 4.20 Services section */
 @import "blocks/services";
 
-/* Home Grid page blocks */
+/* 4.21 Home Grid page blocks */
 @import "blocks/projects-grid";
 
-/* Team list block */
+/* 4.22 Team list block */
 @import "blocks/team-list";
 
-/* News blocks */
+/* 4.23 News blocks */
 @import "blocks/sidebar";
 @import "blocks/news-listing";
 @import "blocks/single-post";
 @import "blocks/quote";
 
-/* Blocks for services pages */
+/* 4.24 Blocks for services pages */
 @import "blocks/service-card";
 @import "blocks/services-list";
 @import "blocks/single-service-block";
 
-/* Feedback block */
+/* 4.25 Feedback block */
 @import "blocks/feedback";
 
-/* Contact block */
+/* 4.26 Contact block */
 @import "blocks/contact-block";
 
-/* Block in About page */
+/* 4.27 Block in About page */
 @import "blocks/about-block";
 
-/* Map block */
+/* 4.28 Map block */
 @import "blocks/map";
 
-/* Video section in homepage */
+/* 4.29 Video section in homepage */
 @import "blocks/video-section";
 
-/* Main slider */
+/* 4.30 Main slider */
 @import "blocks/main-slider";
 
-/* Article */
+/* 4.31 Article */
 @import "blocks/article";
 
-/* Home parallax */
+/* 4.32 Home parallax */
 @import "blocks/welcome";
 @import "blocks/home-parallax";
 @import "blocks/services";
