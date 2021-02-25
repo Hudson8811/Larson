@@ -1,9 +1,19 @@
 .slider-parallax {
+	$self: &;
 	padding-bottom: 70px;
 	position: relative;
 
 	@include media(xl) {
 		padding-bottom: 23px;
+	}
+
+	&--full {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		width: 100%;
+		height: 100%;
 	}
 
 	&__slide {
