@@ -1,0 +1,15 @@
+.services-block {
+	&__header {
+		margin-bottom: 32px;
+
+		@include media(md) {
+			display: flex;
+			align-items: center;
+			margin-bottom: 48px;
+		}
+
+		@include media(xl) {
+			margin-bottom: 70px;
+		}
+	}
+}

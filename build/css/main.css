@@ -3806,6 +3806,24 @@ textarea.custom-input {
   transform: translateY(-50%) translateX(-50%);
 }
 
+.services-block__header {
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .services-block__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .services-block__header {
+    margin-bottom: 70px;
+  }
+}
+
 /* 4.12 Statistics block */
 .statistics__item {
   text-align: center;
