@@ -331,6 +331,17 @@
 		}
 	}
 
+	.social {
+		&__link {
+			&:hover,
+			&:focus {
+				svg {
+					fill: $color-default-white;
+				}
+			}
+		}
+	}
+
 	&--news {
 		height: 100%;
 		overflow: hidden;

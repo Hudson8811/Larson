@@ -1253,7 +1253,7 @@ textarea.custom-input {
 .social__link svg {
   display: block;
   align-self: center;
-  fill: #ffffff;
+  fill: #000000;
   transition: fill 0.3s ease;
 }
 
@@ -2995,6 +2995,10 @@ textarea.custom-input {
 
 .card__link svg {
   margin-left: 8px;
+}
+
+.card .social__link:hover svg, .card .social__link:focus svg {
+  fill: #ffffff;
 }
 
 .card--news {

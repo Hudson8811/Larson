@@ -230,7 +230,7 @@ main {
 }
 
 .social__link svg {
-  fill: #ffffff;
+  fill: #000000;
 }
 
 .social__link:hover svg, .social__link:focus svg {
@@ -444,6 +444,10 @@ main {
 
 .card__send-text {
   color: #ffffff;
+}
+
+.card .social__link:hover svg, .card .social__link:focus svg {
+  fill: #ffffff;
 }
 
 .video-section {
