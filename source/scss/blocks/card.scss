@@ -166,8 +166,22 @@
 		}
 	}
 
+	&--active {
+		border-color: $color-yellow;
+
+		#{$self}__heading {
+			position: static !important;
+			transform: translateY(0);
+		}
+
+		#{$self}__text {
+			position: static !important;
+		}
+	}
+
 	&:hover,
-	&:focus {
+	&:focus,
+	&--active {
 		outline: none;
 
 		#{$self}__content {

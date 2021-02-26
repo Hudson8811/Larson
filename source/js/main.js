@@ -17,6 +17,7 @@
 12. Form validation
 13. Fixed footer
 14. Parallax slider
+15. Home grid background
 
 -------------------------------------------------*/
 
@@ -609,4 +610,33 @@ $(window).on('load', function() {
 		loop: true,
 		speed: 300
 	});
+})();
+
+/* 15. Home grid background */
+(function () {
+	var cards = $('.__js_home-grid-card');
+	var bgContainer = $('.__js_projects-grid-bg');
+
+	cards.each(function(index){
+		var bg = $(this).attr('data-bg');
+		var flag = index === 0 ? true : false;
+		bgContainer.append(setBgItem(bg, flag));
+
+		$(this).on('mouseover focus', function() {
+			cards.removeClass('card--active');
+			$(this).addClass('card--active');
+			$('.projects-grid__bg-item').removeClass('active').eq(index).addClass('active');
+		})
+	});
+
+	function setBgItem(url, isActive) {
+		var bgItem = $('<div class="projects-grid__bg-item" style="background-image: url(' + url + ')"></div>');
+
+		if (isActive) {
+			bgItem.addClass('active')
+		}
+		return bgItem;
+	}
+
+
 })();

@@ -1430,23 +1430,21 @@ textarea.custom-input {
 /* 1.16 Webpage */
 .webpage {
   background-color: #ffffff;
-}
+  /*
+	&--home-grid {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-image: url("../img/home-grid-bg.jpg");
 
-.webpage--home-grid {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-image: url("../img/home-grid-bg.jpg");
-}
+		@include retina {
+			background-image: url("../img/home-grid-bg@2x.jpg");
+		}
 
-@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .webpage--home-grid {
-    background-image: url("../img/home-grid-bg@2x.jpg");
-  }
-}
-
-.webpage--home-grid main {
-  background-color: transparent;
+		main {
+			background-color: transparent;
+		}
+	}*/
 }
 
 .webpage--parallax .header {
@@ -2829,40 +2827,53 @@ textarea.custom-input {
   }
 }
 
-.card:hover, .card:focus {
+.card--active {
+  border-color: #fbc710;
+}
+
+.card--active .card__heading {
+  position: static !important;
+  transform: translateY(0);
+}
+
+.card--active .card__text {
+  position: static !important;
+}
+
+.card:hover, .card:focus, .card--active {
   outline: none;
 }
 
-.card:hover .card__content, .card:focus .card__content {
+.card:hover .card__content, .card:focus .card__content, .card--active .card__content {
   background-color: rgba(251, 199, 16, 0.95);
 }
 
-.card:hover .card__date, .card:focus .card__date {
+.card:hover .card__date, .card:focus .card__date, .card--active .card__date {
   opacity: 1;
   transform: translateY(0);
   transition: transform 0.6s 0.4s ease, opacity 0.6s 0.4s ease;
 }
 
-.card:hover .card__tag, .card:focus .card__tag {
+.card:hover .card__tag, .card:focus .card__tag, .card--active .card__tag {
   color: #000000;
   transform: translateY(0);
   transition: transform 0.5s ease;
 }
 
-.card:hover .card__heading, .card:focus .card__heading {
+.card:hover .card__heading, .card:focus .card__heading, .card--active .card__heading {
   position: static;
   color: #000000;
   transform: translateY(0);
   transition: transform 0.5s ease;
 }
 
-.card:hover .card__text, .card:focus .card__text {
+.card:hover .card__text, .card:focus .card__text, .card--active .card__text {
   opacity: 1;
   transform: translateY(0);
   transition: transform 0.4s 0.2s ease, opacity 0.4s 0.2s ease;
 }
 
-.card:hover .card__bottom, .card:focus .card__bottom {
+.card:hover .card__bottom, .card:focus .card__bottom, .card--active .card__bottom {
   opacity: 1;
 }
 
@@ -5165,6 +5176,33 @@ textarea.custom-input {
 
 .projects-grid__item {
   margin-top: 30px;
+}
+
+.projects-grid__bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.projects-grid__bg-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(1);
+  transition: all 5s, opacity 0.35s;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.projects-grid__bg-item.active {
+  opacity: 1;
+  transform: scale(1.03);
 }
 
 /* 4.22 Team list block */
