@@ -26,7 +26,7 @@
 		svg {
 			display: block;
 			align-self: center;
-			fill: $color-default-white;
+			fill: $color-default-black;
 			@include transition(fill);
 		}
 

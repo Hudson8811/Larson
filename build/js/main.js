@@ -17,6 +17,7 @@
 12. Form validation
 13. Fixed footer
 14. Parallax slider
+15. Home grid background
 
 -------------------------------------------------*/
 
@@ -80,7 +81,7 @@ $(window).on('load', function() {
 	var menuOpenBtn = $('.menu-toggle');
 	var menu = $('.__js_mobile-canvas');
 	var menuCloseBtn = menu.find('.mobile-canvas__close');
-	var headerInner = $('.header__inner');
+	var headerContainer = $('.header .container');
 	var animsition = $('.animsition');
 	var isHandled = false;
 
@@ -107,7 +108,7 @@ $(window).on('load', function() {
 	});
 
 	if ($(window).width() >= mobileBreakpoint) {
-		headerInner.append(menu);
+		headerContainer.append(menu);
 		menu.addClass('header__mobile');
 	}
 
@@ -126,7 +127,7 @@ $(window).on('load', function() {
 
 	$(window).on('resize', function() {
 		if ($(window).width() >= mobileBreakpoint) {
-			headerInner.append(menu);
+			headerContainer.append(menu);
 			menu.addClass('header__mobile');
 		} else {
 			animsition.prepend(menu);
@@ -609,4 +610,33 @@ $(window).on('load', function() {
 		loop: true,
 		speed: 300
 	});
+})();
+
+/* 15. Home grid background */
+(function () {
+	var cards = $('.__js_home-grid-card');
+	var bgContainer = $('.__js_projects-grid-bg');
+
+	cards.each(function(index){
+		var bg = $(this).attr('data-bg');
+		var flag = index === 0 ? true : false;
+		bgContainer.append(setBgItem(bg, flag));
+
+		$(this).on('mouseover focus', function() {
+			cards.removeClass('card--active');
+			$(this).addClass('card--active');
+			$('.projects-grid__bg-item').removeClass('active').eq(index).addClass('active');
+		})
+	});
+
+	function setBgItem(url, isActive) {
+		var bgItem = $('<div class="projects-grid__bg-item" style="background-image: url(' + url + ')"></div>');
+
+		if (isActive) {
+			bgItem.addClass('active')
+		}
+		return bgItem;
+	}
+
+
 })();

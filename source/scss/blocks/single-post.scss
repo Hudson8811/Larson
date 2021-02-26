@@ -199,13 +199,11 @@
 		line-height: 32px;
 		font-weight: bold;
 		color: $color-default-black;
-		text-align: center;
 		margin-bottom: 35px;
 
 		@include media(lg) {
 			font-size: 32px;
 			line-height: 45px;
-			text-align: left;
 			margin-bottom: 66px;
 		}
 
@@ -342,16 +340,16 @@
 	&__tags {
 		font-size: 16px;
 		font-weight: bold;
-		text-align: center;
-
-		@include media(lg) {
-			text-align: left;
-		}
 
 		a {
 			font-weight: 400;
 			color: $color-base;
 			@include transition(color);
+
+			&:focus {
+				outline: none;
+				color: $color-yellow;
+			}
 
 			@include hover {
 				color: $color-yellow;
@@ -359,35 +357,20 @@
 		}
 
 		span {
-			display: block;
 			color: $color-default-black;
-			text-align: center;
-
-			@include media(lg) {
-				display: inline;
-				text-align: left;
-			}
 		}
 	}
 
 	&__socials {
 		display: flex;
-		flex-direction: column;
 		align-items: center;
 		margin: 48px 0 10px;
 
-		@include media(lg) {
-			flex-direction: row;
-		}
-
 		> span {
+			margin-right: 20px;
 			font-size: 16px;
 			font-weight: bold;
 			color: $color-default-black;
-
-			@include media(lg) {
-				padding-right: 20px;
-			}
 		}
 	}
 
@@ -425,11 +408,16 @@
 	}
 
 	&__comment {
-		margin-bottom: 50px;
+		max-width: 730px;
+		margin: 0 auto 50px;
 
 		@include media(lg) {
 			margin-bottom: 207px;
 		}
+	}
+
+	&__comment-form {
+		margin: 0 auto;
 	}
 
 	&--full {
@@ -455,13 +443,21 @@
 }
 
 .post-related {
-	padding: 20px 10px;
+	padding: 20px 0;
 	background-color: $color-default-white;
 
 	@include media(lg) {
-		max-width: 1645px;
 		padding: 119px 0 103px;
 		background-color: $color-grey-f8;
+	}
+
+	@include media(xxl) {
+		background-color: transparent;
+		background-image: linear-gradient(
+			to right,
+			$color-grey-f8 86.09%,
+			transparent 86.09%
+		);
 	}
 
 	&__container {
@@ -481,8 +477,8 @@
 
 	&__title {
 		display: flex;
+		flex-wrap: wrap;
 		flex-direction: column;
-		align-items: center;
 		justify-content: center;
 		margin-bottom: 30px;
 
@@ -556,10 +552,6 @@
 }
 
 .comment {
-	@include media(lg) {
-		padding-right: 380px;
-	}
-
 	&__title {
 		font-family: $font-family--secondary;
 		font-size: 24px;
@@ -577,10 +569,10 @@
 
 	.comment-item {
 		display: flex;
-		align-items: center;
+		//align-items: center;
 		flex-direction: column;
 
-		@include media(lg) {
+		@include media(md) {
 			flex-direction: row;
 			align-items: flex-start;
 		}
@@ -588,7 +580,7 @@
 		+ .comment-item {
 			margin-top: 30px;
 
-			@include media(lg) {
+			@include media(md) {
 				margin-top: 63px;
 			}
 		}
@@ -601,9 +593,10 @@
 			overflow: hidden;
 			margin-bottom: 10px;
 
-			@include media(lg) {
+			@include media(md) {
 				margin-bottom: 0;
 				margin-right: 32px;
+				flex-shrink: 0;
 			}
 
 			img {
@@ -615,13 +608,14 @@
 
 		&__top {
 			display: flex;
-			align-items: center;
+			//align-items: center;
 			flex-direction: column;
 			margin-bottom: 5px;
 
-			@include media(lg) {
+			@include media(md) {
 				flex-direction: row;
 				align-items: flex-end;
+				flex-wrap: wrap;
 			}
 		}
 
@@ -654,17 +648,15 @@
 		&__reply {
 			width: 68px;
 			padding: 5px 13px;
-			position: relative;
-			left: 50%;
-			transform: translateX(-50%);
-			background-color: $color-default-white;
-			border: 1px solid $color-grey-d3;
-			color: $color-default-black;
 			font-size: 12px;
+			color: $color-default-black;
 			text-align: center;
+			border: 1px solid $color-grey-d3;
+			background-color: $color-default-white;
 			text-transform: uppercase;
 			box-sizing: border-box;
 			cursor: pointer;
+
 			@include transition(all);
 
 			@include hover {
@@ -680,14 +672,10 @@
 		}
 
 		&--replyed {
-			padding-left: 20px;
-			margin-left: 20px;
-			border-left: 1px solid #e5e5e5;
+			margin-left: 50px;
 
-			@include media(lg) {
-				margin-left: 50px;
-				padding-left: 0;
-				border-left: none;
+			@include media(md) {
+				margin-left: 80px;
 			}
 
 			@include media(lg) {
@@ -698,9 +686,7 @@
 }
 
 .comment-form {
-	@include media(lg) {
-		padding-right: 380px;
-	}
+	max-width: 730px;
 
 	&__title {
 		font-family: $font-family--secondary;
@@ -708,7 +694,6 @@
 		line-height: 36px;
 		font-weight: bold;
 		color: $color-default-black;
-		text-align: center;
 		margin-bottom: 30px;
 
 		@include media(lg) {
@@ -753,7 +738,7 @@
 	&__inputs-group {
 		display: flex;
 		flex-direction: column;
-		margin: 0 0 30px;
+		//margin: 0 0 30px;
 
 		@include media(lg) {
 			flex-direction: row;
@@ -780,9 +765,6 @@
 		padding: 17px 44px;
 		margin-top: 30px;
 		border-radius: 0;
-		position: relative;
-		left: 50%;
-		transform: translateX(-50%);
 		font-family: $font-family--main;
 		font-size: 16px;
 		font-weight: 500;
@@ -790,8 +772,6 @@
 		cursor: pointer;
 
 		@include media(lg) {
-			left: 0;
-			transform: none;
 			margin-top: 32px;
 		}
 	}

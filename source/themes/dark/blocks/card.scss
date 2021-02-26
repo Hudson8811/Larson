@@ -204,4 +204,15 @@
 	&__link {
 		//@include text(20px, 1.15, $color-default-black);
 	}
+
+	.social {
+		&__link {
+			&:hover,
+			&:focus {
+				svg {
+					fill: $color-default-white;
+				}
+			}
+		}
+	}
 }

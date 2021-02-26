@@ -172,6 +172,11 @@
 		#{$self}__inner {
 			padding-top: 15px;
 			padding-bottom: 15px;
+
+			@include media(xxl) {
+				padding-top: 24px;
+				padding-bottom: 24px;
+			}
 		}
 
 		#{$self}__logo {
@@ -221,7 +226,6 @@
 
 	&__inner {
 		display: flex;
-		flex-wrap: wrap;
 		align-items: center;
 		width: 100%;
 		max-width: $width--full;
@@ -232,25 +236,68 @@
 			padding: 24px 15px;
 		}
 
-		@include media(lg) {
+		@include media(xxl) {
+			position: relative;
+			padding: 42px 15px;
 		}
 	}
 
 	&__logo {
 		margin-right: 20px;
+		flex-shrink: 0;
 
 		@include media(md) {
-			margin-right: 0;
+			//margin-right: 0;
 		}
 
+		@include media(xxl) {
+			//margin-right: 11.71vw;
+			position: absolute;
+		}
+	}
+
+	.container {
+		display: none;
+
 		@include media(lg) {
-			margin-right: 11.71vw;
+			display: block;
 		}
 	}
 
 	&__mobile {
 		@include media(lg) {
 			flex-grow: 1;
+		}
+	}
+
+	&__phone {
+		display: none;
+
+		@include media(lg) {
+			display: block;
+			flex-shrink: 0;
+
+			@include text(16px, 1.25, $color-default-black);
+			font-weight: 600;
+
+			@include transition(color);
+
+			&:hover,
+			&:focus {
+				outline: none;
+				color: $color-yellow;
+			}
+
+			&:active {
+				opacity: 0.7;
+			}
+		}
+
+		@include media(xxl) {
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translateY(-50%);
 		}
 	}
 

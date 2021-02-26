@@ -22,13 +22,8 @@
 			line-height: 21.76px;
 			font-weight: bold;
 			color: $color-default-black;
-			text-align: center;
 			margin: 0;
 			margin-bottom: 30px;
-
-			@include media(lg) {
-				text-align: left;
-			}
 		}
 
 		input[type="search"] {
