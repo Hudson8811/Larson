@@ -9,11 +9,12 @@ block variables
 block header
 	section.video-section
 		.video-section__inner.container
-			img(src="img/home-video-bg.jpg", srcset="img/home-video-bg@2x.jpg 2x", width="1800", height="1020", alt="")
+			video(autoplay, loop="true", muted="true")
+				source(src="video/bg.mp4", type='video/mp4')
 
 			+logo(isHome, 'video-section__logo logo--large logo--white')
 			.video-section__bottom
-				.video-section__copy © LarsonR 2020.
+				.video-section__copy © Larson 2021.
 				ul.video-section__lang-switcherul.lang-switcher.lang-switcher--line
 					li.lang-switcher__item
 						a.lang-switcher__link.lang-switcher__link--current Eng
