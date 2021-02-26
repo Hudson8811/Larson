@@ -5904,13 +5904,18 @@ textarea.custom-input {
 }
 
 .post-sb__comment {
-  margin-bottom: 50px;
+  max-width: 730px;
+  margin: 0 auto 50px;
 }
 
 @media (min-width: 992px) {
   .post-sb__comment {
     margin-bottom: 207px;
   }
+}
+
+.post-sb__comment-form {
+  margin: 0 auto;
 }
 
 .post-sb--full .post-sb__content {
@@ -5937,9 +5942,15 @@ textarea.custom-input {
 
 @media (min-width: 992px) {
   .post-related {
-    max-width: 1645px;
     padding: 119px 0 103px;
     background-color: #f8f8f8;
+  }
+}
+
+@media (min-width: 1560px) {
+  .post-related {
+    background-color: transparent;
+    background-image: linear-gradient(to right, #f8f8f8 86.09%, transparent 86.09%);
   }
 }
 
@@ -6043,12 +6054,6 @@ textarea.custom-input {
 @media (min-width: 992px) {
   .post-related__item .card__content {
     background-color: #f8f8f8;
-  }
-}
-
-@media (min-width: 992px) {
-  .comment {
-    padding-right: 380px;
   }
 }
 
@@ -6208,10 +6213,8 @@ textarea.custom-input {
   }
 }
 
-@media (min-width: 992px) {
-  .comment-form {
-    padding-right: 380px;
-  }
+.comment-form {
+  max-width: 730px;
 }
 
 .comment-form__title {
