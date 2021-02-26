@@ -81,7 +81,7 @@ $(window).on('load', function() {
 	var menuOpenBtn = $('.menu-toggle');
 	var menu = $('.__js_mobile-canvas');
 	var menuCloseBtn = menu.find('.mobile-canvas__close');
-	var headerInner = $('.header__inner');
+	var headerContainer = $('.header .container');
 	var animsition = $('.animsition');
 	var isHandled = false;
 
@@ -108,7 +108,7 @@ $(window).on('load', function() {
 	});
 
 	if ($(window).width() >= mobileBreakpoint) {
-		headerInner.append(menu);
+		headerContainer.append(menu);
 		menu.addClass('header__mobile');
 	}
 
@@ -127,7 +127,7 @@ $(window).on('load', function() {
 
 	$(window).on('resize', function() {
 		if ($(window).width() >= mobileBreakpoint) {
-			headerInner.append(menu);
+			headerContainer.append(menu);
 			menu.addClass('header__mobile');
 		} else {
 			animsition.prepend(menu);

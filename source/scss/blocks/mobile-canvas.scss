@@ -23,13 +23,9 @@
 	}
 
 	@include media(md) {
-		min-height: 575px;
-		padding: 44px 60px;
-	}
-
-	@include media(md) {
-		padding: 40px 80px; //44px 80px;
 		max-width: 750px;
+		min-height: 575px;
+		padding: 40px 80px; //44px 80px;
 	}
 
 	@include media(lg) {
@@ -90,7 +86,13 @@
 
 		@include media(lg) {
 			margin-top: 0;
-			margin-left: auto;
+			//margin-left: auto;
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translateY(-50%);
+
+			display: none;
 		}
 	}
 
