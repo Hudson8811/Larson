@@ -7018,12 +7018,6 @@ textarea.custom-input {
   }
 }
 
-.video-section img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 .video-section__inner {
   position: relative;
 }
@@ -7034,14 +7028,27 @@ textarea.custom-input {
   }
 }
 
+.video-section video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
 .video-section__bottom {
   position: absolute;
   left: 15px;
   right: 15px;
   bottom: 0;
-  display: flex;
+  display: none;
   justify-content: space-between;
   padding: 15px;
+}
+
+@media (min-width: 576px) {
+  .video-section__bottom {
+    display: flex;
+  }
 }
 
 @media (min-width: 992px) {
@@ -7058,7 +7065,15 @@ textarea.custom-input {
 }
 
 .video-section__copy {
-  color: #000000;
+  color: #ffffff;
+}
+
+.video-section .lang-switcher__link {
+  color: #ffffff;
+}
+
+.video-section .lang-switcher__link--current {
+  color: #fbc710;
 }
 
 /* 4.30 Main slider */

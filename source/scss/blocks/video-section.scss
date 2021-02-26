@@ -16,12 +16,6 @@
 		padding-top: 60px;
 	}
 
-	img {
-		display: block;
-		width: 100%;
-		height: auto;
-	}
-
 	&__inner {
 		position: relative;
 
@@ -30,14 +24,25 @@
 		}
 	}
 
+	video {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: 100%;
+	}
+
 	&__bottom {
 		position: absolute;
 		left: 15px;
 		right: 15px;
 		bottom: 0;
-		display: flex;
+		display: none;
 		justify-content: space-between;
 		padding: 15px;
+
+		@include media(sm) {
+			display: flex;
+		}
 
 		@include media(lg) {
 			padding: 52px 15px;
@@ -52,6 +57,16 @@
 	}
 
 	&__copy {
-		color: $color-default-black;
+		color: $color-default-white;
+	}
+
+	.lang-switcher {
+		&__link {
+			color: $color-default-white;
+
+			&--current {
+				color: $color-yellow;
+			}
+		}
 	}
 }
