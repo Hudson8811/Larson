@@ -94,8 +94,8 @@
 			right: 0;
 			background-color: transparent;
 
-			#{$self}__logo {
-				margin-right: 6.25vw;
+			.container {
+				//transform: translateX(-5.52vw);
 			}
 
 			.navigation {
@@ -108,11 +108,20 @@
 				display: none;
 			}
 		}
+		@include media(xxl) {
+			.container {
+				transform: translateX(-4.68vw);
+			}
+		}
 
 		@include media(xxx) {
 			.navigation {
 				&__item {
-					margin-right: 52px;
+					margin-right: 49px;
+
+					&:last-child {
+						margin-right: 0;
+					}
 				}
 			}
 		}

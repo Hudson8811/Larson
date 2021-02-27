@@ -1930,9 +1930,6 @@ textarea.custom-input {
     right: 0;
     background-color: transparent;
   }
-  .header--half .header__logo {
-    margin-right: 6.25vw;
-  }
   .header--half .navigation__item {
     margin-right: 2.7vw;
   }
@@ -1941,9 +1938,18 @@ textarea.custom-input {
   }
 }
 
+@media (min-width: 1560px) {
+  .header--half .container {
+    transform: translateX(-4.68vw);
+  }
+}
+
 @media (min-width: 1920px) {
   .header--half .navigation__item {
-    margin-right: 52px;
+    margin-right: 49px;
+  }
+  .header--half .navigation__item:last-child {
+    margin-right: 0;
   }
 }
 
@@ -3692,38 +3698,58 @@ textarea.custom-input {
     position: relative;
     overflow: hidden;
     display: flex;
-    max-width: 1830px;
   }
+}
+
+.hero__content {
+  position: relative;
+  padding-left: 36px;
 }
 
 @media (min-width: 1200px) {
   .hero__content {
     position: absolute;
-    left: 15px;
+    left: 0;
     z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding-left: 142px;
+    background-image: linear-gradient(to right, #ffffff 54.375%, transparent 54.375%);
+  }
+  .hero__content .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 54.8%;
     height: 100%;
-    padding-left: 17.86vw;
-    padding-right: 40px;
-    background-color: #ffffff;
   }
 }
 
 @media (min-width: 1560px) {
   .hero__content {
-    width: 44.8%;
+    padding-left: 0;
+    background-image: linear-gradient(to right, #ffffff 44.375%, transparent 44.375%);
   }
 }
 
 .hero__tag {
   position: absolute;
-  left: 0;
+  left: 15px;
   top: 50%;
   writing-mode: vertical-rl;
-  transform: translateY(-100%) rotate(180deg);
+  transform: translateY(-60%) rotate(180deg);
+  text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+  .hero__tag {
+    transform: translateY(-100%) rotate(180deg);
+  }
+}
+
+@media screen and (min-width: 1830px) {
+  .hero__tag {
+    left: calc((100% - 1800px) / 2);
+  }
 }
 
 .hero__heading {
@@ -3748,8 +3774,8 @@ textarea.custom-input {
 
 @media (min-width: 1200px) {
   .hero__heading::after {
-    left: 56px;
-    bottom: -28px;
+    left: 69px;
+    bottom: -27px;
     transform: translateY(0);
   }
 }
@@ -3771,7 +3797,9 @@ textarea.custom-input {
   .hero__heading {
     display: flex;
     flex-direction: column;
-    padding: 66px 0 132px 56px;
+    margin-top: 70px;
+    margin-bottom: 103px;
+    padding: 66px 0 137px 59px;
     font-size: 80px;
   }
   .hero__heading::before {
