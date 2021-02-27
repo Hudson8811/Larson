@@ -1,46 +1,98 @@
 .slider-parallax {
 	$self: &;
-	padding-bottom: 70px;
+
 	position: relative;
+	display: flex;
+	height: 100vh;
+	min-height: 540px;
 
-	@include media(xl) {
-		padding-bottom: 23px;
-	}
-
-	&--full {
-		position: absolute;
-		top: 0;
-		left: 0;
+	.swiper-slide {
 		display: flex;
-		width: 100%;
-		height: 100%;
 	}
 
 	&__slide {
+		position: relative;
 		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+		box-sizing: border-box;
 
 		@include media(md) {
 			flex-direction: row;
 		}
+
+		&-image {
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&-wrap {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translateY(-50%) translateX(-50%);
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			padding: 120px 15px 80px;
+
+			@include media(sm) {
+				max-width: 540px;
+			}
+
+			@include media(md) {
+				flex-direction: row;
+				max-width: 720px;
+				padding-top: 140px;
+				padding-bottom: 140px;
+			}
+
+			@include media(lg) {
+				max-width: 960px;
+			}
+
+			@include media(xl) {
+				width: 80%;
+				max-width: 1140px;
+				padding-bottom: 164px;
+			}
+		}
 	}
 
 	&__left {
-		margin-top: 30px;
+		margin-top: 20px;
 		order: 1;
 
 		@include media(md) {
-			max-width: 500px;
 			margin-top: 0;
 			order: 0;
+		}
+	}
+
+	&__right {
+		font-size: 16px;
+		line-height: 1;
+		text-transform: uppercase;
+
+		@include media(md) {
+			flex-grow: 1;
+			text-align: right;
+			font-size: 20px;
+		}
+
+		@include media(lg) {
+			padding-top: 14px;
+			padding-right: 10px;
+			font-size: 25px;
 		}
 	}
 
 	&__subtitle {
 		font-size: 20px;
 		font-weight: bold;
-		margin-bottom: 18px;
+		margin-bottom: 0;
 		text-transform: uppercase;
 
 		@include media(md) {
@@ -49,7 +101,10 @@
 
 		@include media(lg) {
 			font-size: 25px;
-			margin-bottom: 36px;
+
+			@include media-custom-height(768px) {
+				margin-bottom: 36px;
+			}
 		}
 	}
 
@@ -74,6 +129,18 @@
 			font-size: 90px;
 			line-height: 105px;
 			margin-bottom: 38px;
+
+			@include media-custom-height(900px) {
+				margin-bottom: 42px;
+			}
+		}
+
+		br {
+			display: none;
+
+			@include media-custom-height(768px) {
+				display: block;
+			}
 		}
 
 		span {
@@ -87,26 +154,17 @@
 		font-size: 14px;
 		line-height: 22px;
 		color: $color-grey-cc;
-		margin-bottom: 50px;
+		margin-bottom: 30px;
 
 		@include media(sm) {
 			font-size: 16px;
 			line-height: 26px;
 		}
-	}
-
-	&__right {
-		padding-top: 7px;
-		padding-right: 14px;
-		font-size: 20px;
-		text-transform: uppercase;
-
-		@include media(md) {
-			text-align: right;
-		}
 
 		@include media(lg) {
-			font-size: 25px;
+			@include media-custom-height(900px) {
+				margin-bottom: 45px;
+			}
 		}
 	}
 
@@ -114,67 +172,93 @@
 		font-weight: bold;
 	}
 
-	&__nav-btn {
-		width: 50px;
-		height: 50px;
-		background-color: transparent;
-		position: absolute;
-		bottom: 0;
-		z-index: 1;
-		border: none;
-		cursor: pointer;
+	&__date {
+		margin-bottom: 8px;
 
 		@include media(lg) {
-			bottom: -22px;
+			margin-bottom: 14px;
+		}
+	}
+
+	&__nav {
+		position: absolute;
+		bottom: 110px;
+		right: 15px;
+		width: 100%;
+		z-index: 1;
+
+		@include media(sm) {
+			max-width: 540px;
+			left: 50%;
+			right: auto;
+			transform: translateX(-50%);
+		}
+
+		@include media(md) {
+			max-width: 720px;
+			bottom: 140px;
+		}
+
+		@include media(lg) {
+			max-width: 960px;
 		}
 
 		@include media(xl) {
-			top: 41%;
-			bottom: unset;
+			width: 95%;
+			max-width: 1450px;
+			bottom: 51%;
 		}
 
-		@include media(xxl) {
-			width: 64px;
-			height: 64px;
-		}
+		&-btn {
+			width: 50px;
+			height: 50px;
+			background-color: transparent;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 1;
+			border: none;
+			cursor: pointer;
 
-		@include hover {
+			@include media(xxl) {
+				width: 64px;
+				height: 64px;
+			}
+
+			&:focus {
+				outline: none;
+			}
+
+			@include hover {
+				svg {
+					fill: $color-yellow;
+				}
+			}
+
 			svg {
-				fill: $color-yellow;
-			}
-		}
+				width: 100%;
+				height: 100%;
+				fill: $color-default-white;
 
-		svg {
-			width: 100%;
-			height: 100%;
-			fill: $color-default-white;
-			@include transition(fill);
-		}
-
-		&--prev {
-			left: calc(50% - 50px);
-			transform: translateX(-50%);
-
-			@include media(xl) {
-				left: -25px;
+				@include transition(fill);
 			}
 
-			@include media(xxl) {
-				left: -181px;
+			&--prev {
+				right: 0;
+				transform: translateX(-150%) translateY(-50%);
+
+				@include media(sm) {
+					transform: translateX(-200%) translateY(-50%);
+				}
+
+				@include media(xl) {
+					left: 0;
+					transform: translateX(0) translateY(-50%);
+				}
 			}
-		}
 
-		&--next {
-			left: calc(50% + 50px);
-			transform: translateX(-50%);
-
-			@include media(xl) {
-				right: -25px;
-				left: unset;
-			}
-
-			@include media(xxl) {
-				right: -161px;
+			&--next {
+				right: 0;
 			}
 		}
 	}

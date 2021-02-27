@@ -13,6 +13,14 @@
 		}
 	}
 
+	&--white {
+		#{$self}__link {
+			svg {
+				fill: $color-default-white;
+			}
+		}
+	}
+
 	&__item + &__item {
 		margin-left: 28px;
 	}

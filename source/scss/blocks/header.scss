@@ -301,6 +301,21 @@
 		}
 	}
 
+	&__social {
+		display: none;
+
+		@include media(lg) {
+			display: flex;
+			flex-shrink: 0;
+		}
+		@include media(xxl) {
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translateY(-50%);
+		}
+	}
+
 	&__menu-toggle {
 		margin-left: auto;
 		order: 2;
@@ -319,6 +334,13 @@
 		border-radius: 0;
 		align-self: center;
 		order: 1;
+
+		@include media(xxl) {
+			position: absolute;
+			right: 15px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 
 		&-text {
 			display: none;

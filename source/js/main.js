@@ -189,9 +189,11 @@ $(window).on('load', function() {
 /* 4. Fixed header */
 (function() {
 	var header = $('.__js_fixed-header');
-	var headerOffset = header.offset().top;
+	if (header.length) {
+		var headerOffset = header.offset().top;
+		var headerHeight = header.outerHeight();
+	}
 	var classes = 'header--fixed';
-	var headerHeight = header.outerHeight();
 	var scroll = $(window).scrollTop();
 	var isScroll = false;
 	var isNotStatic = header.hasClass('header--half') && $(window).width() >= mobileBreakpoint ? true : false;
@@ -472,6 +474,11 @@ $(window).on('load', function() {
 	function removeDark() {
 		$('.webpage').removeClass('webpage--parallax-dark');
 	}
+
+
+    //$.fn.pagepiling.setAllowScrolling(false, 'left, right');
+
+
 })();
 
 /* 12. Form validation */
