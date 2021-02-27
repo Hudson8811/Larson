@@ -7164,6 +7164,13 @@ textarea.custom-input {
 }
 
 /* 4.30 Main slider */
+.main-slider {
+  position: relative;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main-slider .tp-tabs {
   padding: 0 !important;
   background-color: #ffffff !important;

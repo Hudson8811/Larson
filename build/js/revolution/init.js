@@ -8,7 +8,7 @@ tpj(document).ready(function() {
 		revapi24 = tpj("#rev_slider").show().revolution(
 		{
       sliderType:"standard",
-      sliderLayout:"fullscreen",
+      sliderLayout: "fullwidth",//"fullscreen",
       dottedOverlay:"none",
       delay:7000,
       autoHeight: 'on',
