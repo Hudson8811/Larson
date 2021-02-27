@@ -40,6 +40,28 @@
 		}
 	}
 
+	&--fixed {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+
+		#{$self}__inner {
+			padding-top: 0;
+			padding-bottom: 12px;
+
+			@include media(md) {
+				padding-bottom: 24px;
+			}
+			@include media(lg) {
+				@include media-custom-height(768px) {
+					padding-bottom: 52px;
+				}
+			}
+		}
+	}
+
 	&__inner {
 		position: relative;
 		padding-top: 32px;

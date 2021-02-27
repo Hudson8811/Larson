@@ -1,7 +1,7 @@
 .webpage {
 	$self: &;
 	background-color: $color-default-white;
-
+	/*
 	&--home-grid {
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -15,7 +15,7 @@
 		main {
 			background-color: transparent;
 		}
-	}
+	}*/
 
 	&--parallax {
 		.header {
@@ -28,14 +28,6 @@
 
 		main {
 			min-height: 100vh;
-		}
-
-		.footer {
-			width: 100%;
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			z-index: 1;
 		}
 	}
 
