@@ -3,11 +3,7 @@
 		@include media(xl) {
 			position: relative;
 			overflow: hidden;
-			display: flex;
-			//max-width: $width--full;
-		}
-
-		@include media(xxl) {
+			//display: flex;
 		}
 	}
 
@@ -17,6 +13,7 @@
 
 		@include media(xl) {
 			position: absolute;
+			top: 0;
 			left: 0;
 			z-index: 1;
 			width: 100%;
@@ -39,7 +36,6 @@
 		}
 
 		@include media(xxl) {
-			//width: 44.8%;
 			padding-left: 0;
 			background-image: linear-gradient(
 				to right,
@@ -127,6 +123,7 @@
 		@include media(sm) {
 			max-width: 75%;
 		}
+
 		@include media(xl) {
 			max-width: 340px;
 		}

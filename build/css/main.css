@@ -3697,7 +3697,6 @@ textarea.custom-input {
   .hero__inner {
     position: relative;
     overflow: hidden;
-    display: flex;
   }
 }
 
@@ -3709,6 +3708,7 @@ textarea.custom-input {
 @media (min-width: 1200px) {
   .hero__content {
     position: absolute;
+    top: 0;
     left: 0;
     z-index: 1;
     width: 100%;
