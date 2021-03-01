@@ -7169,6 +7169,7 @@ textarea.custom-input {
   max-width: 1800px;
   margin-left: auto;
   margin-right: auto;
+  height: calc(100vh - 93px);
 }
 
 .main-slider .tp-tabs {
@@ -7223,6 +7224,28 @@ textarea.custom-input {
 
 .main-slider .tp-rightarrow::before {
   content: "next";
+}
+
+@media (min-width: 768px) {
+  .main-slider {
+    height: calc(100vh - 110px);
+  }
+}
+
+.main-slider .rev_slider_wrapper {
+  height: 100% !important;
+}
+
+.main-slider .rev_slider {
+  height: 100% !important;
+}
+
+.main-slider .rev_slider .slot {
+  height: 100% !important;
+}
+
+.main-slider .rev_slider .slot * {
+  height: 100% !important;
 }
 
 /* 4.31 Article */

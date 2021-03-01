@@ -16,7 +16,8 @@ tpj(document).ready(function() {
 		revapi24 = tpj("#rev_slider").show().revolution(
 		{
       sliderType:"standard",
-      sliderLayout: "fullscreen",//"fullscreen",
+      sliderLayout: "auto",//"fullscreen",
+			fullScreenAlignForce: 'off',
       dottedOverlay:"none",
       delay:7000,
       minHeight:380,
@@ -72,7 +73,7 @@ tpj(document).ready(function() {
       },
       responsiveLevels:[1200,992,768,576],
       gridwidth:[1140,960,740,540],
-      gridheight:[800],
+      gridheight:[800,700,600,500],
       lazyType:"none",
       shadow:0,
       spinner:"off",

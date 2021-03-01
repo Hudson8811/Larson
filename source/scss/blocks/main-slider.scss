@@ -60,4 +60,23 @@
 			content: "next";
 		}
 	}
+
+	height: calc(100vh - 93px);
+	@media (min-width: 768px){
+		height: calc(100vh - 110px);
+	}
+
+	.rev_slider_wrapper{
+		height: 100% !important;
+	}
+	.rev_slider{
+		height: 100% !important;
+		.slot{
+			height: 100% !important;
+			*{
+				height: 100% !important;
+			}
+		}
+	}
 }
+
