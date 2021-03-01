@@ -5,14 +5,20 @@ tpj(document).ready(function() {
 	if(tpj("#rev_slider").revolution == undefined){
 		revslider_showDoubleJqueryError("#rev_slider");
 	}else{
+		var prevPos = 120;
+		var nextPos = 230;
+		if ($(window).width() <= 992){
+			prevPos = 10;
+			nextPos = 120;
+		}
+
+
 		revapi24 = tpj("#rev_slider").show().revolution(
 		{
       sliderType:"standard",
-      sliderLayout: "fullwidth",//"fullscreen",
+      sliderLayout: "fullscreen",//"fullscreen",
       dottedOverlay:"none",
       delay:7000,
-      autoHeight: 'on',
-			fullScreenOffset: '#header',
       minHeight:380,
       navigation: {
         keyboardNavigation:"off",
@@ -33,14 +39,14 @@ tpj(document).ready(function() {
 						container: 'layergrid',
 						h_align:"left",
 						v_align:"bottom",
-						h_offset:120,
+						h_offset:prevPos,
 						v_offset:0
 					},
 					right: {
 						container: 'layergrid',
 						h_align:"left",
 						v_align:"bottom",
-						h_offset:230,
+						h_offset:nextPos,
 						v_offset:0
 					}
 				},
@@ -73,9 +79,7 @@ tpj(document).ready(function() {
       stopLoop:"on",
       stopAfterLoops:0,
       shuffle:"off",
-      autoHeight:"on",
-      fullScreenAlignForce:"off",
-      fullScreenOffsetContainer: ".navbar",
+      fullScreenOffsetContainer: "#header",
       fullScreenOffset: "",
       disableProgressBar:"on",
       hideThumbsOnMobile:"off",
