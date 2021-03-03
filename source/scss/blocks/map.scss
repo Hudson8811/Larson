@@ -5,6 +5,10 @@
 	margin-right: auto;
 	padding: 0 15px;
 
+	@include media(xxx) {
+		max-width: calc(100vw - 120px);
+	}
+
 	&__inner {
 		@include media(lg) {
 			padding-top: 80px;

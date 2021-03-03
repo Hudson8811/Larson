@@ -22,6 +22,10 @@
 		padding: 124px 15px;
 	}
 
+	@include media(xxx) {
+		max-width: calc(100vw - 120px);
+	}
+
 	&__logo {
 		margin-bottom: 48px;
 	}

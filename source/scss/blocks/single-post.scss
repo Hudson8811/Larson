@@ -54,9 +54,19 @@
 			height: 400px;
 		}
 
+		@include media(xl) {
+			max-width: $width--full;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 		@include media(xxl) {
 			margin-top: 80px;
-			height: 768px;
+			height: 40vw;
+		}
+
+		@include media(xxx) {
+			max-width: calc(100vw - 120px);
 		}
 
 		img {

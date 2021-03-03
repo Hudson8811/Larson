@@ -5614,10 +5614,24 @@ textarea.custom-input {
   }
 }
 
+@media (min-width: 1200px) {
+  .post-sb-page__main-pic {
+    max-width: 1830px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media (min-width: 1560px) {
   .post-sb-page__main-pic {
     margin-top: 80px;
-    height: 768px;
+    height: 40vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .post-sb-page__main-pic {
+    max-width: calc(100vw - 120px);
   }
 }
 
@@ -7060,6 +7074,12 @@ textarea.custom-input {
   padding: 0 15px;
 }
 
+@media (min-width: 1920px) {
+  .map {
+    max-width: calc(100vw - 120px);
+  }
+}
+
 @media (min-width: 992px) {
   .map__inner {
     padding-top: 80px;
@@ -7633,6 +7653,12 @@ textarea.custom-input {
     max-width: 1830px;
     margin-top: 100px;
     margin-bottom: 210px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .article__about-hero {
+    max-width: calc(100vw - 120px);
   }
 }
 

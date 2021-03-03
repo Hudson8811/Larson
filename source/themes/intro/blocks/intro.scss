@@ -5,6 +5,10 @@
 		margin: 0 auto;
 		overflow: hidden;
 
+		@include media(xxx) {
+			max-width: calc(100vw - 120px);
+		}
+
 		img {
 			display: block;
 			width: 100%;
@@ -84,6 +88,10 @@
 			max-width: $width--full;
 			margin: 0 auto;
 			padding: 160px 0;
+		}
+
+		@include media(xxx) {
+			max-width: calc(100vw - 120px);
 		}
 
 		&--bg {

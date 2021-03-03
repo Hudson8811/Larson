@@ -288,6 +288,10 @@
 			margin-top: 100px;
 			margin-bottom: 210px;
 		}
+
+		@include media(xxx) {
+			max-width: calc(100vw - 120px);
+		}
 	}
 
 	&__feedback {
