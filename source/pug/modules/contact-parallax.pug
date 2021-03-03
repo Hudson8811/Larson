@@ -11,14 +11,14 @@
 			form.contact-parallax__form.js-form-validate(action='php/mail.php', method='POST')
 				label.field
 					input(type="text", name="name", placeholder="Name")
-					.line
+					span.line
 				.field-error(style='display: none')
 				label.field
 					input(type="email", name="email", placeholder="Email*" required)
-					.line
+					span.line
 				.field-error(style='display: none')
 				label.field.label-textarea
 					textarea(name="message", placeholder="Message")
-					.line
+					span.line
 				.field-error(style='display: none')
 				button.btn.contact-parallax__submit(type='submit') send message

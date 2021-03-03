@@ -131,7 +131,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100vw;
+		width: 100%;
 		z-index: 2;
 		background-color: $color-default-white;
 		border-top: none;
@@ -256,6 +256,10 @@
 		@include media(xxl) {
 			position: relative;
 			padding: 42px 15px;
+		}
+
+		@include media(xxx) {
+			max-width: calc(100vw - 90px);
 		}
 	}
 

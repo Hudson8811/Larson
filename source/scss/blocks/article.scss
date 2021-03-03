@@ -292,6 +292,12 @@
 		@include media(xxx) {
 			max-width: calc(100vw - 120px);
 		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	&__feedback {

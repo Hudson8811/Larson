@@ -1942,7 +1942,7 @@ textarea.custom-input {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 2;
   background-color: #ffffff;
   border-top: none;
@@ -2051,6 +2051,12 @@ textarea.custom-input {
   .header__inner {
     position: relative;
     padding: 42px 15px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .header__inner {
+    max-width: calc(100vw - 90px);
   }
 }
 
@@ -2296,6 +2302,12 @@ textarea.custom-input {
     max-width: 1830px;
     padding-top: 150px;
     padding-bottom: 130px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .footer__inner {
+    max-width: calc(100vw - 90px);
   }
 }
 
@@ -7209,9 +7221,7 @@ textarea.custom-input {
 
 @media (min-width: 1920px) {
   .main-slider {
-    max-width: none;
-    padding-left: 60px;
-    padding-right: 60px;
+    max-width: calc(100vw - 120px);
   }
 }
 
@@ -7660,6 +7670,12 @@ textarea.custom-input {
   .article__about-hero {
     max-width: calc(100vw - 120px);
   }
+}
+
+.article__about-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .article__feedback {

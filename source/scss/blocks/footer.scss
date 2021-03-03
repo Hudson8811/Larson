@@ -100,6 +100,10 @@
 			padding-top: 150px;
 			padding-bottom: 130px;
 		}
+
+		@include media(xxx) {
+			max-width: calc(100vw - 90px);
+		}
 	}
 
 	&__social {
