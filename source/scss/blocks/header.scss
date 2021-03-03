@@ -131,7 +131,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		right: 0;
+		width: 100vw;
 		z-index: 2;
 		background-color: $color-default-white;
 		border-top: none;
@@ -214,7 +214,7 @@
 
 			&__dropdown {
 				@include media(lg) {
-					bottom: -25px;
+					bottom: -24px;
 				}
 			}
 		}
@@ -224,6 +224,14 @@
 			&::after {
 				border-top: solid 3px $color-default-black;
 			}
+		}
+	}
+
+	&--bg {
+		background-color: $color-default-white !important;
+
+		@include media(xl) {
+			background-color: transparent !important;
 		}
 	}
 

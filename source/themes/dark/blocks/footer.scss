@@ -1,6 +1,14 @@
 .footer {
 	$self: &;
 
+	&--bg {
+		background-color: $color-dark !important;
+
+		@include media(xl) {
+			background-color: transparent !important;
+		}
+	}
+
 	&__copyright {
 		color: $color-default-white;
 

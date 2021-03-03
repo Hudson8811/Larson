@@ -208,7 +208,7 @@ $(window).on('load', function() {
 			header.addClass(classes);
 
 			if (!header.hasClass('is-fixed')) {
-				header.css({'top': -headerHeight + 'px', 'transform': 'translateY(' + headerHeight + 'px)'}).addClass('is-fixed');
+				header.css({'top': -headerHeight + 'px', 'transform': ' translateY(' + headerHeight + 'px)'}).addClass('is-fixed');
 
 				if (!isNotStatic) {
 					body.css('padding-top', headerHeight + 'px');
@@ -384,7 +384,9 @@ $(window).on('load', function() {
 /* 9. Modal */
 (function(){
 	$(document).ready(function() {
-		$(".fancybox").fancybox();
+		$(".fancybox").fancybox({
+			margin: 0
+		});
 	});
 })();
 
@@ -461,6 +463,13 @@ $(window).on('load', function() {
 						removeDark();
 					}
 
+					if (current.hasClass('__js_bg')) {
+						$('.header').addClass('header--bg');
+						$('.footer').addClass('footer--bg');
+					} else {
+						$('.header').removeClass('header--bg');
+						$('.footer').removeClass('footer--bg');
+					}
 					$('.fp-table.active .aos-init').addClass('aos-animate');
 				}
 			});

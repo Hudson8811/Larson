@@ -1,7 +1,19 @@
 .hero {
 	&__content {
 		@include media(xl) {
-			background-color: $color-dark;
+			background-image: linear-gradient(
+				to right,
+				$color-dark 54.375%,
+				transparent 54.375%
+			);
+		}
+
+		@include media(xxl) {
+			background-image: linear-gradient(
+				to right,
+				$color-dark 44.375%,
+				transparent 44.375%
+			);
 		}
 	}
 

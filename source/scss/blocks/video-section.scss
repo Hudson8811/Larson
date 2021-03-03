@@ -16,11 +16,17 @@
 		padding-top: 60px;
 	}
 
+	@include media(xxl) {
+		padding: 60px 60px 0;
+	}
+
 	&__inner {
 		position: relative;
 
-		@include media(xl) {
-			max-width: $width--full;
+		@include media(xxl) {
+			max-width: none;
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 

@@ -13,6 +13,7 @@
 	&__slide {
 		position: relative;
 		display: flex;
+		width: 100%;
 		box-sizing: border-box;
 
 		@include media(md) {
@@ -20,6 +21,8 @@
 		}
 
 		&-image {
+			width: 100%;
+
 			img {
 				display: block;
 				width: 100%;

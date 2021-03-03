@@ -57,4 +57,16 @@
 			}
 		}
 	}
+
+	&--bg {
+		background-color: $color-dark !important;
+
+		@include media(xl) {
+			background-color: transparent !important;
+		}
+	}
+
+	&__phone {
+		color: $color-default-white;
+	}
 }

@@ -149,6 +149,20 @@ main {
   border-top: solid 3px #ffffff;
 }
 
+.header--bg {
+  background-color: #272727 !important;
+}
+
+@media (min-width: 1200px) {
+  .header--bg {
+    background-color: transparent !important;
+  }
+}
+
+.header__phone {
+  color: #ffffff;
+}
+
 .heading {
   color: #ffffff;
 }
@@ -230,7 +244,7 @@ main {
 }
 
 .social__link svg {
-  fill: #000000;
+  fill: #ffffff;
 }
 
 .social__link:hover svg, .social__link:focus svg {
@@ -243,7 +257,13 @@ main {
 
 @media (min-width: 1200px) {
   .hero__content {
-    background-color: #272727;
+    background-image: linear-gradient(to right, #272727 54.375%, transparent 54.375%);
+  }
+}
+
+@media (min-width: 1560px) {
+  .hero__content {
+    background-image: linear-gradient(to right, #272727 44.375%, transparent 44.375%);
   }
 }
 
@@ -998,6 +1018,16 @@ main {
   .contact-parallax__form textarea:focus {
     color: #ffffff;
     border-color: #ffffff;
+  }
+}
+
+.footer--bg {
+  background-color: #272727 !important;
+}
+
+@media (min-width: 1200px) {
+  .footer--bg {
+    background-color: transparent !important;
   }
 }
 
